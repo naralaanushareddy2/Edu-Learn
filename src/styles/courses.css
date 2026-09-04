@@ -1,0 +1,159 @@
+.courses-page {
+  min-height: 100vh;
+  background: #f7f9fd;
+}
+
+
+/* ================= HEADER ================= */
+
+.courses-header {
+  padding: 70px 8%;
+  text-align: center;
+  background: #ffffff;
+}
+
+.courses-header p {
+  color: #2448b8;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.courses-header h1 {
+  margin: 10px 0 15px;
+  color: #172033;
+  font-size: 40px;
+}
+
+.courses-header span {
+  color: #6b7280;
+  font-size: 16px;
+}
+
+
+/* ================= COURSES ================= */
+
+.course-section {
+  padding: 60px 7%;
+}
+
+.course-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #172033;
+}
+
+
+/* ================= GRID ================= */
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+
+/* ================= CARD ================= */
+
+.course-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #e5e8ef;
+  transition: 0.3s;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ================= ICON ================= */
+
+.course-icon {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #eaf1ff;
+  color: #2448b8;
+
+  margin-bottom: 20px;
+}
+
+.course-icon svg {
+  font-size: 25px;
+}
+
+
+/* ================= CONTENT ================= */
+
+.course-card h3 {
+  color: #172033;
+  margin-bottom: 10px;
+}
+
+.course-card p {
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+
+/* ================= LINK ================= */
+
+.course-card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #2448b8;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* ================= BOTTOM ================= */
+
+.courses-bottom {
+  padding: 20px;
+  text-align: center;
+}
+
+.courses-bottom a {
+  color: #2448b8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+  .course-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .courses-header h1 {
+    font-size: 32px;
+  }
+
+}

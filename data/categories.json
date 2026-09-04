@@ -1,0 +1,1259 @@
+[
+  {
+    "id": 1,
+    "name": "Web Development",
+    "description": "Learn how to design, develop and deploy modern websites and full-stack web applications using popular frontend and backend technologies.",
+    "icon": "code",
+    "subcategories": [
+      {
+        "id": 101,
+        "name": "HTML",
+        "description": "Learn HTML fundamentals and understand how webpages are structured using headings, paragraphs, links, images, tables, forms and semantic elements.",
+        "level": "Beginner",
+        "duration": "6 Hours",
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Introduction to HTML",
+            "description": "Understand what HTML is and how it is used to create webpages.",
+            "video": "https://www.youtube.com/watch?v=dX8396ZmSPk"
+          },
+          {
+            "id": 2,
+            "title": "HTML Document Structure",
+            "description": "Learn the basic structure of an HTML document including html, head and body elements.",
+            "video": "https://www.youtube.com/watch?v=dX8396ZmSPk"
+          },
+          {
+            "id": 3,
+            "title": "Headings, Paragraphs and Text",
+            "description": "Learn how to organize webpage content using headings, paragraphs and text elements.",
+            "video": "https://www.youtube.com/watch?v=dX8396ZmSPk"
+          },
+          {
+            "id": 4,
+            "title": "Links and Images",
+            "description": "Learn how to add hyperlinks and images to webpages.",
+            "video": "https://www.youtube.com/watch?v=dX8396ZmSPk"
+          },
+          {
+            "id": 5,
+            "title": "Lists and Tables",
+            "description": "Learn how to create ordered lists, unordered lists and tables.",
+            "video": "https://www.youtube.com/watch?v=dX8396ZmSPk"
+          },
+          {
+            "id": 6,
+            "title": "HTML Forms",
+            "description": "Learn how to create forms using input fields, labels and buttons.",
+            "video": "https://www.youtube.com/watch?v=dX8396ZmSPk"
+          },
+          {
+            "id": 7,
+            "title": "Semantic HTML",
+            "description": "Understand semantic elements such as header, nav, main, section, article and footer.",
+            "video": "https://www.youtube.com/watch?v=dX8396ZmSPk"
+          }
+        ]
+      },
+      {
+        "id": 102,
+        "name": "CSS",
+        "description": "Learn how to style websites using colors, fonts, layouts, Flexbox, Grid, animations and responsive design.",
+        "level": "Beginner",
+        "duration": "8 Hours",
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Introduction to CSS",
+            "description": "Understand CSS and how it is used to style HTML webpages.",
+            "video": "https://www.youtube.com/watch?v=OXGznpKZ_sA"
+          },
+          {
+            "id": 2,
+            "title": "CSS Selectors",
+            "description": "Learn element, class, ID and attribute selectors.",
+            "video": "https://www.youtube.com/watch?v=OXGznpKZ_sA"
+          },
+          {
+            "id": 3,
+            "title": "Colors and Fonts",
+            "description": "Learn how to customize colors, fonts and text appearance.",
+            "video": "https://www.youtube.com/watch?v=OXGznpKZ_sA"
+          },
+          {
+            "id": 4,
+            "title": "CSS Box Model",
+            "description": "Understand content, padding, border and margin.",
+            "video": "https://www.youtube.com/watch?v=OXGznpKZ_sA"
+          },
+          {
+            "id": 5,
+            "title": "Flexbox",
+            "description": "Learn how to create flexible layouts using CSS Flexbox.",
+            "video": "https://www.youtube.com/watch?v=OXGznpKZ_sA"
+          },
+          {
+            "id": 6,
+            "title": "CSS Grid",
+            "description": "Learn how to create two-dimensional layouts using CSS Grid.",
+            "video": "https://www.youtube.com/watch?v=OXGznpKZ_sA"
+          },
+          {
+            "id": 7,
+            "title": "Responsive Web Design",
+            "description": "Learn how to make websites responsive on mobile, tablet and desktop.",
+            "video": "https://www.youtube.com/watch?v=OXGznpKZ_sA"
+          }
+        ]
+      },
+      {
+        "id": 103,
+        "name": "JavaScript",
+        "description": "Learn JavaScript programming concepts including variables, functions, arrays, objects, events and DOM manipulation.",
+        "level": "Beginner",
+        "duration": "10 Hours",
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Introduction to JavaScript",
+            "description": "Understand JavaScript and its role in modern web development.",
+            "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+          },
+          {
+            "id": 2,
+            "title": "Variables and Data Types",
+            "description": "Learn variables, strings, numbers, booleans and other data types.",
+            "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+          },
+          {
+            "id": 3,
+            "title": "Operators and Conditions",
+            "description": "Learn operators, if statements and conditional programming.",
+            "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+          },
+          {
+            "id": 4,
+            "title": "Loops",
+            "description": "Learn for, while and do-while loops.",
+            "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+          },
+          {
+            "id": 5,
+            "title": "Functions",
+            "description": "Learn how to create reusable JavaScript functions.",
+            "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+          },
+          {
+            "id": 6,
+            "title": "Arrays and Objects",
+            "description": "Learn how to store and manage collections of data.",
+            "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+          },
+          {
+            "id": 7,
+            "title": "DOM Manipulation",
+            "description": "Learn how JavaScript interacts with HTML elements.",
+            "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+          },
+          {
+            "id": 8,
+            "title": "JavaScript Events",
+            "description": "Learn how to handle clicks, forms and other user interactions.",
+            "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+          }
+        ]
+      },
+      {
+        "id": 104,
+        "name": "React.js",
+        "description": "Learn React fundamentals including components, JSX, props, state, events, hooks and routing.",
+        "level": "Intermediate",
+        "duration": "8 Hours",
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Introduction to React",
+            "description": "Understand React and why it is used to build modern interfaces.",
+            "video": "https://www.youtube.com/watch?v=SqcY0GlETPk"
+          },
+          {
+            "id": 2,
+            "title": "React Components",
+            "description": "Learn how to create reusable React components.",
+            "video": "https://www.youtube.com/watch?v=SqcY0GlETPk"
+          },
+          {
+            "id": 3,
+            "title": "JSX",
+            "description": "Learn how JSX is used to write UI structures in React.",
+            "video": "https://www.youtube.com/watch?v=SqcY0GlETPk"
+          },
+          {
+            "id": 4,
+            "title": "Props and State",
+            "description": "Understand how data and state are managed in React.",
+            "video": "https://www.youtube.com/watch?v=SqcY0GlETPk"
+          },
+          {
+            "id": 5,
+            "title": "React Hooks",
+            "description": "Learn useState, useEffect and other important React hooks.",
+            "video": "https://www.youtube.com/watch?v=SqcY0GlETPk"
+          },
+          {
+            "id": 6,
+            "title": "React Router",
+            "description": "Learn how to create navigation and multiple pages in React applications.",
+            "video": "https://www.youtube.com/watch?v=SqcY0GlETPk"
+          }
+        ]
+      },
+      {
+        "id": 105,
+        "name": "Node.js",
+        "description": "Learn server-side JavaScript using Node.js, modules, packages, APIs and backend development.",
+        "level": "Intermediate",
+        "duration": "6 Hours",
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Introduction to Node.js",
+            "description": "Understand Node.js and server-side JavaScript.",
+            "video": "https://www.youtube.com/watch?v=Oe421EPjeBE"
+          },
+          {
+            "id": 2,
+            "title": "Node.js Modules",
+            "description": "Learn how modules are created and used in Node.js.",
+            "video": "https://www.youtube.com/watch?v=Oe421EPjeBE"
+          },
+          {
+            "id": 3,
+            "title": "NPM and Packages",
+            "description": "Learn how to use npm and install Node.js packages.",
+            "video": "https://www.youtube.com/watch?v=Oe421EPjeBE"
+          },
+          {
+            "id": 4,
+            "title": "HTTP Server",
+            "description": "Learn how to create a basic server using Node.js.",
+            "video": "https://www.youtube.com/watch?v=Oe421EPjeBE"
+          },
+          {
+            "id": 5,
+            "title": "Node.js APIs",
+            "description": "Understand how backend APIs work with Node.js.",
+            "video": "https://www.youtube.com/watch?v=Oe421EPjeBE"
+          }
+        ]
+      },
+      {
+        "id": 106,
+        "name": "Express.js",
+        "description": "Learn Express.js for building backend applications and REST APIs.",
+        "level": "Intermediate",
+        "duration": "5 Hours",
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Introduction to Express.js",
+            "description": "Understand Express.js and its role in Node.js applications.",
+            "video": "https://www.youtube.com/watch?v=Oe421EPjeBE"
+          },
+          {
+            "id": 2,
+            "title": "Express Server",
+            "description": "Learn how to create an Express server.",
+            "video": "https://www.youtube.com/watch?v=Oe421EPjeBE"
+          },
+          {
+            "id": 3,
+            "title": "Express Routes",
+            "description": "Learn how to create and manage application routes.",
+            "video": "https://www.youtube.com/watch?v=Oe421EPjeBE"
+          },
+          {
+            "id": 4,
+            "title": "Middleware",
+            "description": "Understand Express middleware and request processing.",
+            "video": "https://www.youtube.com/watch?v=Oe421EPjeBE"
+          },
+          {
+            "id": 5,
+            "title": "REST APIs",
+            "description": "Learn how to build REST APIs using Express.js.",
+            "video": "https://www.youtube.com/watch?v=Oe421EPjeBE"
+          }
+        ]
+      },
+      {
+        "id": 107,
+        "name": "Full Stack Development",
+        "description": "Learn how frontend, backend, databases, APIs, authentication and deployment work together.",
+        "level": "Advanced",
+        "duration": "10 Hours",
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Introduction to Full Stack Development",
+            "description": "Understand frontend, backend and database technologies.",
+            "video": "https://www.youtube.com/watch?v=nu_pCVPKzTk"
+          },
+          {
+            "id": 2,
+            "title": "Frontend Development",
+            "description": "Learn how frontend technologies are used to build user interfaces.",
+            "video": "https://www.youtube.com/watch?v=nu_pCVPKzTk"
+          },
+          {
+            "id": 3,
+            "title": "Backend Development",
+            "description": "Understand server-side application development.",
+            "video": "https://www.youtube.com/watch?v=nu_pCVPKzTk"
+          },
+          {
+            "id": 4,
+            "title": "Databases",
+            "description": "Understand how applications store and retrieve data.",
+            "video": "https://www.youtube.com/watch?v=nu_pCVPKzTk"
+          },
+          {
+            "id": 5,
+            "title": "APIs and Authentication",
+            "description": "Learn how APIs and authentication connect frontend and backend systems.",
+            "video": "https://www.youtube.com/watch?v=nu_pCVPKzTk"
+          },
+          {
+            "id": 6,
+            "title": "Deployment",
+            "description": "Understand the basics of deploying full-stack applications.",
+            "video": "https://www.youtube.com/watch?v=nu_pCVPKzTk"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Programming",
+    "description": "Build strong programming fundamentals and problem-solving skills using popular programming languages.",
+    "icon": "book",
+    "subcategories": [
+      {
+        "id": 201,
+        "name": "C",
+        "description": "Learn C programming fundamentals including variables, conditions, loops, functions, arrays and pointers.",
+        "level": "Beginner",
+        "duration": "6 Hours",
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Introduction to C",
+            "description": "Understand C programming and its basic structure.",
+            "video": "https://www.youtube.com/watch?v=KJgsSFOSQv0"
+          },
+          {
+            "id": 2,
+            "title": "Variables and Data Types",
+            "description": "Learn variables, constants and basic C data types.",
+            "video": "https://www.youtube.com/watch?v=KJgsSFOSQv0"
+          },
+          {
+            "id": 3,
+            "title": "Conditions and Loops",
+            "description": "Learn decision making and repetitive statements.",
+            "video": "https://www.youtube.com/watch?v=KJgsSFOSQv0"
+          },
+          {
+            "id": 4,
+            "title": "Functions",
+            "description": "Learn how to create and use functions in C.",
+            "video": "https://www.youtube.com/watch?v=KJgsSFOSQv0"
+          },
+          {
+            "id": 5,
+            "title": "Arrays and Pointers",
+            "description": "Understand arrays and the fundamentals of pointers.",
+            "video": "https://www.youtube.com/watch?v=KJgsSFOSQv0"
+          }
+        ]
+      },
+      {
+        "id": 202,
+        "name": "C++",
+        "description": "Learn C++ programming and object-oriented concepts including classes, objects, inheritance and polymorphism.",
+        "level": "Beginner",
+        "duration": "7 Hours",
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Introduction to C++",
+            "description": "Learn the basics and structure of C++ programs.",
+            "video": "https://www.youtube.com/watch?v=vLnPwxZdW4Y"
+          },
+          {
+            "id": 2,
+            "title": "Variables and Data Types",
+            "description": "Understand C++ variables and data types.",
+            "video": "https://www.youtube.com/watch?v=vLnPwxZdW4Y"
+          },
+          {
+            "id": 3,
+            "title": "Functions",
+            "description": "Learn functions and parameter passing in C++.",
+            "video": "https://www.youtube.com/watch?v=vLnPwxZdW4Y"
+          },
+          {
+            "id": 4,
+            "title": "Classes and Objects",
+            "description": "Learn the fundamentals of object-oriented programming.",
+            "video": "https://www.youtube.com/watch?v=vLnPwxZdW4Y"
+          },
+          {
+            "id": 5,
+            "title": "Inheritance and Polymorphism",
+            "description": "Understand important object-oriented programming concepts.",
+            "video": "https://www.youtube.com/watch?v=vLnPwxZdW4Y"
+          }
+        ]
+      },
+      {
+        "id": 203,
+        "name": "Java",
+        "description": "Learn Java from the basics through object-oriented programming, exception handling and collections.",
+        "level": "Beginner",
+        "duration": "8 Hours",
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Introduction to Java",
+            "description": "Understand Java and its features.",
+            "video": "https://www.youtube.com/watch?v=eIrMbAQSU34"
+          },
+          {
+            "id": 2,
+            "title": "Java Variables and Data Types",
+            "description": "Learn variables and data types in Java.",
+            "video": "https://www.youtube.com/watch?v=eIrMbAQSU34"
+          },
+          {
+            "id": 3,
+            "title": "Conditions and Loops",
+            "description": "Learn decision-making statements and loops.",
+            "video": "https://www.youtube.com/watch?v=eIrMbAQSU34"
+          },
+          {
+            "id": 4,
+            "title": "Classes and Objects",
+            "description": "Learn Java object-oriented programming.",
+            "video": "https://www.youtube.com/watch?v=eIrMbAQSU34"
+          },
+          {
+            "id": 5,
+            "title": "Inheritance",
+            "description": "Understand inheritance and polymorphism.",
+            "video": "https://www.youtube.com/watch?v=eIrMbAQSU34"
+          },
+          {
+            "id": 6,
+            "title": "Exception Handling",
+            "description": "Learn how Java applications handle errors.",
+            "video": "https://www.youtube.com/watch?v=eIrMbAQSU34"
+          }
+        ]
+      },
+      {
+        "id": 204,
+        "name": "Python",
+        "description": "Learn Python programming from fundamentals through functions, collections, modules and object-oriented programming.",
+        "level": "Beginner",
+        "duration": "7 Hours",
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Introduction to Python",
+            "description": "Understand Python and its applications.",
+            "video": "https://www.youtube.com/watch?v=rfscVS0vtbw"
+          },
+          {
+            "id": 2,
+            "title": "Variables and Data Types",
+            "description": "Learn Python variables and common data types.",
+            "video": "https://www.youtube.com/watch?v=rfscVS0vtbw"
+          },
+          {
+            "id": 3,
+            "title": "Conditions and Loops",
+            "description": "Learn conditional statements and loops.",
+            "video": "https://www.youtube.com/watch?v=rfscVS0vtbw"
+          },
+          {
+            "id": 4,
+            "title": "Functions",
+            "description": "Learn how to create reusable functions.",
+            "video": "https://www.youtube.com/watch?v=rfscVS0vtbw"
+          },
+          {
+            "id": 5,
+            "title": "Lists and Dictionaries",
+            "description": "Learn Python collections and data structures.",
+            "video": "https://www.youtube.com/watch?v=rfscVS0vtbw"
+          },
+          {
+            "id": 6,
+            "title": "Object-Oriented Programming",
+            "description": "Learn classes and objects in Python.",
+            "video": "https://www.youtube.com/watch?v=rfscVS0vtbw"
+          }
+        ]
+      },
+      {
+        "id": 205,
+        "name": "JavaScript",
+        "description": "Develop programming skills using JavaScript and learn modern programming techniques.",
+        "level": "Beginner",
+        "duration": "6 Hours",
+        "lessons": [
+          {
+            "id": 1,
+            "title": "JavaScript Basics",
+            "description": "Learn the fundamentals of JavaScript programming.",
+            "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+          },
+          {
+            "id": 2,
+            "title": "Variables and Data Types",
+            "description": "Learn JavaScript variables and data types.",
+            "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+          },
+          {
+            "id": 3,
+            "title": "Functions",
+            "description": "Learn JavaScript functions and reusable code.",
+            "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+          },
+          {
+            "id": 4,
+            "title": "Arrays and Objects",
+            "description": "Learn JavaScript arrays and objects.",
+            "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+          },
+          {
+            "id": 5,
+            "title": "DOM and Events",
+            "description": "Learn how JavaScript interacts with webpages.",
+            "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Data Science",
+    "description": "Learn how to collect, clean, analyze and visualize data and understand statistics and machine learning.",
+    "icon": "chart",
+    "subcategories": [
+      {
+        "id": 301,
+        "name": "Python for Data Science",
+        "description": "Learn how Python is used for data analysis, visualization, numerical computing and machine learning.",
+        "level": "Beginner",
+        "duration": "6 Hours",
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Python for Data Science",
+            "description": "Understand why Python is widely used in data science.",
+            "video": "https://www.youtube.com/watch?v=LHBE6Q9XlzI"
+          },
+          {
+            "id": 2,
+            "title": "NumPy Basics",
+            "description": "Learn numerical operations using NumPy.",
+            "video": "https://www.youtube.com/watch?v=LHBE6Q9XlzI"
+          },
+          {
+            "id": 3,
+            "title": "Pandas Basics",
+            "description": "Learn how to work with datasets using Pandas.",
+            "video": "https://www.youtube.com/watch?v=LHBE6Q9XlzI"
+          },
+          {
+            "id": 4,
+            "title": "Data Visualization",
+            "description": "Learn the basics of visualizing datasets.",
+            "video": "https://www.youtube.com/watch?v=LHBE6Q9XlzI"
+          }
+        ]
+      },
+      {
+        "id": 302,
+        "name": "NumPy",
+        "description": "Learn numerical computing using NumPy arrays, indexing, mathematical operations and broadcasting.",
+        "level": "Beginner",
+        "duration": "4 Hours",
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Introduction to NumPy",
+            "description": "Understand NumPy and numerical computing.",
+            "video": "https://www.youtube.com/watch?v=QUT1VHiLmmI"
+          },
+          {
+            "id": 2,
+            "title": "NumPy Arrays",
+            "description": "Learn how to create and use NumPy arrays.",
+            "video": "https://www.youtube.com/watch?v=QUT1VHiLmmI"
+          },
+          {
+            "id": 3,
+            "title": "Indexing and Slicing",
+            "description": "Learn how to access and manipulate array data.",
+            "video": "https://www.youtube.com/watch?v=QUT1VHiLmmI"
+          },
+          {
+            "id": 4,
+            "title": "Mathematical Operations",
+            "description": "Perform mathematical operations using NumPy.",
+            "video": "https://www.youtube.com/watch?v=QUT1VHiLmmI"
+          }
+        ]
+      },
+      {
+        "id": 303,
+        "name": "Pandas",
+        "description": "Learn data manipulation using DataFrames, filtering, sorting, grouping and data cleaning.",
+        "level": "Beginner",
+        "duration": "5 Hours",
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Introduction to Pandas",
+            "description": "Understand Pandas and its role in data analysis.",
+            "video": "https://www.youtube.com/watch?v=vmEHCJofslg"
+          },
+          {
+            "id": 2,
+            "title": "Series and DataFrames",
+            "description": "Learn the basic Pandas data structures.",
+            "video": "https://www.youtube.com/watch?v=vmEHCJofslg"
+          },
+          {
+            "id": 3,
+            "title": "Filtering and Sorting",
+            "description": "Learn how to filter and sort datasets.",
+            "video": "https://www.youtube.com/watch?v=vmEHCJofslg"
+          },
+          {
+            "id": 4,
+            "title": "Data Cleaning",
+            "description": "Learn techniques for cleaning datasets.",
+            "video": "https://www.youtube.com/watch?v=vmEHCJofslg"
+          }
+        ]
+      },
+      {
+        "id": 304,
+        "name": "Data Visualization",
+        "description": "Learn how to represent data visually using charts, graphs and visualization libraries.",
+        "level": "Intermediate",
+        "duration": "5 Hours",
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Introduction to Data Visualization",
+            "description": "Understand why visualization is important in data science.",
+            "video": "https://www.youtube.com/watch?v=DAQNHzOcO5A"
+          },
+          {
+            "id": 2,
+            "title": "Charts and Graphs",
+            "description": "Learn different types of charts and graphs.",
+            "video": "https://www.youtube.com/watch?v=DAQNHzOcO5A"
+          },
+          {
+            "id": 3,
+            "title": "Matplotlib",
+            "description": "Learn the basics of creating visualizations with Matplotlib.",
+            "video": "https://www.youtube.com/watch?v=DAQNHzOcO5A"
+          },
+          {
+            "id": 4,
+            "title": "Presenting Data",
+            "description": "Learn how to communicate insights through visualizations.",
+            "video": "https://www.youtube.com/watch?v=DAQNHzOcO5A"
+          }
+        ]
+      },
+      {
+        "id": 305,
+        "name": "Statistics",
+        "description": "Learn essential statistics including probability, distributions, correlation and hypothesis testing.",
+        "level": "Beginner",
+        "duration": "5 Hours",
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Introduction to Statistics",
+            "description": "Understand the role of statistics in data analysis.",
+            "video": "https://www.youtube.com/watch?v=xxpc-HPKN28"
+          },
+          {
+            "id": 2,
+            "title": "Mean, Median and Mode",
+            "description": "Learn common measures of central tendency.",
+            "video": "https://www.youtube.com/watch?v=xxpc-HPKN28"
+          },
+          {
+            "id": 3,
+            "title": "Probability",
+            "description": "Understand the fundamentals of probability.",
+            "video": "https://www.youtube.com/watch?v=xxpc-HPKN28"
+          },
+          {
+            "id": 4,
+            "title": "Correlation",
+            "description": "Learn how relationships between variables are measured.",
+            "video": "https://www.youtube.com/watch?v=xxpc-HPKN28"
+          }
+        ]
+      },
+      {
+        "id": 306,
+        "name": "Machine Learning",
+        "description": "Learn the fundamentals of machine learning including model training, evaluation and prediction.",
+        "level": "Intermediate",
+        "duration": "8 Hours",
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Introduction to Machine Learning",
+            "description": "Understand machine learning and its applications.",
+            "video": "https://www.youtube.com/watch?v=NWONeJKn6kc"
+          },
+          {
+            "id": 2,
+            "title": "Supervised Learning",
+            "description": "Learn the fundamentals of supervised learning.",
+            "video": "https://www.youtube.com/watch?v=NWONeJKn6kc"
+          },
+          {
+            "id": 3,
+            "title": "Unsupervised Learning",
+            "description": "Understand clustering and other unsupervised techniques.",
+            "video": "https://www.youtube.com/watch?v=NWONeJKn6kc"
+          },
+          {
+            "id": 4,
+            "title": "Model Training",
+            "description": "Learn how machine learning models are trained.",
+            "video": "https://www.youtube.com/watch?v=NWONeJKn6kc"
+          },
+          {
+            "id": 5,
+            "title": "Model Evaluation",
+            "description": "Learn how to evaluate machine learning models.",
+            "video": "https://www.youtube.com/watch?v=NWONeJKn6kc"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Database",
+    "description": "Learn how to store, organize, query and manage application data using relational and NoSQL technologies.",
+    "icon": "database",
+    "subcategories": [
+      {
+        "id": 401,
+        "name": "SQL",
+        "description": "Learn SQL queries, filtering, sorting, joins, grouping and database manipulation.",
+        "level": "Beginner",
+        "duration": "5 Hours",
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Introduction to SQL",
+            "description": "Understand SQL and relational databases.",
+            "video": "https://www.youtube.com/watch?v=HXV3zeQKqGY"
+          },
+          {
+            "id": 2,
+            "title": "SELECT Queries",
+            "description": "Learn how to retrieve data from tables.",
+            "video": "https://www.youtube.com/watch?v=HXV3zeQKqGY"
+          },
+          {
+            "id": 3,
+            "title": "Filtering and Sorting",
+            "description": "Learn WHERE, ORDER BY and related SQL operations.",
+            "video": "https://www.youtube.com/watch?v=HXV3zeQKqGY"
+          },
+          {
+            "id": 4,
+            "title": "Joins",
+            "description": "Learn how multiple database tables can be combined.",
+            "video": "https://www.youtube.com/watch?v=HXV3zeQKqGY"
+          },
+          {
+            "id": 5,
+            "title": "Database Operations",
+            "description": "Learn INSERT, UPDATE and DELETE operations.",
+            "video": "https://www.youtube.com/watch?v=HXV3zeQKqGY"
+          }
+        ]
+      },
+      {
+        "id": 402,
+        "name": "MySQL",
+        "description": "Learn MySQL database management, tables, relationships, queries and database operations.",
+        "level": "Beginner",
+        "duration": "5 Hours",
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Introduction to MySQL",
+            "description": "Understand MySQL and relational database management.",
+            "video": "https://www.youtube.com/watch?v=7S_tz1z_5bA"
+          },
+          {
+            "id": 2,
+            "title": "Creating Databases and Tables",
+            "description": "Learn how to create databases and tables.",
+            "video": "https://www.youtube.com/watch?v=7S_tz1z_5bA"
+          },
+          {
+            "id": 3,
+            "title": "MySQL Queries",
+            "description": "Learn common MySQL queries.",
+            "video": "https://www.youtube.com/watch?v=7S_tz1z_5bA"
+          },
+          {
+            "id": 4,
+            "title": "Relationships and Joins",
+            "description": "Understand relationships and joins between tables.",
+            "video": "https://www.youtube.com/watch?v=7S_tz1z_5bA"
+          }
+        ]
+      },
+      {
+        "id": 403,
+        "name": "MongoDB",
+        "description": "Learn MongoDB and NoSQL database concepts including collections, documents and queries.",
+        "level": "Intermediate",
+        "duration": "5 Hours",
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Introduction to MongoDB",
+            "description": "Understand MongoDB and NoSQL databases.",
+            "video": "https://www.youtube.com/watch?v=c2M-rlkkT5o"
+          },
+          {
+            "id": 2,
+            "title": "Databases and Collections",
+            "description": "Learn MongoDB databases and collections.",
+            "video": "https://www.youtube.com/watch?v=c2M-rlkkT5o"
+          },
+          {
+            "id": 3,
+            "title": "MongoDB Documents",
+            "description": "Learn how MongoDB stores data in documents.",
+            "video": "https://www.youtube.com/watch?v=c2M-rlkkT5o"
+          },
+          {
+            "id": 4,
+            "title": "MongoDB Queries",
+            "description": "Learn how to retrieve and modify MongoDB data.",
+            "video": "https://www.youtube.com/watch?v=c2M-rlkkT5o"
+          }
+        ]
+      },
+      {
+        "id": 404,
+        "name": "PostgreSQL",
+        "description": "Learn PostgreSQL database concepts, SQL queries, relationships and advanced operations.",
+        "level": "Intermediate",
+        "duration": "5 Hours",
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Introduction to PostgreSQL",
+            "description": "Understand PostgreSQL and relational databases.",
+            "video": "https://www.youtube.com/watch?v=qw--VYLpxG4"
+          },
+          {
+            "id": 2,
+            "title": "Tables and Data Types",
+            "description": "Learn PostgreSQL tables and data types.",
+            "video": "https://www.youtube.com/watch?v=qw--VYLpxG4"
+          },
+          {
+            "id": 3,
+            "title": "PostgreSQL Queries",
+            "description": "Learn how to retrieve and manipulate data.",
+            "video": "https://www.youtube.com/watch?v=qw--VYLpxG4"
+          },
+          {
+            "id": 4,
+            "title": "Relationships",
+            "description": "Learn relationships between PostgreSQL tables.",
+            "video": "https://www.youtube.com/watch?v=qw--VYLpxG4"
+          }
+        ]
+      },
+      {
+        "id": 405,
+        "name": "Database Design",
+        "description": "Learn how to design efficient databases using entities, relationships, normalization and keys.",
+        "level": "Intermediate",
+        "duration": "4 Hours",
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Introduction to Database Design",
+            "description": "Understand the fundamentals of database design.",
+            "video": "https://www.youtube.com/watch?v=ztHopE5Wnpc"
+          },
+          {
+            "id": 2,
+            "title": "Entities and Relationships",
+            "description": "Learn how entities and relationships are represented.",
+            "video": "https://www.youtube.com/watch?v=ztHopE5Wnpc"
+          },
+          {
+            "id": 3,
+            "title": "Normalization",
+            "description": "Learn how normalization improves database design.",
+            "video": "https://www.youtube.com/watch?v=ztHopE5Wnpc"
+          },
+          {
+            "id": 4,
+            "title": "Keys",
+            "description": "Understand primary keys and foreign keys.",
+            "video": "https://www.youtube.com/watch?v=ztHopE5Wnpc"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Cloud Computing",
+    "description": "Understand cloud computing concepts and learn how modern applications and services are deployed and managed.",
+    "icon": "cloud",
+    "subcategories": [
+      {
+        "id": 501,
+        "name": "AWS",
+        "description": "Learn Amazon Web Services fundamentals including compute, storage, databases and commonly used AWS services.",
+        "level": "Beginner",
+        "duration": "6 Hours",
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Introduction to AWS",
+            "description": "Understand cloud computing and Amazon Web Services.",
+            "video": "https://www.youtube.com/watch?v=ulprqHHWlng"
+          },
+          {
+            "id": 2,
+            "title": "AWS Compute",
+            "description": "Learn the fundamentals of cloud computing services.",
+            "video": "https://www.youtube.com/watch?v=ulprqHHWlng"
+          },
+          {
+            "id": 3,
+            "title": "AWS Storage",
+            "description": "Understand cloud storage concepts.",
+            "video": "https://www.youtube.com/watch?v=ulprqHHWlng"
+          },
+          {
+            "id": 4,
+            "title": "AWS Databases",
+            "description": "Learn the basics of cloud databases.",
+            "video": "https://www.youtube.com/watch?v=ulprqHHWlng"
+          }
+        ]
+      },
+      {
+        "id": 502,
+        "name": "Microsoft Azure",
+        "description": "Learn Azure cloud services, virtual machines, storage, networking and application deployment.",
+        "level": "Beginner",
+        "duration": "5 Hours",
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Introduction to Azure",
+            "description": "Understand Microsoft Azure and cloud computing.",
+            "video": "https://www.youtube.com/watch?v=5abffC-K40c"
+          },
+          {
+            "id": 2,
+            "title": "Azure Virtual Machines",
+            "description": "Learn the basics of virtual machines in Azure.",
+            "video": "https://www.youtube.com/watch?v=5abffC-K40c"
+          },
+          {
+            "id": 3,
+            "title": "Azure Storage",
+            "description": "Understand storage services in Azure.",
+            "video": "https://www.youtube.com/watch?v=5abffC-K40c"
+          },
+          {
+            "id": 4,
+            "title": "Azure Deployment",
+            "description": "Learn the basics of deploying applications to Azure.",
+            "video": "https://www.youtube.com/watch?v=5abffC-K40c"
+          }
+        ]
+      },
+      {
+        "id": 503,
+        "name": "Google Cloud",
+        "description": "Understand Google Cloud Platform and learn compute, storage, databases and networking.",
+        "level": "Beginner",
+        "duration": "5 Hours",
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Introduction to Google Cloud",
+            "description": "Understand Google Cloud Platform.",
+            "video": "https://www.youtube.com/watch?v=JPnoqGsY8a8"
+          },
+          {
+            "id": 2,
+            "title": "Google Cloud Compute",
+            "description": "Learn the fundamentals of cloud compute services.",
+            "video": "https://www.youtube.com/watch?v=JPnoqGsY8a8"
+          },
+          {
+            "id": 3,
+            "title": "Cloud Storage",
+            "description": "Understand Google Cloud storage services.",
+            "video": "https://www.youtube.com/watch?v=JPnoqGsY8a8"
+          },
+          {
+            "id": 4,
+            "title": "Cloud Databases",
+            "description": "Learn the basics of cloud database services.",
+            "video": "https://www.youtube.com/watch?v=JPnoqGsY8a8"
+          }
+        ]
+      },
+      {
+        "id": 504,
+        "name": "Cloud Fundamentals",
+        "description": "Learn cloud models, service models, virtualization, scalability and cloud architecture.",
+        "level": "Beginner",
+        "duration": "4 Hours",
+        "lessons": [
+          {
+            "id": 1,
+            "title": "What is Cloud Computing?",
+            "description": "Understand the fundamentals of cloud computing.",
+            "video": "https://www.youtube.com/watch?v=M988_fsOSWo"
+          },
+          {
+            "id": 2,
+            "title": "Cloud Service Models",
+            "description": "Learn IaaS, PaaS and SaaS.",
+            "video": "https://www.youtube.com/watch?v=M988_fsOSWo"
+          },
+          {
+            "id": 3,
+            "title": "Virtualization",
+            "description": "Understand virtualization in cloud computing.",
+            "video": "https://www.youtube.com/watch?v=M988_fsOSWo"
+          },
+          {
+            "id": 4,
+            "title": "Cloud Architecture",
+            "description": "Learn the basic architecture of cloud systems.",
+            "video": "https://www.youtube.com/watch?v=M988_fsOSWo"
+          }
+        ]
+      },
+      {
+        "id": 505,
+        "name": "DevOps",
+        "description": "Learn development and operations practices including CI/CD, automation, version control and deployment.",
+        "level": "Intermediate",
+        "duration": "6 Hours",
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Introduction to DevOps",
+            "description": "Understand DevOps and its importance in software development.",
+            "video": "https://www.youtube.com/watch?v=0yWAtQ6wYNM"
+          },
+          {
+            "id": 2,
+            "title": "Version Control",
+            "description": "Understand Git and version control concepts.",
+            "video": "https://www.youtube.com/watch?v=0yWAtQ6wYNM"
+          },
+          {
+            "id": 3,
+            "title": "Continuous Integration",
+            "description": "Learn the basics of continuous integration.",
+            "video": "https://www.youtube.com/watch?v=0yWAtQ6wYNM"
+          },
+          {
+            "id": 4,
+            "title": "Continuous Deployment",
+            "description": "Understand automated application deployment.",
+            "video": "https://www.youtube.com/watch?v=0yWAtQ6wYNM"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Soft Skills",
+    "description": "Develop communication, leadership, teamwork, presentation and interview skills needed for academic and professional success.",
+    "icon": "users",
+    "subcategories": [
+      {
+        "id": 601,
+        "name": "Communication",
+        "description": "Improve verbal and written communication skills and communicate clearly and confidently.",
+        "level": "Beginner",
+        "duration": "3 Hours",
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Effective Communication",
+            "description": "Understand the fundamentals of effective communication.",
+            "video": "https://www.youtube.com/watch?v=HAnw168huqA"
+          },
+          {
+            "id": 2,
+            "title": "Verbal Communication",
+            "description": "Learn how to communicate clearly through speech.",
+            "video": "https://www.youtube.com/watch?v=HAnw168huqA"
+          },
+          {
+            "id": 3,
+            "title": "Written Communication",
+            "description": "Improve professional written communication.",
+            "video": "https://www.youtube.com/watch?v=HAnw168huqA"
+          }
+        ]
+      },
+      {
+        "id": 602,
+        "name": "Presentation Skills",
+        "description": "Learn how to prepare and deliver engaging presentations with confidence.",
+        "level": "Beginner",
+        "duration": "3 Hours",
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Introduction to Presentations",
+            "description": "Understand the fundamentals of effective presentations.",
+            "video": "https://www.youtube.com/watch?v=MnIPpUiTcRc"
+          },
+          {
+            "id": 2,
+            "title": "Presentation Structure",
+            "description": "Learn how to organize presentation content.",
+            "video": "https://www.youtube.com/watch?v=MnIPpUiTcRc"
+          },
+          {
+            "id": 3,
+            "title": "Public Speaking",
+            "description": "Improve confidence and public speaking skills.",
+            "video": "https://www.youtube.com/watch?v=MnIPpUiTcRc"
+          }
+        ]
+      },
+      {
+        "id": 603,
+        "name": "Leadership",
+        "description": "Develop leadership skills including decision-making, motivation, communication and team management.",
+        "level": "Intermediate",
+        "duration": "3 Hours",
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Introduction to Leadership",
+            "description": "Understand the fundamentals of leadership.",
+            "video": "https://www.youtube.com/watch?v=4dEo9QJQJrA"
+          },
+          {
+            "id": 2,
+            "title": "Decision Making",
+            "description": "Learn effective decision-making techniques.",
+            "video": "https://www.youtube.com/watch?v=4dEo9QJQJrA"
+          },
+          {
+            "id": 3,
+            "title": "Team Leadership",
+            "description": "Learn how to motivate and guide teams.",
+            "video": "https://www.youtube.com/watch?v=4dEo9QJQJrA"
+          }
+        ]
+      },
+      {
+        "id": 604,
+        "name": "Teamwork",
+        "description": "Learn effective collaboration, conflict resolution and teamwork skills.",
+        "level": "Beginner",
+        "duration": "3 Hours",
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Introduction to Teamwork",
+            "description": "Understand the importance of teamwork.",
+            "video": "https://www.youtube.com/watch?v=ZsZ4Q6u2N5M"
+          },
+          {
+            "id": 2,
+            "title": "Team Collaboration",
+            "description": "Learn how to collaborate effectively with team members.",
+            "video": "https://www.youtube.com/watch?v=ZsZ4Q6u2N5M"
+          },
+          {
+            "id": 3,
+            "title": "Conflict Resolution",
+            "description": "Learn how to handle conflicts within teams.",
+            "video": "https://www.youtube.com/watch?v=ZsZ4Q6u2N5M"
+          }
+        ]
+      },
+      {
+        "id": 605,
+        "name": "Interview Skills",
+        "description": "Prepare for technical and HR interviews and learn how to communicate professionally.",
+        "level": "Beginner",
+        "duration": "3 Hours",
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Interview Preparation",
+            "description": "Learn how to prepare effectively for interviews.",
+            "video": "https://www.youtube.com/watch?v=HG68Ymazo18"
+          },
+          {
+            "id": 2,
+            "title": "Common Interview Questions",
+            "description": "Learn how to approach common interview questions.",
+            "video": "https://www.youtube.com/watch?v=HG68Ymazo18"
+          },
+          {
+            "id": 3,
+            "title": "Professional Communication",
+            "description": "Improve communication and confidence during interviews.",
+            "video": "https://www.youtube.com/watch?v=HG68Ymazo18"
+          }
+        ]
+      }
+    ]
+  }
+]

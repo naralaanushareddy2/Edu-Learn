@@ -1,0 +1,412 @@
+/* =====================================================
+   ADMIN TABS
+===================================================== */
+
+.admin-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.admin-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 13px 20px;
+
+  border: 1px solid #ddd;
+  border-radius: 9px;
+
+  background: white;
+
+  cursor: pointer;
+
+  font-weight: 600;
+}
+
+.admin-tab.active {
+  background: #222;
+  color: white;
+  border-color: #222;
+}
+
+
+/* =====================================================
+   USER MANAGEMENT
+===================================================== */
+
+.admin-users-section {
+  background: white;
+
+  border: 1px solid #e5e5e5;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+}
+
+.admin-section-header {
+  padding: 25px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-section-header h2 {
+  margin: 0 0 6px;
+}
+
+.admin-section-header p {
+  margin: 0;
+  color: #777;
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.admin-search {
+  margin: 0 25px 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  border: 1px solid #ddd;
+
+  border-radius: 8px;
+
+  padding: 0 14px;
+
+  max-width: 600px;
+}
+
+.admin-search svg {
+  color: #777;
+}
+
+.admin-search input {
+  width: 100%;
+
+  border: none;
+
+  outline: none;
+
+  padding: 13px 5px;
+
+  font-size: 14px;
+}
+
+
+/* =====================================================
+   USER TABLE
+===================================================== */
+
+.admin-users-table {
+  min-width: 1100px;
+}
+
+
+/* =====================================================
+   ROLE BADGES
+===================================================== */
+
+.role-badge {
+  display: inline-block;
+
+  padding: 5px 10px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.role-badge.admin {
+  background: #f1e8ff;
+  color: #6c2bd9;
+}
+
+.role-badge.student {
+  background: #e7f7f0;
+  color: #16845c;
+}
+
+
+/* =====================================================
+   USER STATUS
+===================================================== */
+
+.user-status {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+.user-status.active {
+  color: #16845c;
+}
+
+.user-status.locked {
+  color: #c62828;
+}
+
+
+/* =====================================================
+   USER ACTIONS
+===================================================== */
+
+.user-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+.user-action {
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  border: 1px solid #ddd;
+
+  background: white;
+
+  cursor: pointer;
+
+  font-size: 16px;
+}
+
+.user-action.edit:hover {
+  background: #f1f1f1;
+}
+
+.user-action.lock:hover {
+  background: #fff4e5;
+}
+
+.user-action.delete:hover {
+  background: #ffe9e9;
+}
+
+
+/* =====================================================
+   EDIT MODAL
+===================================================== */
+
+.admin-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  z-index: 9999;
+
+  padding: 20px;
+}
+
+.admin-edit-modal {
+  width: 100%;
+
+  max-width: 650px;
+
+  background: white;
+
+  border-radius: 14px;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+
+  max-height: 90vh;
+
+  overflow-y: auto;
+}
+
+.admin-modal-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 22px 25px;
+
+  border-bottom: 1px solid #eee;
+}
+
+.admin-modal-header h2 {
+  margin: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.admin-modal-header p {
+  margin: 5px 0 0;
+
+  color: #777;
+
+  font-size: 13px;
+}
+
+.admin-modal-header > button {
+  border: none;
+
+  background: transparent;
+
+  font-size: 22px;
+
+  cursor: pointer;
+
+  color: #777;
+}
+
+
+/* =====================================================
+   EDIT FORM
+===================================================== */
+
+.admin-edit-form {
+  padding: 25px;
+}
+
+.admin-form-group {
+  margin-bottom: 18px;
+}
+
+.admin-form-group label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+.admin-form-group input,
+.admin-form-group select {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 12px;
+
+  border: 1px solid #ddd;
+
+  border-radius: 7px;
+
+  outline: none;
+
+  font-size: 14px;
+}
+
+.admin-form-group input:focus,
+.admin-form-group select:focus {
+  border-color: #555;
+}
+
+.admin-form-row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 15px;
+}
+
+
+/* =====================================================
+   MODAL BUTTONS
+===================================================== */
+
+.admin-modal-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  margin-top: 25px;
+}
+
+.admin-cancel-btn,
+.admin-save-btn {
+  padding: 11px 18px;
+
+  border-radius: 7px;
+
+  border: none;
+
+  cursor: pointer;
+
+  font-weight: 600;
+}
+
+.admin-cancel-btn {
+  background: #eee;
+}
+
+.admin-save-btn {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  background: #222;
+
+  color: white;
+}
+
+.admin-learning-page {
+  min-height: 100vh;
+  padding: 40px;
+  padding-bottom: 120px;
+  background: #f7f8fa;
+}
+@media (max-width: 600px) {
+
+  .admin-learning-page {
+    padding: 20px;
+    padding-bottom: 180px;
+  }
+
+  .admin-learning-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .learning-stats {
+    grid-template-columns: 1fr;
+  }
+
+}

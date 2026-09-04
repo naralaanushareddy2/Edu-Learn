@@ -1,0 +1,165 @@
+.instructors-page {
+  min-height: 100vh;
+  background: #f7f9fd;
+}
+
+
+/* ================= HEADER ================= */
+
+.instructors-header {
+  padding: 70px 8%;
+  text-align: center;
+  background: #ffffff;
+}
+
+.instructors-header p {
+  color: #2448b8;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.instructors-header h1 {
+  margin: 10px 0 15px;
+  color: #172033;
+  font-size: 40px;
+}
+
+.instructors-header span {
+  color: #6b7280;
+}
+
+
+/* ================= SECTION ================= */
+
+.instructors-section {
+  padding: 60px 7%;
+}
+
+.instructors-section h2 {
+  text-align: center;
+  color: #172033;
+  margin-bottom: 40px;
+}
+
+
+/* ================= GRID ================= */
+
+.instructor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+
+/* ================= CARD ================= */
+
+.instructor-card {
+  padding: 35px;
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e8ef;
+
+  border-radius: 12px;
+
+  transition: 0.3s;
+}
+
+.instructor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ================= ICON ================= */
+
+.instructor-icon {
+  width: 75px;
+  height: 75px;
+
+  margin: 0 auto 20px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e8f8f0;
+  color: #16a568;
+}
+
+.instructor-icon svg {
+  font-size: 32px;
+}
+
+
+/* ================= CONTENT ================= */
+
+.instructor-card h3 {
+  color: #172033;
+  margin-bottom: 8px;
+}
+
+.instructor-role {
+  color: #2448b8;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.instructor-card > p:not(.instructor-role) {
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 15px 0;
+}
+
+
+/* ================= LINK ================= */
+
+.instructor-card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #2448b8;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* ================= BOTTOM ================= */
+
+.instructors-bottom {
+  text-align: center;
+  padding: 20px;
+}
+
+.instructors-bottom a {
+  color: #2448b8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+  .instructor-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .instructor-grid {
+    grid-template-columns: 1fr;
+  }
+
+}

@@ -1,0 +1,183 @@
+.learning-page {
+  min-height: 100vh;
+  background: #f7f9fd;
+}
+
+
+/* ================= HEADER ================= */
+
+.learning-header {
+  padding: 70px 8%;
+  text-align: center;
+  background: #ffffff;
+}
+
+.learning-header p {
+  color: #2448b8;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.learning-header h1 {
+  margin: 10px 0 15px;
+  color: #172033;
+  font-size: 40px;
+}
+
+.learning-header span {
+  color: #6b7280;
+}
+
+
+/* ================= STATISTICS ================= */
+
+.learning-stats {
+  padding: 50px 7%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+
+.learning-stat-card {
+  background: #ffffff;
+
+  padding: 25px;
+
+  border-radius: 12px;
+
+  border: 1px solid #e5e8ef;
+
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+}
+
+
+.learning-stat-card > svg {
+  font-size: 30px;
+  color: #2448b8;
+}
+
+
+.learning-stat-card h3 {
+  margin: 0 0 5px;
+  color: #172033;
+  font-size: 25px;
+}
+
+
+.learning-stat-card p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+
+/* ================= CONTINUE LEARNING ================= */
+
+.continue-learning {
+  padding: 20px 7% 60px;
+}
+
+.continue-learning h2 {
+  text-align: center;
+  color: #172033;
+  margin-bottom: 30px;
+}
+
+
+/* ================= EMPTY STATE ================= */
+
+.learning-empty {
+  max-width: 700px;
+
+  margin: auto;
+
+  padding: 50px 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e8ef;
+
+  border-radius: 12px;
+
+  text-align: center;
+}
+
+
+.learning-empty > svg {
+  font-size: 45px;
+  color: #2448b8;
+  margin-bottom: 15px;
+}
+
+
+.learning-empty h3 {
+  color: #172033;
+}
+
+
+.learning-empty p {
+  color: #6b7280;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+
+.learning-empty a {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-top: 15px;
+
+  padding: 12px 20px;
+
+  background: #2448b8;
+
+  color: white;
+
+  text-decoration: none;
+
+  border-radius: 6px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+/* ================= BOTTOM ================= */
+
+.learning-bottom {
+  text-align: center;
+  padding: 20px;
+}
+
+.learning-bottom a {
+  color: #2448b8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 700px) {
+
+  .learning-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .learning-header h1 {
+    font-size: 32px;
+  }
+
+}

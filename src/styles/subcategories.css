@@ -1,0 +1,362 @@
+/* ================================
+   SUBCATEGORIES PAGE
+================================ */
+
+.subcategories-page {
+  min-height: 100vh;
+  padding: 40px 6%;
+  padding-bottom: 120px;
+  background: #f8fafc;
+  box-sizing: border-box;
+}
+
+
+/* ================================
+   BACK BUTTON
+================================ */
+
+.back-category-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 18px;
+
+  background: #ffffff;
+  color: #1e293b;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.back-category-btn svg {
+  font-size: 18px;
+}
+
+.back-category-btn:hover {
+  background: #1e293b;
+  color: #ffffff;
+  transform: translateX(-3px);
+}
+
+
+/* ================================
+   PAGE HEADER
+================================ */
+
+.subcategory-page-header {
+  max-width: 800px;
+  margin: 50px auto 60px;
+  text-align: center;
+}
+
+.subcategory-page-header p {
+  margin-bottom: 12px;
+
+  color: #2563eb;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.subcategory-page-header h1 {
+  margin: 0 0 18px;
+
+  color: #0f172a;
+
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.subcategory-page-header span {
+  display: block;
+
+  color: #64748b;
+
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+
+/* ================================
+   SUBCATEGORY SECTION
+================================ */
+
+.subcategory-page-section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.subcategory-page-section > h2 {
+  margin-bottom: 8px;
+
+  color: #0f172a;
+
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.subcategory-page-section > p {
+  margin-bottom: 30px;
+
+  color: #64748b;
+
+  font-size: 15px;
+}
+
+
+/* ================================
+   SUBCATEGORY GRID
+================================ */
+
+.subcategory-page-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 24px;
+}
+
+
+/* ================================
+   SUBCATEGORY CARD
+================================ */
+
+.subcategory-page-card {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  min-height: 150px;
+
+  padding: 24px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+
+  text-decoration: none;
+
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05);
+
+  transition: all 0.3s ease;
+
+  box-sizing: border-box;
+}
+
+.subcategory-page-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #2563eb;
+
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.10);
+}
+
+
+/* ================================
+   ICON
+================================ */
+
+.subcategory-page-icon {
+  flex-shrink: 0;
+
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  border-radius: 12px;
+
+  font-size: 25px;
+}
+
+
+/* ================================
+   CONTENT
+================================ */
+
+.subcategory-page-content {
+  flex: 1;
+}
+
+.subcategory-page-content h3 {
+  margin: 0 0 8px;
+
+  color: #0f172a;
+
+  font-size: 18px;
+  font-weight: 650;
+}
+
+.subcategory-page-content p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* ================================
+   ARROW
+================================ */
+
+.subcategory-page-card > svg {
+  flex-shrink: 0;
+
+  color: #94a3b8;
+
+  font-size: 20px;
+
+  transition: all 0.3s ease;
+}
+
+.subcategory-page-card:hover > svg {
+  color: #2563eb;
+  transform: translateX(5px);
+}
+
+
+/* ================================
+   NOT FOUND
+================================ */
+
+.subcategory-not-found {
+  min-height: 70vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.subcategory-not-found h2 {
+  margin-bottom: 20px;
+
+  color: #0f172a;
+
+  font-size: 28px;
+}
+
+.subcategory-not-found a {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 10px 18px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  font-weight: 600;
+}
+
+.subcategory-not-found a:hover {
+  background: #1d4ed8;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 992px) {
+
+  .subcategory-page-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .subcategory-page-header h1 {
+    font-size: 36px;
+  }
+
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 650px) {
+
+  .subcategories-page {
+    padding: 30px 20px;
+    padding-bottom: 110px;
+  }
+
+  .subcategory-page-header {
+    margin: 40px auto;
+  }
+
+  .subcategory-page-header h1 {
+    font-size: 30px;
+  }
+
+  .subcategory-page-header span {
+    font-size: 15px;
+  }
+
+  .subcategory-page-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .subcategory-page-card {
+    padding: 20px;
+  }
+
+  .subcategory-page-section > h2 {
+    font-size: 24px;
+  }
+
+}
+
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 400px) {
+
+  .subcategory-page-card {
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .subcategory-page-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 21px;
+  }
+
+  .subcategory-page-content h3 {
+    font-size: 16px;
+  }
+
+  .subcategory-page-content p {
+    font-size: 13px;
+  }
+
+}
