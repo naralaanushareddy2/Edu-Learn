@@ -1,17 +1,207 @@
 {
-"users": [
-  
-],
-
-"courses": [],
-
-"enrollments": [
-   
-],
-
-"certificates": [],
-
-"wishlist": [
-   
-]
+  "users": [
+    {
+      "name": "Anusha Narala",
+      "email": "anusha@gmail.com",
+      "password": "Anusha@123",
+      "dob": "2005-01-12",
+      "gender": "Female",
+      "country": "Andhra Pradesh",
+      "role": "student",
+      "profileImage": "",
+      "id": "tTYKbrH4ZkI",
+      "locked": false
+    },
+    {
+      "name": "Narii",
+      "email": "nari@gmail.com",
+      "password": "Nari@123",
+      "dob": "2026-09-04",
+      "gender": "Male",
+      "country": "Andhra Pradesh",
+      "role": "admin",
+      "profileImage": "",
+      "id": "6CftA1gliGY"
+    },
+    {
+      "name": "Narendra",
+      "email": "narendra@gmail.com",
+      "password": "Narendra@123",
+      "dob": "2026-09-04",
+      "gender": "Male",
+      "country": "Andhra Pradesh",
+      "role": "admin",
+      "profileImage": "",
+      "id": "EurLZk0WPfQ"
+    }
+  ],
+  "courses": [],
+  "enrollments": [
+    {
+      "userId": "tTYKbrH4ZkI",
+      "userName": "Anusha",
+      "courseId": 101,
+      "courseName": "HTML",
+      "categoryId": 1,
+      "categoryName": "Web Development",
+      "completedLessons": [],
+      "progress": 0,
+      "completed": false,
+      "certificateIssued": false,
+      "enrolledAt": "2026-09-04T17:23:19.795Z",
+      "completedAt": null,
+      "id": "3_nCHnIi4hY"
+    },
+    {
+      "userId": "tTYKbrH4ZkI",
+      "userName": "Anusha",
+      "courseId": 106,
+      "courseName": "Express.js",
+      "categoryId": 1,
+      "categoryName": "Web Development",
+      "completedLessons": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "progress": 100,
+      "completed": true,
+      "certificateIssued": true,
+      "enrolledAt": "2026-09-04T17:23:31.405Z",
+      "completedAt": "2026-09-04T17:24:28.476Z",
+      "id": "CZzWONwrZ6U"
+    },
+    {
+      "userId": null,
+      "userName": "Anusha",
+      "courseId": 302,
+      "courseName": "NumPy",
+      "categoryId": 3,
+      "categoryName": "Data Science",
+      "completedLessons": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "progress": 100,
+      "completed": true,
+      "certificateIssued": true,
+      "enrolledAt": "2026-09-04T17:29:52.901Z",
+      "completedAt": "2026-09-04T17:30:14.254Z",
+      "id": "1AIi6L9sPB8"
+    },
+    {
+      "userId": "tTYKbrH4ZkI",
+      "userName": "Anusha Narala",
+      "courseId": 103,
+      "courseName": "JavaScript",
+      "categoryId": 1,
+      "categoryName": "Web Development",
+      "completedLessons": [],
+      "progress": 0,
+      "completed": false,
+      "certificateIssued": false,
+      "enrolledAt": "2026-09-04T17:52:12.312Z",
+      "completedAt": null,
+      "id": "prrhIMqUHd4"
+    },
+    {
+      "userId": "tTYKbrH4ZkI",
+      "userName": "Anusha Narala",
+      "courseId": 107,
+      "courseName": "Full Stack Development",
+      "categoryId": 1,
+      "categoryName": "Web Development",
+      "completedLessons": [],
+      "progress": 0,
+      "completed": false,
+      "certificateIssued": false,
+      "enrolledAt": "2026-09-04T17:52:22.878Z",
+      "completedAt": null,
+      "id": "p-8KS4e3LK4"
+    },
+    {
+      "userId": "tTYKbrH4ZkI",
+      "userName": "Anusha Narala",
+      "courseId": 402,
+      "courseName": "MySQL",
+      "categoryId": 4,
+      "categoryName": "Database",
+      "completedLessons": [],
+      "progress": 0,
+      "completed": false,
+      "certificateIssued": false,
+      "enrolledAt": "2026-09-04T17:52:40.524Z",
+      "completedAt": null,
+      "id": "ILKeiOmzcZY"
+    },
+    {
+      "userId": "tTYKbrH4ZkI",
+      "userName": "Anusha Narala",
+      "courseId": 401,
+      "courseName": "SQL",
+      "categoryId": 4,
+      "categoryName": "Database",
+      "completedLessons": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "progress": 100,
+      "completed": true,
+      "certificateIssued": true,
+      "enrolledAt": "2026-09-05T05:57:12.244Z",
+      "completedAt": "2026-09-05T05:57:24.037Z",
+      "id": "O9cdcANWqV0"
+    }
+  ],
+  "certificates": [],
+  "wishlist": [
+    {
+      "userId": "tTYKbrH4ZkI",
+      "userName": "Anusha",
+      "courseId": 106,
+      "courseName": "Express.js",
+      "categoryId": 1,
+      "categoryName": "Web Development",
+      "addedAt": "2026-09-04T17:23:34.394Z",
+      "id": "84X0KuWJT5I"
+    },
+    {
+      "userId": null,
+      "userName": "Anusha",
+      "courseId": 302,
+      "courseName": "NumPy",
+      "categoryId": 3,
+      "categoryName": "Data Science",
+      "addedAt": "2026-09-04T17:30:23.366Z",
+      "id": "ZZYCHLcG4HM"
+    },
+    {
+      "userId": "tTYKbrH4ZkI",
+      "userName": "Anusha Narala",
+      "courseId": 107,
+      "courseName": "Full Stack Development",
+      "categoryId": 1,
+      "categoryName": "Web Development",
+      "addedAt": "2026-09-04T17:52:26.003Z",
+      "id": "n4d-cB7eZ1Y"
+    },
+    {
+      "userId": "tTYKbrH4ZkI",
+      "userName": "Anusha Narala",
+      "courseId": 403,
+      "courseName": "MongoDB",
+      "categoryId": 4,
+      "categoryName": "Database",
+      "addedAt": "2026-09-04T17:52:50.244Z",
+      "id": "0Fr1_ljqToA"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

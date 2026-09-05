@@ -22,6 +22,7 @@ import {
 } from "react-icons/fi";
 
 import "../styles/certificate.css";
+import { useSelector } from "react-redux";
 
 const API_URL =
   "http://localhost:5000";
@@ -40,13 +41,10 @@ const Certificate = () => {
   const certificateRef =
     useRef(null);
 
-
-  const loggedInUser =
-    JSON.parse(
-      localStorage.getItem(
-        "loggedInUser"
-      )
-    );
+const loggedInUser = useSelector(
+  (state) => state.auth.user
+);
+  
 
 
   // =====================================================
