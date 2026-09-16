@@ -18,7 +18,8 @@ import {
   FiTrash2,
   FiAward,
   FiClock,
-  FiCheckCircle
+  FiCheckCircle,
+  FiTrendingUp
 } from "react-icons/fi";
 
 import "../styles/my-learning.css";
@@ -386,63 +387,63 @@ const MyLearning = () => {
 
         <section className="learning-summary">
 
-          <div>
-
-            <strong>
-              {courses.length}
-            </strong>
-
-            <span>
-              Enrolled Courses
-            </span>
-
+          <div className="summary-card">
+            <div className="summary-card-icon enrolled-icon">
+              <FiBookOpen />
+            </div>
+            <div className="summary-card-info">
+              <p className="summary-value">
+                {courses.length}
+              </p>
+              <p className="summary-label">
+                Enrolled Courses
+              </p>
+            </div>
           </div>
 
-
-          <div>
-
-            <strong>
-
-              {
-                courses.filter(
-                  (course) =>
-                    course.progress === 100
-                ).length
-              }
-
-            </strong>
-
-            <span>
-              Completed
-            </span>
-
+          <div className="summary-card">
+            <div className="summary-card-icon completed-icon">
+              <FiCheckCircle />
+            </div>
+            <div className="summary-card-info">
+              <p className="summary-value">
+                {
+                  courses.filter(
+                    (course) =>
+                      course.progress === 100
+                  ).length
+                }
+              </p>
+              <p className="summary-label">
+                Completed
+              </p>
+            </div>
           </div>
 
-
-          <div>
-
-            <strong>
-
-              {
-                Math.round(
-                  courses.reduce(
-                    (sum, course) =>
-                      sum +
-                      Number(
-                        course.progress || 0
-                      ),
-                    0
-                  ) /
-                  courses.length
-                )
-              }%
-
-            </strong>
-
-            <span>
-              Average Progress
-            </span>
-
+          <div className="summary-card">
+            <div className="summary-card-icon progress-icon">
+              <FiTrendingUp />
+            </div>
+            <div className="summary-card-info">
+              <p className="summary-value">
+                {
+                  Math.round(
+                    courses.reduce(
+                      (sum, course) =>
+                        sum +
+                        Number(
+                          course.progress || 0
+                        ),
+                      0
+                    ) /
+                    courses.length
+                  )
+                }%
+              </p>
+              <p className="summary-label">
+                Average Progress
+              </p>
+            </div>
           </div>
 
         </section>

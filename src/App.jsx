@@ -1,13 +1,12 @@
-import React from 'react'
 import Allroutes from '../Allroutes'
+import { ThemeProvider } from './context/ThemeContext'
 import './styles/modern-overrides.css'
 
 const App = () => {
   return (
-    <div>
-      
-      <Allroutes/>
-    </div>
+    <ThemeProvider>
+      <Allroutes />
+    </ThemeProvider>
   )
 }
 

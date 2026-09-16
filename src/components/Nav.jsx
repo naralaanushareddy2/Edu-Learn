@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { useTheme } from "../context/ThemeContext";
 
 import "../styles/nav.css";
 import logo from "../assets/logo.png";
@@ -14,10 +15,12 @@ import {
   FiUpload,
   FiTrash2,
   FiLogIn,
-  FiLogOut
+  FiSun,
+  FiMoon
 } from "react-icons/fi";
 
 const Nav = () => {
+  const { theme, toggleTheme, isDark } = useTheme();
 
   // =====================================================
   // GET USER FROM REDUX
@@ -113,11 +116,11 @@ const Nav = () => {
 
         <section className="logo">
 
-          <Link to="/">
+          <Link to="/" className="logo-link" aria-label="EduLearn home">
 
             <img
               src={logo}
-              alt="EduLearn Logo"
+              alt="EduLearn"
             />
 
           </Link>
@@ -148,6 +151,21 @@ const Nav = () => {
         {/* USER ACTIONS */}
 
         <section className="user-actions">
+
+          {/* THEME TOGGLE (DARK / LIGHT) */}
+          <button
+            type="button"
+            className="action-icon theme-toggle-btn"
+            onClick={toggleTheme}
+            title={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
+            aria-label={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
+          >
+            {isDark ? (
+              <FiSun className="theme-toggle-icon sun-icon" />
+            ) : (
+              <FiMoon className="theme-toggle-icon moon-icon" />
+            )}
+          </button>
 
           {/* WISHLIST */}
 
@@ -369,6 +387,20 @@ const Nav = () => {
                     </span>
 
                   </Link>
+
+                  {/* THEME TOGGLE */}
+                  <button
+                    type="button"
+                    className="profile-option theme-profile-option"
+                    onClick={() => {
+                      toggleTheme();
+                    }}
+                  >
+                    {isDark ? <FiSun /> : <FiMoon />}
+                    <span>
+                      {isDark ? "Light Mode" : "Dark Mode"}
+                    </span>
+                  </button>
 
                 </div>
 

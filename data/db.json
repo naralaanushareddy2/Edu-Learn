@@ -13,7 +13,7 @@
       "locked": false
     },
     {
-      "name": "Narii",
+      "name": "Narii Reddy",
       "email": "nari@gmail.com",
       "password": "Nari@123",
       "dob": "2026-09-04",
@@ -33,6 +33,17 @@
       "role": "admin",
       "profileImage": "",
       "id": "EurLZk0WPfQ"
+    },
+    {
+      "name": "Seeta",
+      "email": "seeta@gmail.com",
+      "password": "Seeta@123",
+      "dob": "2026-09-06",
+      "gender": "Female",
+      "country": "Andhra Pradesh",
+      "role": "student",
+      "profileImage": "",
+      "id": "8VUWlON60WQ"
     }
   ],
   "courses": [],
@@ -44,12 +55,20 @@
       "courseName": "HTML",
       "categoryId": 1,
       "categoryName": "Web Development",
-      "completedLessons": [],
-      "progress": 0,
-      "completed": false,
-      "certificateIssued": false,
+      "completedLessons": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "progress": 100,
+      "completed": true,
+      "certificateIssued": true,
       "enrolledAt": "2026-09-04T17:23:19.795Z",
-      "completedAt": null,
+      "completedAt": "2026-09-08T06:30:14.738Z",
       "id": "3_nCHnIi4hY"
     },
     {
@@ -158,6 +177,96 @@
       "enrolledAt": "2026-09-05T05:57:12.244Z",
       "completedAt": "2026-09-05T05:57:24.037Z",
       "id": "O9cdcANWqV0"
+    },
+    {
+      "userId": "tTYKbrH4ZkI",
+      "userName": "Anusha Narala",
+      "courseId": 403,
+      "courseName": "MongoDB",
+      "categoryId": 4,
+      "categoryName": "Database",
+      "completedLessons": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "progress": 100,
+      "completed": true,
+      "certificateIssued": true,
+      "enrolledAt": "2026-09-05T06:18:52.975Z",
+      "completedAt": "2026-09-05T06:19:06.205Z",
+      "id": "9boi_vsLSP8"
+    },
+    {
+      "userId": "8VUWlON60WQ",
+      "userName": "Seeta",
+      "courseId": 204,
+      "courseName": "Python",
+      "categoryId": 2,
+      "categoryName": "Programming",
+      "completedLessons": [],
+      "progress": 0,
+      "completed": false,
+      "certificateIssued": false,
+      "enrolledAt": "2026-09-06T04:58:55.970Z",
+      "completedAt": null,
+      "id": "j2-yKHOAWbI"
+    },
+    {
+      "userId": "tTYKbrH4ZkI",
+      "userName": "Anusha Narala",
+      "courseId": 602,
+      "courseName": "Presentation Skills",
+      "categoryId": 6,
+      "categoryName": "Soft Skills",
+      "completedLessons": [
+        1,
+        2,
+        3
+      ],
+      "progress": 100,
+      "completed": true,
+      "certificateIssued": true,
+      "enrolledAt": "2026-09-08T06:30:43.891Z",
+      "completedAt": "2026-09-08T06:30:52.172Z",
+      "id": "oDZcNv9kyhg"
+    },
+    {
+      "userId": "tTYKbrH4ZkI",
+      "userName": "Anusha Narala",
+      "courseId": 205,
+      "courseName": "JavaScript",
+      "categoryId": 2,
+      "categoryName": "Programming",
+      "completedLessons": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "progress": 100,
+      "completed": true,
+      "certificateIssued": true,
+      "enrolledAt": "2026-09-09T03:55:57.804Z",
+      "completedAt": "2026-09-09T03:56:15.527Z",
+      "id": "bXlPJAgPSyQ"
+    },
+    {
+      "userId": "EurLZk0WPfQ",
+      "userName": "Narendra",
+      "courseId": 202,
+      "courseName": "C++",
+      "categoryId": 2,
+      "categoryName": "Programming",
+      "completedLessons": [],
+      "progress": 0,
+      "completed": false,
+      "certificateIssued": false,
+      "enrolledAt": "2026-09-16T02:22:02.974Z",
+      "completedAt": null,
+      "id": "6iRcqrc3L_s"
     }
   ],
   "certificates": [],
@@ -201,6 +310,46 @@
       "categoryName": "Database",
       "addedAt": "2026-09-04T17:52:50.244Z",
       "id": "0Fr1_ljqToA"
+    },
+    {
+      "userId": "8VUWlON60WQ",
+      "userName": "Seeta",
+      "courseId": 204,
+      "courseName": "Python",
+      "categoryId": 2,
+      "categoryName": "Programming",
+      "addedAt": "2026-09-06T04:58:59.641Z",
+      "id": "dO1lSpdxIFc"
+    },
+    {
+      "userId": "tTYKbrH4ZkI",
+      "userName": "Anusha Narala",
+      "courseId": 205,
+      "courseName": "JavaScript",
+      "categoryId": 2,
+      "categoryName": "Programming",
+      "addedAt": "2026-09-09T03:56:00.847Z",
+      "id": "zVVhaHD7eVo"
+    },
+    {
+      "userId": "tTYKbrH4ZkI",
+      "userName": "Anusha Narala",
+      "courseId": 101,
+      "courseName": "HTML",
+      "categoryId": 1,
+      "categoryName": "Web Development",
+      "addedAt": "2026-09-15T16:05:05.277Z",
+      "id": "8ySuV-OE-sQ"
+    },
+    {
+      "userId": "EurLZk0WPfQ",
+      "userName": "Narendra",
+      "courseId": 202,
+      "courseName": "C++",
+      "categoryId": 2,
+      "categoryName": "Programming",
+      "addedAt": "2026-09-16T02:22:08.666Z",
+      "id": "WHySCFP4w_0"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

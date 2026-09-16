@@ -98,28 +98,39 @@
 .logo {
     display: flex;
     align-items: center;
-
+    justify-content: flex-start;
     flex-shrink: 0;
+    height: 56px;
 }
 
-.logo a {
-    display: flex;
+.logo a,
+.logo-link {
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
+    height: 52px;
+    padding: 4px 8px;
+    text-decoration: none;
+    background: #ffffff;
+    border: 1px solid #e6ebf2;
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.logo a:hover,
+.logo-link:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(15, 39, 71, 0.08);
 }
 
 .logo img {
-    width: 155px;
-    height: auto;
-
+    height: 44px;
+    width: auto;
+    max-width: 168px;
     display: block;
-
     object-fit: contain;
-
-    transition: transform 0.25s ease;
-}
-
-.logo img:hover {
-    transform: scale(1.02);
+    object-position: center;
 }
 
 
@@ -628,7 +639,8 @@
     }
 
     .logo img {
-        width: 135px;
+        height: 40px;
+        max-width: 148px;
     }
 
     .search-box {
@@ -689,10 +701,19 @@
     .logo {
         grid-column: 1;
         grid-row: 1;
+        height: 48px;
+    }
+
+    .logo a,
+    .logo-link {
+        height: 44px;
+        padding: 3px 6px;
     }
 
     .logo img {
-        width: 125px;
+        height: 36px;
+        max-width: 132px;
+        width: auto;
     }
 
 
@@ -756,7 +777,9 @@
     }
 
     .logo img {
-        width: 115px;
+        height: 32px;
+        max-width: 118px;
+        width: auto;
     }
 
     .user-actions {

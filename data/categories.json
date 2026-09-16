@@ -16,43 +16,50 @@
             "id": 1,
             "title": "Introduction to HTML",
             "description": "Understand what HTML is and how it is used to create webpages.",
-            "video": "https://www.youtube.com/watch?v=dX8396ZmSPk"
+            "video": "https://www.youtube.com/watch?v=kUMe1FH4CHE",
+            "start": 0
           },
           {
             "id": 2,
             "title": "HTML Document Structure",
             "description": "Learn the basic structure of an HTML document including html, head and body elements.",
-            "video": "https://www.youtube.com/watch?v=dX8396ZmSPk"
+            "video": "https://www.youtube.com/watch?v=kUMe1FH4CHE&t=245s",
+            "start": 245
           },
           {
             "id": 3,
             "title": "Headings, Paragraphs and Text",
             "description": "Learn how to organize webpage content using headings, paragraphs and text elements.",
-            "video": "https://www.youtube.com/watch?v=dX8396ZmSPk"
+            "video": "https://www.youtube.com/watch?v=kUMe1FH4CHE&t=1140s",
+            "start": 1140
           },
           {
             "id": 4,
             "title": "Links and Images",
             "description": "Learn how to add hyperlinks and images to webpages.",
-            "video": "https://www.youtube.com/watch?v=dX8396ZmSPk"
+            "video": "https://www.youtube.com/watch?v=kUMe1FH4CHE&t=1820s",
+            "start": 1820
           },
           {
             "id": 5,
             "title": "Lists and Tables",
             "description": "Learn how to create ordered lists, unordered lists and tables.",
-            "video": "https://www.youtube.com/watch?v=dX8396ZmSPk"
+            "video": "https://www.youtube.com/watch?v=kUMe1FH4CHE&t=2700s",
+            "start": 2700
           },
           {
             "id": 6,
             "title": "HTML Forms",
             "description": "Learn how to create forms using input fields, labels and buttons.",
-            "video": "https://www.youtube.com/watch?v=dX8396ZmSPk"
+            "video": "https://www.youtube.com/watch?v=kUMe1FH4CHE&t=3600s",
+            "start": 3600
           },
           {
             "id": 7,
             "title": "Semantic HTML",
             "description": "Understand semantic elements such as header, nav, main, section, article and footer.",
-            "video": "https://www.youtube.com/watch?v=dX8396ZmSPk"
+            "video": "https://www.youtube.com/watch?v=kUMe1FH4CHE&t=4500s",
+            "start": 4500
           }
         ]
       },
@@ -67,43 +74,50 @@
             "id": 1,
             "title": "Introduction to CSS",
             "description": "Understand CSS and how it is used to style HTML webpages.",
-            "video": "https://www.youtube.com/watch?v=OXGznpKZ_sA"
+            "video": "https://www.youtube.com/watch?v=1Rs2ND1ryYc",
+            "start": 0
           },
           {
             "id": 2,
             "title": "CSS Selectors",
             "description": "Learn element, class, ID and attribute selectors.",
-            "video": "https://www.youtube.com/watch?v=OXGznpKZ_sA"
+            "video": "https://www.youtube.com/watch?v=1Rs2ND1ryYc&t=720s",
+            "start": 720
           },
           {
             "id": 3,
             "title": "Colors and Fonts",
             "description": "Learn how to customize colors, fonts and text appearance.",
-            "video": "https://www.youtube.com/watch?v=OXGznpKZ_sA"
+            "video": "https://www.youtube.com/watch?v=1Rs2ND1ryYc&t=1680s",
+            "start": 1680
           },
           {
             "id": 4,
             "title": "CSS Box Model",
             "description": "Understand content, padding, border and margin.",
-            "video": "https://www.youtube.com/watch?v=OXGznpKZ_sA"
+            "video": "https://www.youtube.com/watch?v=1Rs2ND1ryYc&t=2700s",
+            "start": 2700
           },
           {
             "id": 5,
             "title": "Flexbox",
             "description": "Learn how to create flexible layouts using CSS Flexbox.",
-            "video": "https://www.youtube.com/watch?v=OXGznpKZ_sA"
+            "video": "https://www.youtube.com/watch?v=1Rs2ND1ryYc&t=4200s",
+            "start": 4200
           },
           {
             "id": 6,
             "title": "CSS Grid",
             "description": "Learn how to create two-dimensional layouts using CSS Grid.",
-            "video": "https://www.youtube.com/watch?v=OXGznpKZ_sA"
+            "video": "https://www.youtube.com/watch?v=1Rs2ND1ryYc&t=7200s",
+            "start": 7200
           },
           {
             "id": 7,
             "title": "Responsive Web Design",
             "description": "Learn how to make websites responsive on mobile, tablet and desktop.",
-            "video": "https://www.youtube.com/watch?v=OXGznpKZ_sA"
+            "video": "https://www.youtube.com/watch?v=1Rs2ND1ryYc&t=10800s",
+            "start": 10800
           }
         ]
       },
@@ -118,49 +132,57 @@
             "id": 1,
             "title": "Introduction to JavaScript",
             "description": "Understand JavaScript and its role in modern web development.",
-            "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+            "video": "https://www.youtube.com/watch?v=W6NZfCO5SIk",
+            "start": 0
           },
           {
             "id": 2,
             "title": "Variables and Data Types",
             "description": "Learn variables, strings, numbers, booleans and other data types.",
-            "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+            "video": "https://www.youtube.com/watch?v=W6NZfCO5SIk&t=420s",
+            "start": 420
           },
           {
             "id": 3,
             "title": "Operators and Conditions",
             "description": "Learn operators, if statements and conditional programming.",
-            "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+            "video": "https://www.youtube.com/watch?v=W6NZfCO5SIk&t=900s",
+            "start": 900
           },
           {
             "id": 4,
             "title": "Loops",
             "description": "Learn for, while and do-while loops.",
-            "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+            "video": "https://www.youtube.com/watch?v=W6NZfCO5SIk&t=1380s",
+            "start": 1380
           },
           {
             "id": 5,
             "title": "Functions",
             "description": "Learn how to create reusable JavaScript functions.",
-            "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+            "video": "https://www.youtube.com/watch?v=W6NZfCO5SIk&t=1860s",
+            "start": 1860
           },
           {
             "id": 6,
             "title": "Arrays and Objects",
             "description": "Learn how to store and manage collections of data.",
-            "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+            "video": "https://www.youtube.com/watch?v=W6NZfCO5SIk&t=2460s",
+            "start": 2460
           },
           {
             "id": 7,
             "title": "DOM Manipulation",
             "description": "Learn how JavaScript interacts with HTML elements.",
-            "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+            "video": "https://www.youtube.com/watch?v=W6NZfCO5SIk&t=3120s",
+            "start": 3120
           },
           {
             "id": 8,
             "title": "JavaScript Events",
             "description": "Learn how to handle clicks, forms and other user interactions.",
-            "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+            "video": "https://www.youtube.com/watch?v=W6NZfCO5SIk&t=3720s",
+            "start": 3720
           }
         ]
       },
@@ -175,37 +197,43 @@
             "id": 1,
             "title": "Introduction to React",
             "description": "Understand React and why it is used to build modern interfaces.",
-            "video": "https://www.youtube.com/watch?v=SqcY0GlETPk"
+            "video": "https://www.youtube.com/watch?v=SqcY0GlETPk",
+            "start": 0
           },
           {
             "id": 2,
             "title": "React Components",
             "description": "Learn how to create reusable React components.",
-            "video": "https://www.youtube.com/watch?v=SqcY0GlETPk"
+            "video": "https://www.youtube.com/watch?v=SqcY0GlETPk&t=480s",
+            "start": 480
           },
           {
             "id": 3,
             "title": "JSX",
             "description": "Learn how JSX is used to write UI structures in React.",
-            "video": "https://www.youtube.com/watch?v=SqcY0GlETPk"
+            "video": "https://www.youtube.com/watch?v=SqcY0GlETPk&t=1080s",
+            "start": 1080
           },
           {
             "id": 4,
             "title": "Props and State",
             "description": "Understand how data and state are managed in React.",
-            "video": "https://www.youtube.com/watch?v=SqcY0GlETPk"
+            "video": "https://www.youtube.com/watch?v=SqcY0GlETPk&t=1680s",
+            "start": 1680
           },
           {
             "id": 5,
             "title": "React Hooks",
             "description": "Learn useState, useEffect and other important React hooks.",
-            "video": "https://www.youtube.com/watch?v=SqcY0GlETPk"
+            "video": "https://www.youtube.com/watch?v=SqcY0GlETPk&t=2400s",
+            "start": 2400
           },
           {
             "id": 6,
             "title": "React Router",
             "description": "Learn how to create navigation and multiple pages in React applications.",
-            "video": "https://www.youtube.com/watch?v=SqcY0GlETPk"
+            "video": "https://www.youtube.com/watch?v=SqcY0GlETPk&t=3300s",
+            "start": 3300
           }
         ]
       },
@@ -220,31 +248,36 @@
             "id": 1,
             "title": "Introduction to Node.js",
             "description": "Understand Node.js and server-side JavaScript.",
-            "video": "https://www.youtube.com/watch?v=Oe421EPjeBE"
+            "video": "https://www.youtube.com/watch?v=TlB_eWDSMT4",
+            "start": 0
           },
           {
             "id": 2,
             "title": "Node.js Modules",
             "description": "Learn how modules are created and used in Node.js.",
-            "video": "https://www.youtube.com/watch?v=Oe421EPjeBE"
+            "video": "https://www.youtube.com/watch?v=TlB_eWDSMT4&t=600s",
+            "start": 600
           },
           {
             "id": 3,
             "title": "NPM and Packages",
             "description": "Learn how to use npm and install Node.js packages.",
-            "video": "https://www.youtube.com/watch?v=Oe421EPjeBE"
+            "video": "https://www.youtube.com/watch?v=TlB_eWDSMT4&t=1500s",
+            "start": 1500
           },
           {
             "id": 4,
             "title": "HTTP Server",
             "description": "Learn how to create a basic server using Node.js.",
-            "video": "https://www.youtube.com/watch?v=Oe421EPjeBE"
+            "video": "https://www.youtube.com/watch?v=TlB_eWDSMT4&t=2700s",
+            "start": 2700
           },
           {
             "id": 5,
             "title": "Node.js APIs",
             "description": "Understand how backend APIs work with Node.js.",
-            "video": "https://www.youtube.com/watch?v=Oe421EPjeBE"
+            "video": "https://www.youtube.com/watch?v=TlB_eWDSMT4&t=3900s",
+            "start": 3900
           }
         ]
       },
@@ -259,31 +292,36 @@
             "id": 1,
             "title": "Introduction to Express.js",
             "description": "Understand Express.js and its role in Node.js applications.",
-            "video": "https://www.youtube.com/watch?v=Oe421EPjeBE"
+            "video": "https://www.youtube.com/watch?v=SccSCuHhOw0",
+            "start": 0
           },
           {
             "id": 2,
             "title": "Express Server",
             "description": "Learn how to create an Express server.",
-            "video": "https://www.youtube.com/watch?v=Oe421EPjeBE"
+            "video": "https://www.youtube.com/watch?v=SccSCuHhOw0&t=480s",
+            "start": 480
           },
           {
             "id": 3,
             "title": "Express Routes",
             "description": "Learn how to create and manage application routes.",
-            "video": "https://www.youtube.com/watch?v=Oe421EPjeBE"
+            "video": "https://www.youtube.com/watch?v=SccSCuHhOw0&t=1200s",
+            "start": 1200
           },
           {
             "id": 4,
             "title": "Middleware",
             "description": "Understand Express middleware and request processing.",
-            "video": "https://www.youtube.com/watch?v=Oe421EPjeBE"
+            "video": "https://www.youtube.com/watch?v=SccSCuHhOw0&t=2100s",
+            "start": 2100
           },
           {
             "id": 5,
             "title": "REST APIs",
             "description": "Learn how to build REST APIs using Express.js.",
-            "video": "https://www.youtube.com/watch?v=Oe421EPjeBE"
+            "video": "https://www.youtube.com/watch?v=SccSCuHhOw0&t=3000s",
+            "start": 3000
           }
         ]
       },
@@ -298,37 +336,43 @@
             "id": 1,
             "title": "Introduction to Full Stack Development",
             "description": "Understand frontend, backend and database technologies.",
-            "video": "https://www.youtube.com/watch?v=nu_pCVPKzTk"
+            "video": "https://www.youtube.com/watch?v=nu_pCVPKzTk",
+            "start": 0
           },
           {
             "id": 2,
             "title": "Frontend Development",
             "description": "Learn how frontend technologies are used to build user interfaces.",
-            "video": "https://www.youtube.com/watch?v=nu_pCVPKzTk"
+            "video": "https://www.youtube.com/watch?v=nu_pCVPKzTk&t=720s",
+            "start": 720
           },
           {
             "id": 3,
             "title": "Backend Development",
             "description": "Understand server-side application development.",
-            "video": "https://www.youtube.com/watch?v=nu_pCVPKzTk"
+            "video": "https://www.youtube.com/watch?v=nu_pCVPKzTk&t=1800s",
+            "start": 1800
           },
           {
             "id": 4,
             "title": "Databases",
             "description": "Understand how applications store and retrieve data.",
-            "video": "https://www.youtube.com/watch?v=nu_pCVPKzTk"
+            "video": "https://www.youtube.com/watch?v=nu_pCVPKzTk&t=3000s",
+            "start": 3000
           },
           {
             "id": 5,
             "title": "APIs and Authentication",
             "description": "Learn how APIs and authentication connect frontend and backend systems.",
-            "video": "https://www.youtube.com/watch?v=nu_pCVPKzTk"
+            "video": "https://www.youtube.com/watch?v=nu_pCVPKzTk&t=4200s",
+            "start": 4200
           },
           {
             "id": 6,
             "title": "Deployment",
             "description": "Understand the basics of deploying full-stack applications.",
-            "video": "https://www.youtube.com/watch?v=nu_pCVPKzTk"
+            "video": "https://www.youtube.com/watch?v=nu_pCVPKzTk&t=5400s",
+            "start": 5400
           }
         ]
       }
@@ -351,31 +395,36 @@
             "id": 1,
             "title": "Introduction to C",
             "description": "Understand C programming and its basic structure.",
-            "video": "https://www.youtube.com/watch?v=KJgsSFOSQv0"
+            "video": "https://www.youtube.com/watch?v=KJgsSFOSQv0",
+            "start": 0
           },
           {
             "id": 2,
             "title": "Variables and Data Types",
             "description": "Learn variables, constants and basic C data types.",
-            "video": "https://www.youtube.com/watch?v=KJgsSFOSQv0"
+            "video": "https://www.youtube.com/watch?v=KJgsSFOSQv0&t=480s",
+            "start": 480
           },
           {
             "id": 3,
             "title": "Conditions and Loops",
             "description": "Learn decision making and repetitive statements.",
-            "video": "https://www.youtube.com/watch?v=KJgsSFOSQv0"
+            "video": "https://www.youtube.com/watch?v=KJgsSFOSQv0&t=1200s",
+            "start": 1200
           },
           {
             "id": 4,
             "title": "Functions",
             "description": "Learn how to create and use functions in C.",
-            "video": "https://www.youtube.com/watch?v=KJgsSFOSQv0"
+            "video": "https://www.youtube.com/watch?v=KJgsSFOSQv0&t=2100s",
+            "start": 2100
           },
           {
             "id": 5,
             "title": "Arrays and Pointers",
             "description": "Understand arrays and the fundamentals of pointers.",
-            "video": "https://www.youtube.com/watch?v=KJgsSFOSQv0"
+            "video": "https://www.youtube.com/watch?v=KJgsSFOSQv0&t=3000s",
+            "start": 3000
           }
         ]
       },
@@ -390,31 +439,36 @@
             "id": 1,
             "title": "Introduction to C++",
             "description": "Learn the basics and structure of C++ programs.",
-            "video": "https://www.youtube.com/watch?v=vLnPwxZdW4Y"
+            "video": "https://www.youtube.com/watch?v=vLnPwxZdW4Y",
+            "start": 0
           },
           {
             "id": 2,
             "title": "Variables and Data Types",
             "description": "Understand C++ variables and data types.",
-            "video": "https://www.youtube.com/watch?v=vLnPwxZdW4Y"
+            "video": "https://www.youtube.com/watch?v=vLnPwxZdW4Y&t=600s",
+            "start": 600
           },
           {
             "id": 3,
             "title": "Functions",
             "description": "Learn functions and parameter passing in C++.",
-            "video": "https://www.youtube.com/watch?v=vLnPwxZdW4Y"
+            "video": "https://www.youtube.com/watch?v=vLnPwxZdW4Y&t=1500s",
+            "start": 1500
           },
           {
             "id": 4,
             "title": "Classes and Objects",
             "description": "Learn the fundamentals of object-oriented programming.",
-            "video": "https://www.youtube.com/watch?v=vLnPwxZdW4Y"
+            "video": "https://www.youtube.com/watch?v=vLnPwxZdW4Y&t=2400s",
+            "start": 2400
           },
           {
             "id": 5,
             "title": "Inheritance and Polymorphism",
             "description": "Understand important object-oriented programming concepts.",
-            "video": "https://www.youtube.com/watch?v=vLnPwxZdW4Y"
+            "video": "https://www.youtube.com/watch?v=vLnPwxZdW4Y&t=3600s",
+            "start": 3600
           }
         ]
       },
@@ -429,37 +483,43 @@
             "id": 1,
             "title": "Introduction to Java",
             "description": "Understand Java and its features.",
-            "video": "https://www.youtube.com/watch?v=eIrMbAQSU34"
+            "video": "https://www.youtube.com/watch?v=eIrMbAQSU34",
+            "start": 0
           },
           {
             "id": 2,
             "title": "Java Variables and Data Types",
             "description": "Learn variables and data types in Java.",
-            "video": "https://www.youtube.com/watch?v=eIrMbAQSU34"
+            "video": "https://www.youtube.com/watch?v=eIrMbAQSU34&t=720s",
+            "start": 720
           },
           {
             "id": 3,
             "title": "Conditions and Loops",
             "description": "Learn decision-making statements and loops.",
-            "video": "https://www.youtube.com/watch?v=eIrMbAQSU34"
+            "video": "https://www.youtube.com/watch?v=eIrMbAQSU34&t=1800s",
+            "start": 1800
           },
           {
             "id": 4,
             "title": "Classes and Objects",
             "description": "Learn Java object-oriented programming.",
-            "video": "https://www.youtube.com/watch?v=eIrMbAQSU34"
+            "video": "https://www.youtube.com/watch?v=eIrMbAQSU34&t=3000s",
+            "start": 3000
           },
           {
             "id": 5,
             "title": "Inheritance",
             "description": "Understand inheritance and polymorphism.",
-            "video": "https://www.youtube.com/watch?v=eIrMbAQSU34"
+            "video": "https://www.youtube.com/watch?v=eIrMbAQSU34&t=4200s",
+            "start": 4200
           },
           {
             "id": 6,
             "title": "Exception Handling",
             "description": "Learn how Java applications handle errors.",
-            "video": "https://www.youtube.com/watch?v=eIrMbAQSU34"
+            "video": "https://www.youtube.com/watch?v=eIrMbAQSU34&t=5400s",
+            "start": 5400
           }
         ]
       },
@@ -474,37 +534,43 @@
             "id": 1,
             "title": "Introduction to Python",
             "description": "Understand Python and its applications.",
-            "video": "https://www.youtube.com/watch?v=rfscVS0vtbw"
+            "video": "https://www.youtube.com/watch?v=rfscVS0vtbw",
+            "start": 0
           },
           {
             "id": 2,
             "title": "Variables and Data Types",
             "description": "Learn Python variables and common data types.",
-            "video": "https://www.youtube.com/watch?v=rfscVS0vtbw"
+            "video": "https://www.youtube.com/watch?v=rfscVS0vtbw&t=600s",
+            "start": 600
           },
           {
             "id": 3,
             "title": "Conditions and Loops",
             "description": "Learn conditional statements and loops.",
-            "video": "https://www.youtube.com/watch?v=rfscVS0vtbw"
+            "video": "https://www.youtube.com/watch?v=rfscVS0vtbw&t=1500s",
+            "start": 1500
           },
           {
             "id": 4,
             "title": "Functions",
             "description": "Learn how to create reusable functions.",
-            "video": "https://www.youtube.com/watch?v=rfscVS0vtbw"
+            "video": "https://www.youtube.com/watch?v=rfscVS0vtbw&t=2700s",
+            "start": 2700
           },
           {
             "id": 5,
             "title": "Lists and Dictionaries",
             "description": "Learn Python collections and data structures.",
-            "video": "https://www.youtube.com/watch?v=rfscVS0vtbw"
+            "video": "https://www.youtube.com/watch?v=rfscVS0vtbw&t=3900s",
+            "start": 3900
           },
           {
             "id": 6,
             "title": "Object-Oriented Programming",
             "description": "Learn classes and objects in Python.",
-            "video": "https://www.youtube.com/watch?v=rfscVS0vtbw"
+            "video": "https://www.youtube.com/watch?v=rfscVS0vtbw&t=5100s",
+            "start": 5100
           }
         ]
       },
@@ -519,31 +585,36 @@
             "id": 1,
             "title": "JavaScript Basics",
             "description": "Learn the fundamentals of JavaScript programming.",
-            "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+            "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg",
+            "start": 0
           },
           {
             "id": 2,
             "title": "Variables and Data Types",
             "description": "Learn JavaScript variables and data types.",
-            "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+            "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg&t=720s",
+            "start": 720
           },
           {
             "id": 3,
             "title": "Functions",
             "description": "Learn JavaScript functions and reusable code.",
-            "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+            "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg&t=1800s",
+            "start": 1800
           },
           {
             "id": 4,
             "title": "Arrays and Objects",
             "description": "Learn JavaScript arrays and objects.",
-            "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+            "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg&t=3000s",
+            "start": 3000
           },
           {
             "id": 5,
             "title": "DOM and Events",
             "description": "Learn how JavaScript interacts with webpages.",
-            "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+            "video": "https://www.youtube.com/watch?v=PkZNo7MFNFg&t=4500s",
+            "start": 4500
           }
         ]
       }
@@ -566,25 +637,29 @@
             "id": 1,
             "title": "Python for Data Science",
             "description": "Understand why Python is widely used in data science.",
-            "video": "https://www.youtube.com/watch?v=LHBE6Q9XlzI"
+            "video": "https://www.youtube.com/watch?v=LHBE6Q9XlzI",
+            "start": 0
           },
           {
             "id": 2,
             "title": "NumPy Basics",
             "description": "Learn numerical operations using NumPy.",
-            "video": "https://www.youtube.com/watch?v=LHBE6Q9XlzI"
+            "video": "https://www.youtube.com/watch?v=LHBE6Q9XlzI&t=720s",
+            "start": 720
           },
           {
             "id": 3,
             "title": "Pandas Basics",
             "description": "Learn how to work with datasets using Pandas.",
-            "video": "https://www.youtube.com/watch?v=LHBE6Q9XlzI"
+            "video": "https://www.youtube.com/watch?v=LHBE6Q9XlzI&t=1800s",
+            "start": 1800
           },
           {
             "id": 4,
             "title": "Data Visualization",
             "description": "Learn the basics of visualizing datasets.",
-            "video": "https://www.youtube.com/watch?v=LHBE6Q9XlzI"
+            "video": "https://www.youtube.com/watch?v=LHBE6Q9XlzI&t=3000s",
+            "start": 3000
           }
         ]
       },
@@ -599,25 +674,29 @@
             "id": 1,
             "title": "Introduction to NumPy",
             "description": "Understand NumPy and numerical computing.",
-            "video": "https://www.youtube.com/watch?v=QUT1VHiLmmI"
+            "video": "https://www.youtube.com/watch?v=QUT1VHiLmmI",
+            "start": 0
           },
           {
             "id": 2,
             "title": "NumPy Arrays",
             "description": "Learn how to create and use NumPy arrays.",
-            "video": "https://www.youtube.com/watch?v=QUT1VHiLmmI"
+            "video": "https://www.youtube.com/watch?v=QUT1VHiLmmI&t=600s",
+            "start": 600
           },
           {
             "id": 3,
             "title": "Indexing and Slicing",
             "description": "Learn how to access and manipulate array data.",
-            "video": "https://www.youtube.com/watch?v=QUT1VHiLmmI"
+            "video": "https://www.youtube.com/watch?v=QUT1VHiLmmI&t=1500s",
+            "start": 1500
           },
           {
             "id": 4,
             "title": "Mathematical Operations",
             "description": "Perform mathematical operations using NumPy.",
-            "video": "https://www.youtube.com/watch?v=QUT1VHiLmmI"
+            "video": "https://www.youtube.com/watch?v=QUT1VHiLmmI&t=2700s",
+            "start": 2700
           }
         ]
       },
@@ -632,25 +711,29 @@
             "id": 1,
             "title": "Introduction to Pandas",
             "description": "Understand Pandas and its role in data analysis.",
-            "video": "https://www.youtube.com/watch?v=vmEHCJofslg"
+            "video": "https://www.youtube.com/watch?v=vmEHCJofslg",
+            "start": 0
           },
           {
             "id": 2,
             "title": "Series and DataFrames",
             "description": "Learn the basic Pandas data structures.",
-            "video": "https://www.youtube.com/watch?v=vmEHCJofslg"
+            "video": "https://www.youtube.com/watch?v=vmEHCJofslg&t=720s",
+            "start": 720
           },
           {
             "id": 3,
             "title": "Filtering and Sorting",
             "description": "Learn how to filter and sort datasets.",
-            "video": "https://www.youtube.com/watch?v=vmEHCJofslg"
+            "video": "https://www.youtube.com/watch?v=vmEHCJofslg&t=1800s",
+            "start": 1800
           },
           {
             "id": 4,
             "title": "Data Cleaning",
             "description": "Learn techniques for cleaning datasets.",
-            "video": "https://www.youtube.com/watch?v=vmEHCJofslg"
+            "video": "https://www.youtube.com/watch?v=vmEHCJofslg&t=3000s",
+            "start": 3000
           }
         ]
       },
@@ -665,25 +748,29 @@
             "id": 1,
             "title": "Introduction to Data Visualization",
             "description": "Understand why visualization is important in data science.",
-            "video": "https://www.youtube.com/watch?v=DAQNHzOcO5A"
+            "video": "https://www.youtube.com/watch?v=DAQNHzOcO5A",
+            "start": 0
           },
           {
             "id": 2,
             "title": "Charts and Graphs",
             "description": "Learn different types of charts and graphs.",
-            "video": "https://www.youtube.com/watch?v=DAQNHzOcO5A"
+            "video": "https://www.youtube.com/watch?v=DAQNHzOcO5A&t=600s",
+            "start": 600
           },
           {
             "id": 3,
             "title": "Matplotlib",
             "description": "Learn the basics of creating visualizations with Matplotlib.",
-            "video": "https://www.youtube.com/watch?v=DAQNHzOcO5A"
+            "video": "https://www.youtube.com/watch?v=DAQNHzOcO5A&t=1500s",
+            "start": 1500
           },
           {
             "id": 4,
             "title": "Presenting Data",
             "description": "Learn how to communicate insights through visualizations.",
-            "video": "https://www.youtube.com/watch?v=DAQNHzOcO5A"
+            "video": "https://www.youtube.com/watch?v=DAQNHzOcO5A&t=2700s",
+            "start": 2700
           }
         ]
       },
@@ -698,25 +785,29 @@
             "id": 1,
             "title": "Introduction to Statistics",
             "description": "Understand the role of statistics in data analysis.",
-            "video": "https://www.youtube.com/watch?v=xxpc-HPKN28"
+            "video": "https://www.youtube.com/watch?v=xxpc-HPKN28",
+            "start": 0
           },
           {
             "id": 2,
             "title": "Mean, Median and Mode",
             "description": "Learn common measures of central tendency.",
-            "video": "https://www.youtube.com/watch?v=xxpc-HPKN28"
+            "video": "https://www.youtube.com/watch?v=xxpc-HPKN28&t=480s",
+            "start": 480
           },
           {
             "id": 3,
             "title": "Probability",
             "description": "Understand the fundamentals of probability.",
-            "video": "https://www.youtube.com/watch?v=xxpc-HPKN28"
+            "video": "https://www.youtube.com/watch?v=xxpc-HPKN28&t=1200s",
+            "start": 1200
           },
           {
             "id": 4,
             "title": "Correlation",
             "description": "Learn how relationships between variables are measured.",
-            "video": "https://www.youtube.com/watch?v=xxpc-HPKN28"
+            "video": "https://www.youtube.com/watch?v=xxpc-HPKN28&t=2100s",
+            "start": 2100
           }
         ]
       },
@@ -731,31 +822,36 @@
             "id": 1,
             "title": "Introduction to Machine Learning",
             "description": "Understand machine learning and its applications.",
-            "video": "https://www.youtube.com/watch?v=NWONeJKn6kc"
+            "video": "https://www.youtube.com/watch?v=NWONeJKn6kc",
+            "start": 0
           },
           {
             "id": 2,
             "title": "Supervised Learning",
             "description": "Learn the fundamentals of supervised learning.",
-            "video": "https://www.youtube.com/watch?v=NWONeJKn6kc"
+            "video": "https://www.youtube.com/watch?v=NWONeJKn6kc&t=720s",
+            "start": 720
           },
           {
             "id": 3,
             "title": "Unsupervised Learning",
             "description": "Understand clustering and other unsupervised techniques.",
-            "video": "https://www.youtube.com/watch?v=NWONeJKn6kc"
+            "video": "https://www.youtube.com/watch?v=NWONeJKn6kc&t=1800s",
+            "start": 1800
           },
           {
             "id": 4,
             "title": "Model Training",
             "description": "Learn how machine learning models are trained.",
-            "video": "https://www.youtube.com/watch?v=NWONeJKn6kc"
+            "video": "https://www.youtube.com/watch?v=NWONeJKn6kc&t=3000s",
+            "start": 3000
           },
           {
             "id": 5,
             "title": "Model Evaluation",
             "description": "Learn how to evaluate machine learning models.",
-            "video": "https://www.youtube.com/watch?v=NWONeJKn6kc"
+            "video": "https://www.youtube.com/watch?v=NWONeJKn6kc&t=4200s",
+            "start": 4200
           }
         ]
       }
@@ -778,31 +874,36 @@
             "id": 1,
             "title": "Introduction to SQL",
             "description": "Understand SQL and relational databases.",
-            "video": "https://www.youtube.com/watch?v=HXV3zeQKqGY"
+            "video": "https://www.youtube.com/watch?v=HXV3zeQKqGY",
+            "start": 0
           },
           {
             "id": 2,
             "title": "SELECT Queries",
             "description": "Learn how to retrieve data from tables.",
-            "video": "https://www.youtube.com/watch?v=HXV3zeQKqGY"
+            "video": "https://www.youtube.com/watch?v=HXV3zeQKqGY&t=720s",
+            "start": 720
           },
           {
             "id": 3,
             "title": "Filtering and Sorting",
             "description": "Learn WHERE, ORDER BY and related SQL operations.",
-            "video": "https://www.youtube.com/watch?v=HXV3zeQKqGY"
+            "video": "https://www.youtube.com/watch?v=HXV3zeQKqGY&t=1800s",
+            "start": 1800
           },
           {
             "id": 4,
             "title": "Joins",
             "description": "Learn how multiple database tables can be combined.",
-            "video": "https://www.youtube.com/watch?v=HXV3zeQKqGY"
+            "video": "https://www.youtube.com/watch?v=HXV3zeQKqGY&t=3300s",
+            "start": 3300
           },
           {
             "id": 5,
             "title": "Database Operations",
             "description": "Learn INSERT, UPDATE and DELETE operations.",
-            "video": "https://www.youtube.com/watch?v=HXV3zeQKqGY"
+            "video": "https://www.youtube.com/watch?v=HXV3zeQKqGY&t=4800s",
+            "start": 4800
           }
         ]
       },
@@ -817,25 +918,29 @@
             "id": 1,
             "title": "Introduction to MySQL",
             "description": "Understand MySQL and relational database management.",
-            "video": "https://www.youtube.com/watch?v=7S_tz1z_5bA"
+            "video": "https://www.youtube.com/watch?v=7S_tz1z_5bA",
+            "start": 0
           },
           {
             "id": 2,
             "title": "Creating Databases and Tables",
             "description": "Learn how to create databases and tables.",
-            "video": "https://www.youtube.com/watch?v=7S_tz1z_5bA"
+            "video": "https://www.youtube.com/watch?v=7S_tz1z_5bA&t=600s",
+            "start": 600
           },
           {
             "id": 3,
             "title": "MySQL Queries",
             "description": "Learn common MySQL queries.",
-            "video": "https://www.youtube.com/watch?v=7S_tz1z_5bA"
+            "video": "https://www.youtube.com/watch?v=7S_tz1z_5bA&t=1500s",
+            "start": 1500
           },
           {
             "id": 4,
             "title": "Relationships and Joins",
             "description": "Understand relationships and joins between tables.",
-            "video": "https://www.youtube.com/watch?v=7S_tz1z_5bA"
+            "video": "https://www.youtube.com/watch?v=7S_tz1z_5bA&t=2700s",
+            "start": 2700
           }
         ]
       },
@@ -850,25 +955,29 @@
             "id": 1,
             "title": "Introduction to MongoDB",
             "description": "Understand MongoDB and NoSQL databases.",
-            "video": "https://www.youtube.com/watch?v=c2M-rlkkT5o"
+            "video": "https://www.youtube.com/watch?v=c2M-rlkkT5o",
+            "start": 0
           },
           {
             "id": 2,
             "title": "Databases and Collections",
             "description": "Learn MongoDB databases and collections.",
-            "video": "https://www.youtube.com/watch?v=c2M-rlkkT5o"
+            "video": "https://www.youtube.com/watch?v=c2M-rlkkT5o&t=600s",
+            "start": 600
           },
           {
             "id": 3,
             "title": "MongoDB Documents",
             "description": "Learn how MongoDB stores data in documents.",
-            "video": "https://www.youtube.com/watch?v=c2M-rlkkT5o"
+            "video": "https://www.youtube.com/watch?v=c2M-rlkkT5o&t=1500s",
+            "start": 1500
           },
           {
             "id": 4,
             "title": "MongoDB Queries",
             "description": "Learn how to retrieve and modify MongoDB data.",
-            "video": "https://www.youtube.com/watch?v=c2M-rlkkT5o"
+            "video": "https://www.youtube.com/watch?v=c2M-rlkkT5o&t=2700s",
+            "start": 2700
           }
         ]
       },
@@ -883,25 +992,29 @@
             "id": 1,
             "title": "Introduction to PostgreSQL",
             "description": "Understand PostgreSQL and relational databases.",
-            "video": "https://www.youtube.com/watch?v=qw--VYLpxG4"
+            "video": "https://www.youtube.com/watch?v=qw--VYLpxG4",
+            "start": 0
           },
           {
             "id": 2,
             "title": "Tables and Data Types",
             "description": "Learn PostgreSQL tables and data types.",
-            "video": "https://www.youtube.com/watch?v=qw--VYLpxG4"
+            "video": "https://www.youtube.com/watch?v=qw--VYLpxG4&t=600s",
+            "start": 600
           },
           {
             "id": 3,
             "title": "PostgreSQL Queries",
             "description": "Learn how to retrieve and manipulate data.",
-            "video": "https://www.youtube.com/watch?v=qw--VYLpxG4"
+            "video": "https://www.youtube.com/watch?v=qw--VYLpxG4&t=1500s",
+            "start": 1500
           },
           {
             "id": 4,
             "title": "Relationships",
             "description": "Learn relationships between PostgreSQL tables.",
-            "video": "https://www.youtube.com/watch?v=qw--VYLpxG4"
+            "video": "https://www.youtube.com/watch?v=qw--VYLpxG4&t=2700s",
+            "start": 2700
           }
         ]
       },
@@ -916,25 +1029,29 @@
             "id": 1,
             "title": "Introduction to Database Design",
             "description": "Understand the fundamentals of database design.",
-            "video": "https://www.youtube.com/watch?v=ztHopE5Wnpc"
+            "video": "https://www.youtube.com/watch?v=ztHopE5Wnpc",
+            "start": 0
           },
           {
             "id": 2,
             "title": "Entities and Relationships",
             "description": "Learn how entities and relationships are represented.",
-            "video": "https://www.youtube.com/watch?v=ztHopE5Wnpc"
+            "video": "https://www.youtube.com/watch?v=ztHopE5Wnpc&t=600s",
+            "start": 600
           },
           {
             "id": 3,
             "title": "Normalization",
             "description": "Learn how normalization improves database design.",
-            "video": "https://www.youtube.com/watch?v=ztHopE5Wnpc"
+            "video": "https://www.youtube.com/watch?v=ztHopE5Wnpc&t=1500s",
+            "start": 1500
           },
           {
             "id": 4,
             "title": "Keys",
             "description": "Understand primary keys and foreign keys.",
-            "video": "https://www.youtube.com/watch?v=ztHopE5Wnpc"
+            "video": "https://www.youtube.com/watch?v=ztHopE5Wnpc&t=2400s",
+            "start": 2400
           }
         ]
       }
@@ -957,25 +1074,29 @@
             "id": 1,
             "title": "Introduction to AWS",
             "description": "Understand cloud computing and Amazon Web Services.",
-            "video": "https://www.youtube.com/watch?v=ulprqHHWlng"
+            "video": "https://www.youtube.com/watch?v=ulprqHHWlng",
+            "start": 0
           },
           {
             "id": 2,
             "title": "AWS Compute",
             "description": "Learn the fundamentals of cloud computing services.",
-            "video": "https://www.youtube.com/watch?v=ulprqHHWlng"
+            "video": "https://www.youtube.com/watch?v=ulprqHHWlng&t=720s",
+            "start": 720
           },
           {
             "id": 3,
             "title": "AWS Storage",
             "description": "Understand cloud storage concepts.",
-            "video": "https://www.youtube.com/watch?v=ulprqHHWlng"
+            "video": "https://www.youtube.com/watch?v=ulprqHHWlng&t=1800s",
+            "start": 1800
           },
           {
             "id": 4,
             "title": "AWS Databases",
             "description": "Learn the basics of cloud databases.",
-            "video": "https://www.youtube.com/watch?v=ulprqHHWlng"
+            "video": "https://www.youtube.com/watch?v=ulprqHHWlng&t=3000s",
+            "start": 3000
           }
         ]
       },
@@ -990,25 +1111,29 @@
             "id": 1,
             "title": "Introduction to Azure",
             "description": "Understand Microsoft Azure and cloud computing.",
-            "video": "https://www.youtube.com/watch?v=5abffC-K40c"
+            "video": "https://www.youtube.com/watch?v=NKEFWyqJ5XA",
+            "start": 0
           },
           {
             "id": 2,
             "title": "Azure Virtual Machines",
             "description": "Learn the basics of virtual machines in Azure.",
-            "video": "https://www.youtube.com/watch?v=5abffC-K40c"
+            "video": "https://www.youtube.com/watch?v=NKEFWyqJ5XA&t=600s",
+            "start": 600
           },
           {
             "id": 3,
             "title": "Azure Storage",
             "description": "Understand storage services in Azure.",
-            "video": "https://www.youtube.com/watch?v=5abffC-K40c"
+            "video": "https://www.youtube.com/watch?v=NKEFWyqJ5XA&t=1500s",
+            "start": 1500
           },
           {
             "id": 4,
             "title": "Azure Deployment",
             "description": "Learn the basics of deploying applications to Azure.",
-            "video": "https://www.youtube.com/watch?v=5abffC-K40c"
+            "video": "https://www.youtube.com/watch?v=NKEFWyqJ5XA&t=2700s",
+            "start": 2700
           }
         ]
       },
@@ -1023,25 +1148,29 @@
             "id": 1,
             "title": "Introduction to Google Cloud",
             "description": "Understand Google Cloud Platform.",
-            "video": "https://www.youtube.com/watch?v=JPnoqGsY8a8"
+            "video": "https://www.youtube.com/watch?v=4D3X6SbAit4",
+            "start": 0
           },
           {
             "id": 2,
             "title": "Google Cloud Compute",
             "description": "Learn the fundamentals of cloud compute services.",
-            "video": "https://www.youtube.com/watch?v=JPnoqGsY8a8"
+            "video": "https://www.youtube.com/watch?v=4D3X6SbAit4&t=600s",
+            "start": 600
           },
           {
             "id": 3,
             "title": "Cloud Storage",
             "description": "Understand Google Cloud storage services.",
-            "video": "https://www.youtube.com/watch?v=JPnoqGsY8a8"
+            "video": "https://www.youtube.com/watch?v=4D3X6SbAit4&t=1500s",
+            "start": 1500
           },
           {
             "id": 4,
             "title": "Cloud Databases",
             "description": "Learn the basics of cloud database services.",
-            "video": "https://www.youtube.com/watch?v=JPnoqGsY8a8"
+            "video": "https://www.youtube.com/watch?v=4D3X6SbAit4&t=2700s",
+            "start": 2700
           }
         ]
       },
@@ -1056,25 +1185,29 @@
             "id": 1,
             "title": "What is Cloud Computing?",
             "description": "Understand the fundamentals of cloud computing.",
-            "video": "https://www.youtube.com/watch?v=M988_fsOSWo"
+            "video": "https://www.youtube.com/watch?v=M988_fsOSWo",
+            "start": 0
           },
           {
             "id": 2,
             "title": "Cloud Service Models",
             "description": "Learn IaaS, PaaS and SaaS.",
-            "video": "https://www.youtube.com/watch?v=M988_fsOSWo"
+            "video": "https://www.youtube.com/watch?v=M988_fsOSWo&t=480s",
+            "start": 480
           },
           {
             "id": 3,
             "title": "Virtualization",
             "description": "Understand virtualization in cloud computing.",
-            "video": "https://www.youtube.com/watch?v=M988_fsOSWo"
+            "video": "https://www.youtube.com/watch?v=M988_fsOSWo&t=1200s",
+            "start": 1200
           },
           {
             "id": 4,
             "title": "Cloud Architecture",
             "description": "Learn the basic architecture of cloud systems.",
-            "video": "https://www.youtube.com/watch?v=M988_fsOSWo"
+            "video": "https://www.youtube.com/watch?v=M988_fsOSWo&t=2100s",
+            "start": 2100
           }
         ]
       },
@@ -1089,25 +1222,29 @@
             "id": 1,
             "title": "Introduction to DevOps",
             "description": "Understand DevOps and its importance in software development.",
-            "video": "https://www.youtube.com/watch?v=0yWAtQ6wYNM"
+            "video": "https://www.youtube.com/watch?v=j5Zsa_eOXeY",
+            "start": 0
           },
           {
             "id": 2,
             "title": "Version Control",
             "description": "Understand Git and version control concepts.",
-            "video": "https://www.youtube.com/watch?v=0yWAtQ6wYNM"
+            "video": "https://www.youtube.com/watch?v=j5Zsa_eOXeY&t=600s",
+            "start": 600
           },
           {
             "id": 3,
             "title": "Continuous Integration",
             "description": "Learn the basics of continuous integration.",
-            "video": "https://www.youtube.com/watch?v=0yWAtQ6wYNM"
+            "video": "https://www.youtube.com/watch?v=j5Zsa_eOXeY&t=1500s",
+            "start": 1500
           },
           {
             "id": 4,
             "title": "Continuous Deployment",
             "description": "Understand automated application deployment.",
-            "video": "https://www.youtube.com/watch?v=0yWAtQ6wYNM"
+            "video": "https://www.youtube.com/watch?v=j5Zsa_eOXeY&t=2700s",
+            "start": 2700
           }
         ]
       }
@@ -1130,19 +1267,22 @@
             "id": 1,
             "title": "Effective Communication",
             "description": "Understand the fundamentals of effective communication.",
-            "video": "https://www.youtube.com/watch?v=HAnw168huqA"
+            "video": "https://www.youtube.com/watch?v=HAnw168huqA",
+            "start": 0
           },
           {
             "id": 2,
             "title": "Verbal Communication",
             "description": "Learn how to communicate clearly through speech.",
-            "video": "https://www.youtube.com/watch?v=HAnw168huqA"
+            "video": "https://www.youtube.com/watch?v=HAnw168huqA&t=420s",
+            "start": 420
           },
           {
             "id": 3,
             "title": "Written Communication",
             "description": "Improve professional written communication.",
-            "video": "https://www.youtube.com/watch?v=HAnw168huqA"
+            "video": "https://www.youtube.com/watch?v=HAnw168huqA&t=960s",
+            "start": 960
           }
         ]
       },
@@ -1157,19 +1297,22 @@
             "id": 1,
             "title": "Introduction to Presentations",
             "description": "Understand the fundamentals of effective presentations.",
-            "video": "https://www.youtube.com/watch?v=MnIPpUiTcRc"
+            "video": "https://www.youtube.com/watch?v=Unzc731iCUY",
+            "start": 0
           },
           {
             "id": 2,
             "title": "Presentation Structure",
             "description": "Learn how to organize presentation content.",
-            "video": "https://www.youtube.com/watch?v=MnIPpUiTcRc"
+            "video": "https://www.youtube.com/watch?v=Unzc731iCUY&t=480s",
+            "start": 480
           },
           {
             "id": 3,
             "title": "Public Speaking",
             "description": "Improve confidence and public speaking skills.",
-            "video": "https://www.youtube.com/watch?v=MnIPpUiTcRc"
+            "video": "https://www.youtube.com/watch?v=Unzc731iCUY&t=1080s",
+            "start": 1080
           }
         ]
       },
@@ -1184,19 +1327,22 @@
             "id": 1,
             "title": "Introduction to Leadership",
             "description": "Understand the fundamentals of leadership.",
-            "video": "https://www.youtube.com/watch?v=4dEo9QJQJrA"
+            "video": "https://www.youtube.com/watch?v=KYlO36NKhvM",
+            "start": 0
           },
           {
             "id": 2,
             "title": "Decision Making",
             "description": "Learn effective decision-making techniques.",
-            "video": "https://www.youtube.com/watch?v=4dEo9QJQJrA"
+            "video": "https://www.youtube.com/watch?v=KYlO36NKhvM&t=480s",
+            "start": 480
           },
           {
             "id": 3,
             "title": "Team Leadership",
             "description": "Learn how to motivate and guide teams.",
-            "video": "https://www.youtube.com/watch?v=4dEo9QJQJrA"
+            "video": "https://www.youtube.com/watch?v=KYlO36NKhvM&t=1080s",
+            "start": 1080
           }
         ]
       },
@@ -1211,19 +1357,22 @@
             "id": 1,
             "title": "Introduction to Teamwork",
             "description": "Understand the importance of teamwork.",
-            "video": "https://www.youtube.com/watch?v=ZsZ4Q6u2N5M"
+            "video": "https://www.youtube.com/watch?v=1ISjVYIsIQQ",
+            "start": 0
           },
           {
             "id": 2,
             "title": "Team Collaboration",
             "description": "Learn how to collaborate effectively with team members.",
-            "video": "https://www.youtube.com/watch?v=ZsZ4Q6u2N5M"
+            "video": "https://www.youtube.com/watch?v=1ISjVYIsIQQ&t=420s",
+            "start": 420
           },
           {
             "id": 3,
             "title": "Conflict Resolution",
             "description": "Learn how to handle conflicts within teams.",
-            "video": "https://www.youtube.com/watch?v=ZsZ4Q6u2N5M"
+            "video": "https://www.youtube.com/watch?v=1ISjVYIsIQQ&t=960s",
+            "start": 960
           }
         ]
       },
@@ -1238,19 +1387,22 @@
             "id": 1,
             "title": "Interview Preparation",
             "description": "Learn how to prepare effectively for interviews.",
-            "video": "https://www.youtube.com/watch?v=HG68Ymazo18"
+            "video": "https://www.youtube.com/watch?v=PJK-qC5W8ME",
+            "start": 0
           },
           {
             "id": 2,
             "title": "Common Interview Questions",
             "description": "Learn how to approach common interview questions.",
-            "video": "https://www.youtube.com/watch?v=HG68Ymazo18"
+            "video": "https://www.youtube.com/watch?v=PJK-qC5W8ME&t=480s",
+            "start": 480
           },
           {
             "id": 3,
             "title": "Professional Communication",
             "description": "Improve communication and confidence during interviews.",
-            "video": "https://www.youtube.com/watch?v=HG68Ymazo18"
+            "video": "https://www.youtube.com/watch?v=PJK-qC5W8ME&t=1080s",
+            "start": 1080
           }
         ]
       }

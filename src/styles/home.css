@@ -238,24 +238,24 @@
    ========================================================= */
 
 .home-page .hero .primary-btn {
-  background: #3454d1;
+  background: #0f2747;
 
   color: #ffffff;
 
   box-shadow:
-    0 10px 25px rgba(52, 84, 209, 0.35);
+    0 10px 25px rgba(15, 39, 71, 0.35);
 }
 
 
 .home-page .hero .primary-btn:hover {
-  background: #2845b8;
+  background: #183c67;
 
   color: #ffffff;
 
   transform: translateY(-3px);
 
   box-shadow:
-    0 14px 30px rgba(52, 84, 209, 0.45);
+    0 14px 30px rgba(15, 39, 71, 0.45);
 }
 
 
@@ -285,6 +285,44 @@
 
 
 /* =========================================================
+   HERO STATS ROW
+   ========================================================= */
+
+.home-page .hero .hero-stats-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.home-page .hero .hero-stat-pill {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.home-page .hero .hero-stat-pill strong {
+  color: #60a5fa;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.home-page .hero .hero-stat-pill span {
+  color: #e2e8f0;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+
+/* =========================================================
    SECTION HEADING
    ========================================================= */
 
@@ -303,7 +341,7 @@
 .home-page .section-heading p {
   margin: 0 0 10px;
 
-  color: #3454d1;
+  color: #1d4ed8;
 
   font-size: 12px;
 
@@ -340,10 +378,9 @@
   background:
     linear-gradient(
       180deg,
-      #ffffff 0%,
-      #f9fbff 100%
+      #f8fafc 0%,
+      #eef3f8 100%
     );
-    /* text-align: center; */
 }
 
 
@@ -414,8 +451,8 @@
 
   background: linear-gradient(
     90deg,
-    #3454d1,
-    #6c7ff2
+    #0f2747,
+    #2563eb
   );
 
   transform: scaleX(0);
@@ -480,23 +517,23 @@
    ========================================================= */
 
 .home-page .feature-card:nth-child(1) .feature-icon {
-  background: #eaf1ff;
+  background: #e8eef6;
 
-  color: #3454d1;
+  color: #0f2747;
 }
 
 
 .home-page .feature-card:nth-child(2) .feature-icon {
-  background: #e8f8f0;
+  background: #e8f4ef;
 
-  color: #16a568;
+  color: #0f766e;
 }
 
 
 .home-page .feature-card:nth-child(3) .feature-icon {
-  background: #fff1df;
+  background: #f7eedd;
 
-  color: #f28a16;
+  color: #b45309;
 }
 
 
@@ -538,7 +575,7 @@
 
   gap: 6px;
 
-  color: #3454d1;
+  color: #0f2747;
 
   font-size: 13px;
 
@@ -639,9 +676,9 @@
 
   border-radius: 14px;
 
-  background: #eaf1ff;
+  background: #e8eef6;
 
-  color: #3454d1;
+  color: #0f2747;
 }
 
 
@@ -660,7 +697,7 @@
 
   margin-bottom: 8px;
 
-  color: #3454d1;
+  color: #0f2747;
 
   font-size: 11px;
 

@@ -45,6 +45,20 @@ const Home = () => {
               Create Free Account
             </Link>
           </div>
+          <div className="hero-stats-row">
+            <div className="hero-stat-pill">
+              <strong>15+</strong>
+              <span>Curated Tracks</span>
+            </div>
+            <div className="hero-stat-pill">
+              <strong>100%</strong>
+              <span>Free & Open</span>
+            </div>
+            <div className="hero-stat-pill">
+              <strong>Verified</strong>
+              <span>Certificates</span>
+            </div>
+          </div>
         </div>
       </section>
       <section className="why-edulearn">

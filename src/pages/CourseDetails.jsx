@@ -29,6 +29,7 @@ import {
   FiHeart,
   FiCheckCircle,
   FiAward,
+  FiX,
 } from "react-icons/fi";
 
 const API_URL = "http://localhost:5000";
@@ -77,6 +78,83 @@ const CourseDetails = () => {
 
   const [isWishlisted, setIsWishlisted] =
     useState(false);
+
+  const [activeLessonVideo, setActiveLessonVideo] =
+    useState(null);
+
+  const parseYouTubeStart = (url, explicitStart) => {
+    if (Number.isFinite(explicitStart) && explicitStart > 0) {
+      return Math.floor(explicitStart);
+    }
+
+    if (!url) return 0;
+
+    const startParam = url.match(/[?&]start=(\d+)/);
+    if (startParam) {
+      return parseInt(startParam[1], 10);
+    }
+
+    const tParam = url.match(/[?&#]t=([^&]+)/);
+    if (!tParam) return 0;
+
+    const value = decodeURIComponent(tParam[1]);
+    if (/^\d+s?$/i.test(value)) {
+      return parseInt(value, 10);
+    }
+
+    let seconds = 0;
+    const hours = value.match(/(\d+)h/i);
+    const minutes = value.match(/(\d+)m/i);
+    const secs = value.match(/(\d+)s/i);
+    if (hours) seconds += parseInt(hours[1], 10) * 3600;
+    if (minutes) seconds += parseInt(minutes[1], 10) * 60;
+    if (secs) seconds += parseInt(secs[1], 10);
+    return seconds;
+  };
+
+  const getWatchUrl = (url, startSeconds = 0) => {
+    if (!url) return "";
+    if (!startSeconds) return url;
+
+    try {
+      const parsed = new URL(url);
+      parsed.searchParams.delete("t");
+      parsed.searchParams.delete("start");
+      parsed.searchParams.set("t", `${startSeconds}s`);
+      return parsed.toString();
+    } catch {
+      return url;
+    }
+  };
+
+  const getEmbedUrl = (url, explicitStart) => {
+    if (!url) return "";
+    try {
+      let videoId = "";
+      const startSeconds = parseYouTubeStart(url, explicitStart);
+
+      const vMatch = url.match(/[?&]v=([a-zA-Z0-9_-]{11})/);
+      if (vMatch) {
+        videoId = vMatch[1];
+      } else {
+        const shortMatch = url.match(/youtu\.be\/([a-zA-Z0-9_-]{11})/);
+        if (shortMatch) {
+          videoId = shortMatch[1];
+        }
+      }
+
+      if (videoId) {
+        let embed = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+        if (startSeconds > 0) {
+          embed += `&start=${startSeconds}`;
+        }
+        return embed;
+      }
+      return url;
+    } catch {
+      return url;
+    }
+  };
 
 
   // =====================================================
@@ -1115,22 +1193,32 @@ const CourseDetails = () => {
 
 
                     {lesson.video && (
-
-                      <a
-                        href={lesson.video}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="watch-video-btn"
-                      >
-
-                        <FiPlayCircle />
-
-                        Watch Video
-
-                        <FiExternalLink />
-
-                      </a>
-
+                      <div className="lesson-video-actions">
+                        <button
+                          type="button"
+                          className="watch-video-btn"
+                          onClick={() =>
+                            setActiveLessonVideo({
+                              ...lesson,
+                              partNumber: index + 1,
+                              start: lesson.start || 0
+                            })
+                          }
+                          title="Watch this part"
+                        >
+                          <FiPlayCircle />
+                          <span>Watch Part {index + 1}</span>
+                        </button>
+                        <a
+                          href={getWatchUrl(lesson.video, lesson.start)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="external-video-link"
+                          title="Open this part on YouTube"
+                        >
+                          <FiExternalLink />
+                        </a>
+                      </div>
                     )}
 
 
@@ -1222,6 +1310,74 @@ const CourseDetails = () => {
         </Link>
 
       </div>
+
+      {/* VIDEO PLAYER MODAL */}
+      {activeLessonVideo && (
+        <div
+          className="video-modal-overlay"
+          onClick={() => setActiveLessonVideo(null)}
+        >
+          <div
+            className="video-modal-container"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="video-modal-header">
+              <div className="video-modal-title">
+                <span className="video-part-badge">
+                  Part {activeLessonVideo.partNumber || 1}
+                </span>
+                <h3>{activeLessonVideo.title}</h3>
+              </div>
+              <button
+                type="button"
+                className="video-modal-close"
+                onClick={() => setActiveLessonVideo(null)}
+                aria-label="Close video"
+              >
+                <FiX />
+              </button>
+            </div>
+
+            <div className="video-modal-player-wrapper">
+              <iframe
+                key={`${activeLessonVideo.id}-${activeLessonVideo.start || 0}-${activeLessonVideo.video}`}
+                src={getEmbedUrl(activeLessonVideo.video, activeLessonVideo.start)}
+                title={activeLessonVideo.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="video-modal-iframe"
+              />
+            </div>
+
+            <div className="video-modal-footer">
+              <p>{activeLessonVideo.description}</p>
+              <div className="video-modal-actions">
+                <a
+                  href={getWatchUrl(activeLessonVideo.video, activeLessonVideo.start)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="modal-youtube-link"
+                >
+                  <FiExternalLink />
+                  <span>Open in YouTube</span>
+                </a>
+                {enrollment && !completedLessons.includes(activeLessonVideo.id) && (
+                  <button
+                    type="button"
+                    className="modal-complete-btn"
+                    onClick={() => {
+                      handleLessonComplete(activeLessonVideo.id);
+                    }}
+                  >
+                    <FiCheckCircle />
+                    <span>Mark as Completed</span>
+                  </button>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
     </div>
 
