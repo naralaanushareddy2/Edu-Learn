@@ -1,7 +1,9 @@
 .terms-page {
   min-height: calc(100vh - 124px);
   padding: 50px 6% 100px;
-  background: #f7f9fc;
+  background: var(--bg-page);
+  color: var(--text-primary);
+  transition: var(--theme-transition);
 }
 
 .terms-header {
@@ -12,7 +14,7 @@
 
 .terms-header p {
   margin: 0 0 10px;
-  color: #315d8f;
+  color: var(--accent-primary);
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -20,12 +22,13 @@
 
 .terms-header h1 {
   margin: 0 0 12px;
-  color: #172b45;
+  color: var(--text-primary);
   font-size: 38px;
+  letter-spacing: -0.5px;
 }
 
 .terms-header span {
-  color: #68778a;
+  color: var(--text-muted);
   font-size: 16px;
   line-height: 1.7;
 }
@@ -34,16 +37,17 @@
   max-width: 950px;
   margin: 0 auto;
   padding: 35px 40px;
-  background: #ffffff;
-  border: 1px solid #e3e8ef;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: 14px;
-  box-shadow: 0 8px 25px rgba(30, 50, 90, 0.05);
+  box-shadow: var(--shadow-sm);
+  transition: var(--theme-transition);
 }
 
 .terms-section {
   padding: 0 0 25px;
   margin-bottom: 25px;
-  border-bottom: 1px solid #edf0f4;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .terms-section:last-child {
@@ -54,13 +58,13 @@
 
 .terms-section h2 {
   margin: 0 0 10px;
-  color: #24364b;
+  color: var(--text-primary);
   font-size: 19px;
 }
 
 .terms-section p {
   margin: 0;
-  color: #68778a;
+  color: var(--text-secondary);
   font-size: 14px;
   line-height: 1.8;
 }

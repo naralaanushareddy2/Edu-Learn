@@ -1,20 +1,116 @@
 /* =========================================================
-   MODERN OVERRIDES
+   MODERN OVERRIDES - MASTER DESIGN SYSTEM
    =========================================================
-   
-   IMPORTANT:
-   This file contains only general/global styling.
-   Home page specific styling belongs in home.css.
-   
-   Do NOT add .hero, .hero-content, .feature-card,
-   or .course-card positioning rules here.
+   Comprehensive tokens and universal mode-adaptive rules
+   Formal • Executive • Academic • Engaging
    ========================================================= */
 
 @import "./dark-mode.css";
 
+/* =========================================================
+   DESIGN TOKENS (LIGHT & DARK MODE)
+   ========================================================= */
+
+:root,
+[data-theme="light"],
+html.light-theme,
+body.light-theme {
+  /* Canvas & Surfaces */
+  --bg-page: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f1f5f9;
+  --bg-well: #f1f5f9;
+  --bg-input: #ffffff;
+  --bg-input-focus: #ffffff;
+
+  /* Borders & Dividers */
+  --border-color: #e2e8f0;
+  --border-subtle: #f1f5f9;
+  --border-strong: #cbd5e1;
+
+  /* Typography */
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --text-inverse: #ffffff;
+
+  /* Primary Brand & Accents */
+  --accent-primary: #1e40af;
+  --accent-hover: #1d4ed8;
+  --accent-subtle: #eff6ff;
+  --accent-secondary: #0284c7;
+  --accent-gold: #b45309;
+  --accent-gold-bg: #fef3c7;
+
+  /* Status Colors */
+  --success: #059669;
+  --success-bg: #ecfdf5;
+  --danger: #dc2626;
+  --danger-bg: #fef2f2;
+  --warning: #d97706;
+  --warning-bg: #fffbeb;
+
+  /* Elevation Shadows */
+  --shadow-sm: 0 1px 3px 0 rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 4px 14px -1px rgba(15, 23, 42, 0.08), 0 2px 6px -2px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 12px 28px -4px rgba(15, 23, 42, 0.10), 0 4px 12px -2px rgba(15, 23, 42, 0.04);
+  --shadow-xl: 0 20px 36px -5px rgba(15, 23, 42, 0.12), 0 8px 16px -6px rgba(15, 23, 42, 0.05);
+
+  --ring-focus: 0 0 0 3px rgba(30, 64, 175, 0.18);
+  --theme-transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+
+[data-theme="dark"],
+html.dark-theme,
+body.dark-theme {
+  /* Canvas & Surfaces */
+  --bg-page: #090e17;
+  --bg-surface: #0f172a;
+  --bg-card: #131d2e;
+  --bg-card-hover: #19253b;
+  --bg-well: #0c1424;
+  --bg-input: #101928;
+  --bg-input-focus: #142033;
+
+  /* Borders & Dividers */
+  --border-color: #1e2d42;
+  --border-subtle: #162235;
+  --border-strong: #2a3c54;
+
+  /* Typography */
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-inverse: #0f172a;
+
+  /* Primary Brand & Accents */
+  --accent-primary: #38bdf8;
+  --accent-hover: #60a5fa;
+  --accent-subtle: rgba(56, 189, 248, 0.14);
+  --accent-secondary: #38bdf8;
+  --accent-gold: #fbbf24;
+  --accent-gold-bg: rgba(251, 191, 36, 0.15);
+
+  /* Status Colors */
+  --success: #10b981;
+  --success-bg: rgba(16, 185, 129, 0.15);
+  --danger: #f87171;
+  --danger-bg: rgba(239, 68, 68, 0.15);
+  --warning: #fbbf24;
+  --warning-bg: rgba(245, 158, 11, 0.15);
+
+  /* Elevation Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.55);
+  --shadow-xl: 0 20px 42px rgba(0, 0, 0, 0.65);
+
+  --ring-focus: 0 0 0 3px rgba(56, 189, 248, 0.28);
+}
 
 /* =========================================================
-   BOX SIZING
+   BOX SIZING & BASE STYLES
    ========================================================= */
 
 *,
@@ -23,206 +119,537 @@
   box-sizing: border-box;
 }
 
-
-/* =========================================================
-   HTML / BODY
-   ========================================================= */
-
 html {
   scroll-behavior: smooth;
 }
 
-
 body {
   margin: 0;
-
   padding: 0;
-
   font-family:
     Inter,
+    -apple-system,
+    BlinkMacSystemFont,
     "Segoe UI",
     Roboto,
     Arial,
     sans-serif;
-
-  background: #ffffff;
-
-  color: #172033;
-
+  background-color: var(--bg-page);
+  color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
-
   text-rendering: optimizeLegibility;
+  transition: var(--theme-transition);
 }
 
-
 /* =========================================================
-   LINKS
+   ALL PAGE WRAPPERS - CONSISTENT THEME BACKGROUND
    ========================================================= */
 
-a {
-  color: inherit;
+.home-page,
+.courses-page,
+.categories-page,
+.subcategories-page,
+.category-details-page,
+.instructors-page,
+.learning-page,
+.my-learning-page,
+.profile-page,
+.wishlist-page,
+.help-page,
+.terms-page,
+.admin-dashboard-page,
+.admin-learning-page,
+.login-page {
+  background-color: var(--bg-page) !important;
+  color: var(--text-primary) !important;
+  transition: var(--theme-transition);
 }
 
-
 /* =========================================================
-   BUTTONS
+   UNIVERSAL TYPOGRAPHY OVERRIDES (MODE-ADAPTIVE)
    ========================================================= */
 
-button,
-input,
+h1, h2, h3, h4, h5, h6,
+.categories-header h1,
+.subcategories-header h1,
+.courses-header h1,
+.my-learning-header h1,
+.wishlist-header h1,
+.instructors-header h1,
+.profile-header h1,
+.profile-title h1,
+.certificate-page-header h1,
+.section-heading h2,
+.course-details-content h1,
+.category-card h2,
+.category-card h3,
+.subcategory-page-card h3,
+.subcategory-card h3,
+.subcategory-page-section > h2,
+.learning-course-content h2,
+.wishlist-card-content h2,
+.instructor-card h3,
+.feature-content h3,
+.admin-users-heading h2,
+.lessons-heading h2,
+.lesson-content h3,
+.help-intro h2,
+.faq-card h3,
+.terms-section h2,
+.admin-modal-box h3,
+.academic-modal h2,
+.summary-value,
+.course-card h3,
+.learning-stat-card h3,
+.profile-name,
+.admin-user-info strong {
+  color: var(--text-primary) !important;
+  letter-spacing: -0.3px;
+}
+
+p,
+.course-description,
+.lesson-content p,
+.learning-course-content > p,
+.wishlist-card-content p,
+.instructor-bio,
+.feature-content p,
+.terms-section p,
+.help-intro p,
+.faq-card p,
+.course-card p,
+.learning-stat-card p,
+.profile-bio {
+  color: var(--text-secondary) !important;
+  line-height: 1.65;
+}
+
+small,
+.text-muted,
+.summary-label,
+.admin-user-info small,
+.results-count,
+.course-level-tag,
+.lesson-duration,
+.categories-header span,
+.subcategories-header span,
+.courses-header span,
+.my-learning-header span,
+.wishlist-header span,
+.instructors-header span,
+.profile-title p,
+.admin-users-heading span,
+.lessons-heading p,
+.learning-meta,
+.course-card-meta,
+.section-subtitle,
+.terms-header span,
+.help-header > p:last-child {
+  color: var(--text-muted) !important;
+}
+
+.categories-header p,
+.subcategories-header p,
+.courses-header p,
+.my-learning-header p,
+.wishlist-header p,
+.courses-eyebrow,
+.instructors-eyebrow,
+.section-heading p,
+.help-label,
+.terms-header p,
+.learning-category,
+.wishlist-category,
+.course-category,
+.course-track-pill,
+.lessons-heading span,
+.subcategory-count {
+  color: var(--accent-primary) !important;
+  font-weight: 700;
+}
+
+/* =========================================================
+   UNIVERSAL CARDS & SURFACES
+   ========================================================= */
+
+.category-card,
+.subcategory-card,
+.subcategory-page-card,
+.course-card,
+.lesson-card,
+.learning-course-card,
+.summary-card,
+.wishlist-card,
+.instructor-card,
+.feature-card,
+.admin-user-stat,
+.admin-users-table-wrapper,
+.profile-main-card,
+.profile-details-card,
+.profile-card,
+.faq-card,
+.help-intro,
+.terms-container,
+.learning-stat-card,
+.admin-modal-box,
+.academic-modal,
+.course-details-header {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+  border-radius: 16px;
+  transition: var(--theme-transition);
+}
+
+.category-card:hover,
+.subcategory-card:hover,
+.subcategory-page-card:hover,
+.course-card:hover,
+.lesson-card:hover,
+.learning-course-card:hover,
+.summary-card:hover,
+.wishlist-card:hover,
+.instructor-card:hover,
+.feature-card:hover,
+.faq-card:hover {
+  border-color: var(--accent-primary) !important;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+/* Section & Page Headers */
+.categories-header,
+.subcategories-header,
+.courses-header,
+.my-learning-header,
+.wishlist-header,
+.instructors-header,
+.help-header,
+.terms-header,
+.learning-header {
+  background: var(--bg-surface) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  transition: var(--theme-transition);
+}
+
+/* =========================================================
+   TABLES & ADMIN STYLES
+   ========================================================= */
+
+.admin-users-table th {
+  background: var(--bg-surface) !important;
+  color: var(--text-muted) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.admin-users-table td {
+  background: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+  border-top: 1px solid var(--border-color) !important;
+}
+
+.admin-users-table tr:hover td {
+  background: var(--bg-card-hover) !important;
+}
+
+.admin-user-avatar {
+  background: var(--accent-subtle) !important;
+  color: var(--accent-primary) !important;
+}
+
+.admin-action {
+  background: var(--bg-well) !important;
+  color: var(--text-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px;
+  transition: var(--theme-transition);
+}
+
+.admin-action:hover {
+  background: var(--accent-subtle) !important;
+  color: var(--accent-primary) !important;
+  border-color: var(--accent-primary) !important;
+}
+
+/* =========================================================
+   FORM CONTROLS & INPUTS
+   ========================================================= */
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select,
 textarea,
-select {
-  font-family: inherit;
+.admin-form-group input,
+.admin-form-group select,
+.search-box input,
+.courses-inline-search input,
+.admin-search input {
+  background-color: var(--bg-input) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color) !important;
+  transition: var(--theme-transition);
 }
 
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted) !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+.courses-inline-search:focus-within,
+.search-box:focus-within,
+.admin-search:focus-within {
+  border-color: var(--accent-primary) !important;
+  box-shadow: var(--ring-focus) !important;
+}
+
+label,
+.admin-form-group label,
+.login-form label,
+.profile-form-group label {
+  color: var(--text-primary) !important;
+  font-weight: 600;
+}
 
 /* =========================================================
-   IMAGES
+   NAVIGATION & BOTTOM BAR
    ========================================================= */
 
-img {
-  max-width: 100%;
-
-  display: block;
+.nav-middle {
+  background: var(--bg-surface) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: var(--theme-transition);
 }
 
+.bottom-nav {
+  background: var(--bg-surface) !important;
+  border-top: 1px solid var(--border-color) !important;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08) !important;
+  transition: var(--theme-transition);
+}
+
+.bottom-nav-item {
+  color: var(--text-muted) !important;
+}
+
+.bottom-nav-item:hover {
+  color: var(--text-primary) !important;
+}
+
+.bottom-nav-item.active {
+  color: var(--accent-primary) !important;
+}
+
+.bottom-nav-item.active .bottom-nav-icon {
+  color: var(--accent-primary) !important;
+}
+
+.action-icon {
+  color: var(--text-muted) !important;
+  transition: var(--theme-transition);
+}
+
+.action-icon:hover {
+  color: var(--accent-primary) !important;
+}
+
+.profile-button {
+  background: var(--bg-well) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+.profile-menu {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: var(--shadow-xl) !important;
+}
+
+.profile-header h4 {
+  color: var(--text-primary) !important;
+}
+
+.profile-header p {
+  color: var(--text-muted) !important;
+}
+
+.profile-option {
+  color: var(--text-primary) !important;
+}
+
+.profile-option:hover {
+  background: var(--bg-card-hover) !important;
+  color: var(--accent-primary) !important;
+}
 
 /* =========================================================
-   SELECTION
+   STATUS BADGES & TAGS
    ========================================================= */
 
-::selection {
-  background: #3454d1;
-
-  color: #ffffff;
+.user-status.active {
+  background: var(--success-bg) !important;
+  color: var(--success) !important;
+  border: 1px solid var(--success) !important;
+  font-weight: 600;
 }
 
+.user-status.locked {
+  background: var(--danger-bg) !important;
+  color: var(--danger) !important;
+  border: 1px solid var(--danger) !important;
+  font-weight: 600;
+}
+
+.admin-role {
+  background: var(--accent-subtle) !important;
+  color: var(--accent-primary) !important;
+  font-weight: 600;
+}
+
+.admin-role-admin {
+  background: var(--accent-gold-bg) !important;
+  color: var(--accent-gold) !important;
+  font-weight: 700;
+}
+
+.meta-item,
+.course-card-meta,
+.learning-meta {
+  background: var(--bg-well) !important;
+  color: var(--text-secondary) !important;
+}
+
+.external-video-link {
+  background: var(--bg-well) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.external-video-link:hover {
+  background: var(--accent-subtle) !important;
+  color: var(--accent-primary) !important;
+  border-color: var(--accent-primary) !important;
+}
+
+.wishlist-btn {
+  background: var(--bg-well) !important;
+  color: var(--accent-primary) !important;
+  border: 1px solid var(--accent-primary) !important;
+}
+
+.wishlist-btn:hover {
+  background: var(--accent-primary) !important;
+  color: #ffffff !important;
+}
 
 /* =========================================================
-   SCROLLBAR
+   ADMIN NAVIGATION TABS (EXECUTIVE STYLE)
    ========================================================= */
 
-::-webkit-scrollbar {
-  width: 8px;
+.admin-nav-tabs {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 6% 0;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-color);
+  box-sizing: border-box;
 }
 
-
-::-webkit-scrollbar-track {
-  background: #f1f3f8;
+.admin-nav-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: transparent;
+  border-bottom: 3px solid transparent;
+  transition: var(--theme-transition);
+  text-decoration: none;
+  cursor: pointer;
 }
 
-
-::-webkit-scrollbar-thumb {
-  background: #b7bfd4;
-
-  border-radius: 20px;
+.admin-nav-tab:hover {
+  color: var(--accent-primary);
 }
 
-
-::-webkit-scrollbar-thumb:hover {
-  background: #8792b1;
+.admin-nav-tab.active {
+  color: var(--accent-primary);
+  border-bottom-color: var(--accent-primary);
+  background: var(--accent-subtle);
+  border-radius: 8px 8px 0 0;
 }
 
+.admin-nav-tab-icon {
+  font-size: 17px;
+}
 
 /* =========================================================
-   GLOBAL CONTAINER
+   PAGE TRANSITION & GLOBAL UTILITIES
    ========================================================= */
 
 .container {
   width: 100%;
-
-  max-width: 1250px;
-
+  max-width: 1280px;
   margin-left: auto;
-
   margin-right: auto;
-
   padding-left: 24px;
-
   padding-right: 24px;
 }
-
-
-/* =========================================================
-   GLOBAL CARD POLISH
-   ========================================================= */
-
-.card {
-  border-radius: 14px;
-
-  border: 1px solid #e5e9f2;
-
-  background: #ffffff;
-
-  box-shadow:
-    0 8px 30px rgba(30, 50, 90, 0.06);
-}
-
-
-/* =========================================================
-   GLOBAL FORM ELEMENTS
-   ========================================================= */
-
-input,
-textarea,
-select {
-  outline: none;
-}
-
-
-input:focus,
-textarea:focus,
-select:focus {
-  border-color: #3454d1;
-}
-
-
-/* =========================================================
-   GLOBAL BUTTON TRANSITION
-   ========================================================= */
-
-button {
-  transition:
-    background 0.25s ease,
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-
-/* =========================================================
-   PAGE TRANSITION
-   ========================================================= */
 
 .page-transition {
   animation: pageFadeIn 0.35s ease;
 }
 
-
 @keyframes pageFadeIn {
-
   from {
     opacity: 0;
-
     transform: translateY(5px);
   }
-
   to {
     opacity: 1;
-
     transform: translateY(0);
   }
 }
 
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
 
-/* =========================================================
-   RESPONSIVE GLOBAL CONTAINER
-   ========================================================= */
+::-webkit-scrollbar-track {
+  background: var(--bg-page);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+::selection {
+  background: var(--accent-primary);
+  color: #ffffff;
+}
 
 @media (max-width: 650px) {
-
   .container {
-    padding-left: 18px;
-
-    padding-right: 18px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }

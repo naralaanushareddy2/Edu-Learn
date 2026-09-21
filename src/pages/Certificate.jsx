@@ -1,4 +1,4 @@
-import React, {
+import {
   useEffect,
   useRef,
   useState
@@ -9,7 +9,7 @@ import {
   useParams
 } from "react-router-dom";
 
-import axios from "axios";
+import api, { API_URL } from "../services/api";
 
 import { jsPDF } from "jspdf";
 
@@ -23,9 +23,6 @@ import {
 
 import "../styles/certificate.css";
 import { useSelector } from "react-redux";
-
-const API_URL =
-  "http://localhost:5000";
 
 
 const Certificate = () => {
@@ -82,62 +79,39 @@ const loggedInUser = useSelector(
   // =====================================================
 
   useEffect(() => {
+    let isMounted = true;
 
     const loadEnrollment = async () => {
-
       try {
-
-        if (
-          !loggedInUser ||
-          !selectedCourse
-        ) {
-
-          setLoading(false);
-
+        if (!loggedInUser || !selectedCourse) {
+          if (isMounted) setLoading(false);
           return;
-
         }
 
-
-        const response =
-          await axios.get(
-
-            `${API_URL}/enrollments?userId=${encodeURIComponent(
-              loggedInUser.id
-            )}&courseId=${selectedCourse.id}`
-
-          );
-
-
-        if (
-          response.data.length > 0
-        ) {
-
-          setEnrollment(
-            response.data[0]
-          );
-
-        }
-
-      } catch (error) {
-
-        console.error(
-          "Certificate error:",
-          error
+        const response = await api.get(
+          `${API_URL}/enrollments?userId=${encodeURIComponent(
+            loggedInUser.id
+          )}&courseId=${selectedCourse.id}`
         );
 
+        if (isMounted && response.data.length > 0) {
+          setEnrollment(response.data[0]);
+        }
+      } catch (error) {
+        console.error("Certificate error:", error);
       } finally {
-
-        setLoading(false);
-
+        if (isMounted) {
+          setLoading(false);
+        }
       }
-
     };
-
 
     loadEnrollment();
 
-  }, [courseId]);
+    return () => {
+      isMounted = false;
+    };
+  }, [courseId, loggedInUser, selectedCourse]);
 
 
   // =====================================================

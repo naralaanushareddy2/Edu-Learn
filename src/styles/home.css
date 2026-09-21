@@ -10,9 +10,10 @@
 .home-page {
   width: 100%;
   min-height: 100vh;
-  background: #ffffff;
-  color: #172033;
+  background: var(--bg-page);
+  color: var(--text-primary);
   overflow-x: hidden;
+  transition: var(--theme-transition);
 }
 
 
@@ -341,7 +342,7 @@
 .home-page .section-heading p {
   margin: 0 0 10px;
 
-  color: #1d4ed8;
+  color: var(--accent-primary);
 
   font-size: 12px;
 
@@ -355,7 +356,7 @@
 .home-page .section-heading h2 {
   margin: 0;
 
-  color: #172033;
+  color: var(--text-primary);
 
   font-size: 34px;
 
@@ -375,12 +376,10 @@
 .home-page .why-edulearn {
   padding: 90px 7%;
 
-  background:
-    linear-gradient(
-      180deg,
-      #f8fafc 0%,
-      #eef3f8 100%
-    );
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  transition: var(--theme-transition);
 }
 
 
@@ -416,9 +415,9 @@
 
   min-height: 155px;
 
-  background: #ffffff;
+  background: var(--bg-card);
 
-  border: 1px solid #e5e9f2;
+  border: 1px solid var(--border-color);
 
   border-radius: 16px;
 
@@ -426,8 +425,7 @@
 
   color: inherit;
 
-  box-shadow:
-    0 8px 30px rgba(30, 50, 90, 0.06);
+  box-shadow: var(--shadow-sm);
 
   overflow: hidden;
 
@@ -451,8 +449,8 @@
 
   background: linear-gradient(
     90deg,
-    #0f2747,
-    #2563eb
+    var(--accent-primary),
+    var(--accent-secondary)
   );
 
   transform: scaleX(0);
@@ -466,10 +464,9 @@
 .home-page .feature-card:hover {
   transform: translateY(-7px);
 
-  border-color: #d5defc;
+  border-color: var(--accent-primary);
 
-  box-shadow:
-    0 18px 40px rgba(30, 50, 90, 0.12);
+  box-shadow: var(--shadow-lg);
 }
 
 
@@ -517,23 +514,23 @@
    ========================================================= */
 
 .home-page .feature-card:nth-child(1) .feature-icon {
-  background: #e8eef6;
+  background: var(--accent-subtle);
 
-  color: #0f2747;
+  color: var(--accent-primary);
 }
 
 
 .home-page .feature-card:nth-child(2) .feature-icon {
-  background: #e8f4ef;
+  background: var(--success-bg);
 
-  color: #0f766e;
+  color: var(--success);
 }
 
 
 .home-page .feature-card:nth-child(3) .feature-icon {
-  background: #f7eedd;
+  background: var(--accent-gold-bg);
 
-  color: #b45309;
+  color: var(--accent-gold);
 }
 
 
@@ -549,7 +546,7 @@
 .home-page .feature-content h3 {
   margin: 2px 0 9px;
 
-  color: #172033;
+  color: var(--text-primary);
 
   font-size: 18px;
 
@@ -560,7 +557,7 @@
 .home-page .feature-content p {
   margin: 0 0 15px;
 
-  color: #6b7280;
+  color: var(--text-secondary);
 
   font-size: 13px;
 
@@ -575,7 +572,7 @@
 
   gap: 6px;
 
-  color: #0f2747;
+  color: var(--accent-primary);
 
   font-size: 13px;
 
@@ -597,7 +594,8 @@
 .home-page .featured-courses {
   padding: 90px 7%;
 
-  background: #f5f7fc;
+  background: var(--bg-page);
+  transition: var(--theme-transition);
 }
 
 
@@ -633,14 +631,13 @@
 
   min-height: 300px;
 
-  background: #ffffff;
+  background: var(--bg-card);
 
-  border: 1px solid #e5e9f2;
+  border: 1px solid var(--border-color);
 
   border-radius: 16px;
 
-  box-shadow:
-    0 8px 30px rgba(30, 50, 90, 0.06);
+  box-shadow: var(--shadow-sm);
 
   transition:
     transform 0.3s ease,
@@ -652,10 +649,9 @@
 .home-page .course-card:hover {
   transform: translateY(-7px);
 
-  border-color: #d4ddfb;
+  border-color: var(--accent-primary);
 
-  box-shadow:
-    0 18px 40px rgba(30, 50, 90, 0.12);
+  box-shadow: var(--shadow-lg);
 }
 
 
@@ -676,9 +672,9 @@
 
   border-radius: 14px;
 
-  background: #e8eef6;
+  background: var(--accent-subtle);
 
-  color: #0f2747;
+  color: var(--accent-primary);
 }
 
 
@@ -697,7 +693,7 @@
 
   margin-bottom: 8px;
 
-  color: #0f2747;
+  color: var(--accent-primary);
 
   font-size: 11px;
 
@@ -716,7 +712,7 @@
 .home-page .course-card h3 {
   margin: 0 0 10px;
 
-  color: #172033;
+  color: var(--text-primary);
 
   font-size: 19px;
 
@@ -733,7 +729,7 @@
 .home-page .course-card p {
   margin: 0 0 17px;
 
-  color: #6b7280;
+  color: var(--text-secondary);
 
   font-size: 13px;
 
@@ -779,7 +775,7 @@
 
   width: fit-content;
 
-  color: #3454d1;
+  color: var(--accent-primary);
 
   text-decoration: none;
 
@@ -794,7 +790,7 @@
 .home-page .course-card > a:hover {
   gap: 11px;
 
-  color: #18378f;
+  color: var(--accent-hover);
 }
 
 
@@ -815,21 +811,20 @@
 
   gap: 15px;
 
-  background: #ffffff;
+  background: var(--bg-card);
 
-  border: 1px solid #e5e9f2;
+  border: 1px solid var(--border-color);
 
   border-radius: 16px;
 
-  box-shadow:
-    0 8px 25px rgba(30, 50, 90, 0.05);
+  box-shadow: var(--shadow-sm);
 }
 
 
 .home-page .course-placeholder p {
   margin: 0;
 
-  color: #777777;
+  color: var(--text-muted);
 }
 
 
@@ -840,7 +835,7 @@
 
   gap: 7px;
 
-  color: #3454d1;
+  color: var(--accent-primary);
 
   text-decoration: none;
 

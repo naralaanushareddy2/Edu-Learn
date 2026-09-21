@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import axios from "axios";
+import api, { API_URL } from "../services/api";
 
 import {
   FiHeart,
@@ -16,8 +16,6 @@ import {
 } from "../redux/wishlistSlice";
 
 import "../styles/wishlist.css";
-
-const API_URL = "http://localhost:5000";
 
 const Wishlist = () => {
 
@@ -69,7 +67,7 @@ const Wishlist = () => {
 
         setLoading(true);
 
-        const response = await axios.get(
+        const response = await api.get(
           `${API_URL}/wishlist?userId=${encodeURIComponent(
             loggedInUser.id
           )}`
@@ -84,10 +82,6 @@ const Wishlist = () => {
         console.error(
           "Wishlist loading error:",
           error
-        );
-
-        alert(
-          "Unable to load your wishlist. Make sure JSON Server is running."
         );
 
       } finally {
@@ -113,7 +107,7 @@ const Wishlist = () => {
 
     try {
 
-      await axios.delete(
+      await api.delete(
         `${API_URL}/wishlist/${wishlistId}`
       );
 

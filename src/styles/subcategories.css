@@ -1,15 +1,16 @@
 /* ================================
    SUBCATEGORIES PAGE
+   Modern, formal styling using design tokens
 ================================ */
 
 .subcategories-page {
   min-height: 100vh;
-  padding: 40px 6%;
-  padding-bottom: 120px;
-  background: #f8fafc;
+  padding: 40px 6% 120px;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
   box-sizing: border-box;
+  transition: var(--theme-transition);
 }
-
 
 /* ================================
    BACK BUTTON
@@ -19,32 +20,28 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-
   padding: 10px 18px;
-
-  background: #ffffff;
-  color: #1e293b;
-
-  border: 1px solid #e2e8f0;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
-
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
-
-  transition: all 0.3s ease;
+  transition: var(--theme-transition);
 }
 
 .back-category-btn svg {
   font-size: 18px;
+  color: var(--accent-primary);
 }
 
 .back-category-btn:hover {
-  background: #1e293b;
-  color: #ffffff;
+  background: var(--accent-subtle);
+  color: var(--accent-primary);
+  border-color: var(--accent-primary);
   transform: translateX(-3px);
 }
-
 
 /* ================================
    PAGE HEADER
@@ -58,33 +55,26 @@
 
 .subcategory-page-header p {
   margin-bottom: 12px;
-
-  color: #2563eb;
-
+  color: var(--accent-primary);
   font-size: 13px;
   font-weight: 700;
-
   letter-spacing: 2px;
 }
 
 .subcategory-page-header h1 {
   margin: 0 0 18px;
-
-  color: #0f172a;
-
+  color: var(--text-primary);
   font-size: 42px;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: -0.5px;
 }
 
 .subcategory-page-header span {
   display: block;
-
-  color: #64748b;
-
+  color: var(--text-muted);
   font-size: 17px;
   line-height: 1.7;
 }
-
 
 /* ================================
    SUBCATEGORY SECTION
@@ -97,21 +87,16 @@
 
 .subcategory-page-section > h2 {
   margin-bottom: 8px;
-
-  color: #0f172a;
-
+  color: var(--text-primary);
   font-size: 28px;
   font-weight: 700;
 }
 
 .subcategory-page-section > p {
   margin-bottom: 30px;
-
-  color: #64748b;
-
+  color: var(--text-muted);
   font-size: 15px;
 }
-
 
 /* ================================
    SUBCATEGORY GRID
@@ -119,12 +104,9 @@
 
 .subcategory-page-grid {
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
-
   gap: 24px;
 }
-
 
 /* ================================
    SUBCATEGORY CARD
@@ -133,35 +115,24 @@
 .subcategory-page-card {
   display: flex;
   align-items: center;
-
   gap: 18px;
-
   min-height: 150px;
-
   padding: 24px;
-
-  background: #ffffff;
-
-  border: 1px solid #e2e8f0;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: 14px;
-
   text-decoration: none;
-
-  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05);
-
-  transition: all 0.3s ease;
-
+  box-shadow: var(--shadow-sm);
+  transition: var(--theme-transition);
   box-sizing: border-box;
 }
 
 .subcategory-page-card:hover {
   transform: translateY(-5px);
-
-  border-color: #2563eb;
-
-  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.10);
+  border-color: var(--accent-primary);
+  box-shadow: var(--shadow-lg);
+  background: var(--bg-card-hover);
 }
-
 
 /* ================================
    ICON
@@ -169,23 +140,16 @@
 
 .subcategory-page-icon {
   flex-shrink: 0;
-
   width: 52px;
   height: 52px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
-  background: #eff6ff;
-
-  color: #2563eb;
-
+  background: var(--accent-subtle);
+  color: var(--accent-primary);
   border-radius: 12px;
-
   font-size: 25px;
 }
-
 
 /* ================================
    CONTENT
@@ -197,22 +161,17 @@
 
 .subcategory-page-content h3 {
   margin: 0 0 8px;
-
-  color: #0f172a;
-
+  color: var(--text-primary);
   font-size: 18px;
-  font-weight: 650;
+  font-weight: 700;
 }
 
 .subcategory-page-content p {
   margin: 0;
-
-  color: #64748b;
-
+  color: var(--text-secondary);
   font-size: 14px;
   line-height: 1.6;
 }
-
 
 /* ================================
    ARROW
@@ -220,19 +179,15 @@
 
 .subcategory-page-card > svg {
   flex-shrink: 0;
-
-  color: #94a3b8;
-
+  color: var(--text-muted);
   font-size: 20px;
-
-  transition: all 0.3s ease;
+  transition: transform 0.25s ease, color 0.25s ease;
 }
 
 .subcategory-page-card:hover > svg {
-  color: #2563eb;
+  color: var(--accent-primary);
   transform: translateX(5px);
 }
-
 
 /* ================================
    NOT FOUND
@@ -240,50 +195,37 @@
 
 .subcategory-not-found {
   min-height: 70vh;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   text-align: center;
+  color: var(--text-primary);
 }
 
 .subcategory-not-found h2 {
   margin-bottom: 20px;
-
-  color: #0f172a;
-
+  color: var(--text-primary);
   font-size: 28px;
 }
 
 .subcategory-not-found a {
   display: inline-flex;
   align-items: center;
-
   padding: 10px 18px;
-
-  background: #2563eb;
+  background: var(--accent-primary);
   color: #ffffff;
-
   border-radius: 8px;
-
   text-decoration: none;
-
   font-weight: 600;
+  transition: var(--theme-transition);
 }
 
 .subcategory-not-found a:hover {
-  background: #1d4ed8;
+  background: var(--accent-hover);
 }
 
-
-/* ================================
-   TABLET
-================================ */
-
 @media (max-width: 992px) {
-
   .subcategory-page-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -291,19 +233,11 @@
   .subcategory-page-header h1 {
     font-size: 36px;
   }
-
 }
 
-
-/* ================================
-   MOBILE
-================================ */
-
 @media (max-width: 650px) {
-
   .subcategories-page {
-    padding: 30px 20px;
-    padding-bottom: 110px;
+    padding: 30px 20px 110px;
   }
 
   .subcategory-page-header {
@@ -312,10 +246,6 @@
 
   .subcategory-page-header h1 {
     font-size: 30px;
-  }
-
-  .subcategory-page-header span {
-    font-size: 15px;
   }
 
   .subcategory-page-grid {
@@ -330,33 +260,4 @@
   .subcategory-page-section > h2 {
     font-size: 24px;
   }
-
-}
-
-
-/* ================================
-   SMALL MOBILE
-================================ */
-
-@media (max-width: 400px) {
-
-  .subcategory-page-card {
-    gap: 12px;
-    padding: 16px;
-  }
-
-  .subcategory-page-icon {
-    width: 45px;
-    height: 45px;
-    font-size: 21px;
-  }
-
-  .subcategory-page-content h3 {
-    font-size: 16px;
-  }
-
-  .subcategory-page-content p {
-    font-size: 13px;
-  }
-
 }

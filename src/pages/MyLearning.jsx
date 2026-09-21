@@ -1,14 +1,12 @@
-
-import React, { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
+import api, { API_URL } from "../services/api";
 import { useDispatch, useSelector } from "react-redux";
 
 import categories from "@data/categories.json";
 
 import {
   setEnrollments,
-  updateEnrollment,
   removeEnrollment
 } from "../redux/enrollmentSlice";
 
@@ -23,8 +21,6 @@ import {
 } from "react-icons/fi";
 
 import "../styles/my-learning.css";
-
-const API_URL = "http://localhost:5000";
 
 const MyLearning = () => {
 
@@ -49,183 +45,91 @@ const MyLearning = () => {
   // LOCAL STATE
   // =====================================================
 
-  const [courses, setCourses] = useState([]);
-
   const [loading, setLoading] = useState(true);
-
 
   // =====================================================
   // FIND COURSE FROM categories.json
   // =====================================================
 
   const findCourse = (courseId) => {
-
     for (const category of categories) {
-
-      const course =
-        category.subcategories.find(
-          (item) =>
-            Number(item.id) === Number(courseId)
-        );
+      const course = category.subcategories.find(
+        (item) => Number(item.id) === Number(courseId)
+      );
 
       if (course) {
-
         return {
           ...course,
-
-          categoryId:
-            category.id,
-
-          categoryName:
-            category.name
+          categoryId: category.id,
+          categoryName: category.name
         };
-
       }
-
     }
 
     return null;
   };
 
+  // =====================================================
+  // FORMAT REDUX ENROLLMENTS INTO COURSE DATA (DERIVED)
+  // =====================================================
+
+  const courses = useMemo(() => {
+    if (!loggedInUser) return [];
+
+    return enrollments
+      .map((enrollment) => {
+        const course = findCourse(enrollment.courseId);
+        if (!course) return null;
+
+        return {
+          ...course,
+          enrollmentId: enrollment.id,
+          progress: Number(enrollment.progress || 0),
+          completedLessons: enrollment.completedLessons || [],
+          completed: enrollment.completed || false,
+          enrolledAt: enrollment.enrolledAt
+        };
+      })
+      .filter(Boolean);
+  }, [enrollments, loggedInUser]);
 
   // =====================================================
-  // LOAD ENROLLMENTS FROM JSON SERVER
+  // LOAD ENROLLMENTS ON USER CHANGE
   // =====================================================
 
-  const loadEnrollments = async () => {
+  useEffect(() => {
+    let isMounted = true;
 
-    try {
-
-      setLoading(true);
-
-      // No logged-in user
-      if (!loggedInUser) {
-
-        dispatch(
-          setEnrollments([])
-        );
-
-        setCourses([]);
-
+    const fetchEnrollments = async () => {
+      if (!loggedInUser?.id) {
+        dispatch(setEnrollments([]));
+        if (isMounted) setLoading(false);
         return;
       }
 
+      try {
+        const response = await api.get(
+          `${API_URL}/enrollments?userId=${encodeURIComponent(loggedInUser.id)}`
+        );
 
-      // Get user's enrollments from JSON Server
-      const response = await axios.get(
-        `${API_URL}/enrollments?userId=${encodeURIComponent(
-          loggedInUser.id
-        )}`
-      );
+        if (isMounted) {
+          dispatch(setEnrollments(response.data));
+        }
+      } catch (error) {
+        console.error("My Learning error:", error);
+      } finally {
+        if (isMounted) {
+          setLoading(false);
+        }
+      }
+    };
 
+    fetchEnrollments();
 
-      // Store database data in Redux
-      dispatch(
-        setEnrollments(
-          response.data
-        )
-      );
-
-    } catch (error) {
-
-      console.error(
-        "My Learning error:",
-        error
-      );
-
-      alert(
-        "Unable to load your learning courses."
-      );
-
-    } finally {
-
-      setLoading(false);
-
-    }
-
-  };
-
-
-  // =====================================================
-  // LOAD DATA WHEN USER CHANGES
-  // =====================================================
-
-  useEffect(() => {
-
-    loadEnrollments();
-
-  }, [
-    loggedInUser
-  ]);
-
-
-  // =====================================================
-  // FORMAT REDUX ENROLLMENTS INTO COURSE DATA
-  // =====================================================
-
-  useEffect(() => {
-
-    if (!loggedInUser) {
-
-      setCourses([]);
-
-      return;
-    }
-
-
-    const formattedCourses =
-      enrollments
-        .map((enrollment) => {
-
-          const course =
-            findCourse(
-              enrollment.courseId
-            );
-
-
-          // Course not found
-          if (!course) {
-
-            return null;
-
-          }
-
-
-          return {
-
-            ...course,
-
-            enrollmentId:
-              enrollment.id,
-
-            progress:
-              Number(
-                enrollment.progress || 0
-              ),
-
-            completedLessons:
-              enrollment.completedLessons || [],
-
-            completed:
-              enrollment.completed || false,
-
-            enrolledAt:
-              enrollment.enrolledAt
-
-          };
-
-        })
-        .filter(Boolean);
-
-
-    setCourses(
-      formattedCourses
-    );
-
-  }, [
-    enrollments,
-    loggedInUser
-  ]);
+    return () => {
+      isMounted = false;
+    };
+  }, [loggedInUser, dispatch]);
 
 
   // =====================================================
@@ -252,8 +156,8 @@ const MyLearning = () => {
 
     try {
 
-      // Delete from JSON Server
-      await axios.delete(
+      // Delete enrollment record
+      await api.delete(
         `${API_URL}/enrollments/${enrollmentId}`
       );
 

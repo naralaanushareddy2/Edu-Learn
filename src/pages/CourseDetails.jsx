@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
-import axios from "axios";
+import api, { API_URL } from "../services/api";
 import { useDispatch, useSelector } from "react-redux";
 
 import categories from "@data/categories.json";
@@ -32,11 +32,28 @@ import {
   FiX,
 } from "react-icons/fi";
 
-const API_URL = "http://localhost:5000";
 
 const CourseDetails = () => {
 
   const { subcategoryId } = useParams();
+
+  // =====================================================
+  // FIND COURSE & CATEGORY
+  // =====================================================
+
+  let selectedSubcategory = null;
+  let selectedCategory = null;
+
+  for (const category of categories) {
+    const found = category.subcategories.find(
+      (sub) => Number(sub.id) === Number(subcategoryId)
+    );
+    if (found) {
+      selectedSubcategory = found;
+      selectedCategory = category;
+      break;
+    }
+  }
 
   // =====================================================
   // REDUX
@@ -44,43 +61,53 @@ const CourseDetails = () => {
 
   const dispatch = useDispatch();
 
-
   // Logged-in user
   const loggedInUser = useSelector(
     (state) => state.auth.user
   );
-
 
   // Enrollments from Redux
   const enrollments = useSelector(
     (state) => state.enrollment.enrollments
   );
 
-
   // Wishlist from Redux
   const wishlistItems = useSelector(
     (state) => state.wishlist.items
   );
 
-
   // =====================================================
-  // LOCAL STATE
+  // LOCAL & DERIVED STATE
   // =====================================================
 
-  const [enrollment, setEnrollment] =
-    useState(null);
+  const [localEnrollment, setLocalEnrollment] = useState(null);
+  const [processing, setProcessing] = useState(false);
+  const [activeLessonVideo, setActiveLessonVideo] = useState(null);
 
-  const [loading, setLoading] =
-    useState(true);
+  const matchedEnrollment = useMemo(() => {
+    if (!loggedInUser || !selectedSubcategory) return null;
+    return (
+      enrollments.find(
+        (item) =>
+          String(item.userId) === String(loggedInUser.id) &&
+          String(item.courseId) === String(selectedSubcategory.id)
+      ) || null
+    );
+  }, [enrollments, loggedInUser, selectedSubcategory]);
 
-  const [processing, setProcessing] =
-    useState(false);
+  const enrollment = localEnrollment || matchedEnrollment;
+  const setEnrollment = setLocalEnrollment;
 
-  const [isWishlisted, setIsWishlisted] =
-    useState(false);
+  const isWishlisted = useMemo(() => {
+    if (!selectedSubcategory || !loggedInUser) return false;
+    return wishlistItems.some(
+      (item) =>
+        String(item.userId) === String(loggedInUser.id) &&
+        String(item.courseId) === String(selectedSubcategory.id)
+    );
+  }, [wishlistItems, loggedInUser, selectedSubcategory]);
 
-  const [activeLessonVideo, setActiveLessonVideo] =
-    useState(null);
+  const setIsWishlisted = () => {};
 
   const parseYouTubeStart = (url, explicitStart) => {
     if (Number.isFinite(explicitStart) && explicitStart > 0) {
@@ -157,33 +184,6 @@ const CourseDetails = () => {
   };
 
 
-  // =====================================================
-  // FIND COURSE
-  // =====================================================
-
-  let selectedSubcategory = null;
-  let selectedCategory = null;
-
-
-  categories.forEach((category) => {
-
-    const found =
-      category.subcategories.find(
-        (subcategory) =>
-          Number(subcategory.id) ===
-          Number(subcategoryId)
-      );
-
-
-    if (found) {
-
-      selectedSubcategory = found;
-
-      selectedCategory = category;
-
-    }
-
-  });
 
 
   // =====================================================
@@ -202,7 +202,7 @@ const CourseDetails = () => {
 
 
         const response =
-          await axios.get(
+          await api.get(
             `${API_URL}/enrollments?userId=${encodeURIComponent(
               loggedInUser.id
             )}`
@@ -247,7 +247,7 @@ const CourseDetails = () => {
 
 
         const response =
-          await axios.get(
+          await api.get(
             `${API_URL}/wishlist?userId=${encodeURIComponent(
               loggedInUser.id
             )}`
@@ -277,81 +277,6 @@ const CourseDetails = () => {
 
 
   // =====================================================
-  // FIND CURRENT ENROLLMENT
-  // =====================================================
-
-  useEffect(() => {
-
-    if (
-      !loggedInUser ||
-      !selectedSubcategory
-    ) {
-
-      setEnrollment(null);
-
-      setLoading(false);
-
-      return;
-
-    }
-
-
-    const currentEnrollment =
-      enrollments.find(
-        (item) =>
-          String(item.userId) ===
-            String(loggedInUser.id) &&
-          String(item.courseId) ===
-            String(selectedSubcategory.id)
-      );
-
-
-    setEnrollment(
-      currentEnrollment || null
-    );
-
-
-    setLoading(false);
-
-  }, [
-    enrollments,
-    loggedInUser,
-    subcategoryId,
-  ]);
-
-
-  // =====================================================
-  // CHECK WISHLIST
-  // =====================================================
-
-  useEffect(() => {
-
-    if (!selectedSubcategory) {
-
-      setIsWishlisted(false);
-
-      return;
-
-    }
-
-
-    const exists =
-      wishlistItems.some(
-        (item) =>
-          String(item.userId) ===
-            String(loggedInUser?.id) &&
-          String(item.courseId) ===
-            String(selectedSubcategory.id)
-      );
-
-
-    setIsWishlisted(exists);
-
-  }, [
-    wishlistItems,
-    loggedInUser,
-    subcategoryId,
-  ]);
 
 
   // =====================================================
@@ -389,27 +314,7 @@ const CourseDetails = () => {
   }
 
 
-  // =====================================================
-  // LOADING
-  // =====================================================
 
-  if (loading) {
-
-    return (
-
-      <div className="course-not-found">
-
-        <FiBookOpen />
-
-        <h2>
-          Loading Course...
-        </h2>
-
-      </div>
-
-    );
-
-  }
 
 
   // =====================================================
@@ -469,7 +374,7 @@ const CourseDetails = () => {
       // -------------------------------------------------
 
       const existing =
-        await axios.get(
+        await api.get(
           `${API_URL}/enrollments?userId=${encodeURIComponent(
             loggedInUser.id
           )}&courseId=${selectedSubcategory.id}`
@@ -548,11 +453,11 @@ const CourseDetails = () => {
 
 
       // -------------------------------------------------
-      // CREATE RECORD IN JSON SERVER
+      // CREATE RECORD
       // -------------------------------------------------
 
       const response =
-        await axios.post(
+        await api.post(
           `${API_URL}/enrollments`,
           enrollmentData
         );
@@ -686,7 +591,7 @@ const CourseDetails = () => {
       // -------------------------------------------------
 
       const response =
-        await axios.patch(
+        await api.patch(
           `${API_URL}/enrollments/${enrollment.id}`,
           {
 
@@ -802,7 +707,7 @@ const CourseDetails = () => {
 
       if (existingWishlistItem) {
 
-        await axios.delete(
+        await api.delete(
           `${API_URL}/wishlist/${existingWishlistItem.id}`
         );
 
@@ -859,11 +764,11 @@ const CourseDetails = () => {
 
 
       // -------------------------------------------------
-      // SAVE TO JSON SERVER
+      // SAVE RECORD
       // -------------------------------------------------
 
       const response =
-        await axios.post(
+        await api.post(
           `${API_URL}/wishlist`,
           wishlistData
         );

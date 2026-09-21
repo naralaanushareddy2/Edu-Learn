@@ -1,5 +1,5 @@
-import React from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 import "../styles/learning.css";
 
 import {
@@ -9,8 +9,17 @@ import {
   FiArrowRight
 } from "react-icons/fi";
 
-
 const Learning = () => {
+  const loggedInUser = useSelector((state) => state.auth.user);
+  const enrollments = useSelector((state) => state.enrollment.enrollments);
+
+  const completedCount = enrollments.filter((e) => e.completed).length;
+  const avgProgress = enrollments.length
+    ? Math.round(
+        enrollments.reduce((acc, curr) => acc + Number(curr.progress || 0), 0) /
+          enrollments.length
+      )
+    : 0;
 
   return (
 
@@ -49,7 +58,7 @@ const Learning = () => {
           <div>
 
             <h3>
-              0
+              {loggedInUser ? enrollments.length : 0}
             </h3>
 
             <p>
@@ -68,7 +77,7 @@ const Learning = () => {
           <div>
 
             <h3>
-              0%
+              {loggedInUser ? `${avgProgress}%` : "0%"}
             </h3>
 
             <p>
@@ -87,11 +96,11 @@ const Learning = () => {
           <div>
 
             <h3>
-              0 hrs
+              {loggedInUser ? `${completedCount} Done` : "0 hrs"}
             </h3>
 
             <p>
-              Learning Time
+              Completed Courses
             </p>
 
           </div>
@@ -116,26 +125,25 @@ const Learning = () => {
           <FiBookOpen />
 
           <h3>
-            Start Your Learning Journey
+            {loggedInUser && enrollments.length > 0
+              ? "Continue Your Active Courses"
+              : "Start Your Learning Journey"}
           </h3>
 
           <p>
-            You haven't enrolled in any courses yet.
-            Explore our courses and start learning today.
+            {loggedInUser && enrollments.length > 0
+              ? `You currently have ${enrollments.length} enrolled course(s). Pick up right where you left off.`
+              : "Explore our courses and start learning in-demand skills today."}
           </p>
 
-
-          <Link to="/Courses">
-
-            Explore Courses
+          <Link to={loggedInUser && enrollments.length > 0 ? "/my-learning" : "/Courses"}>
+            {loggedInUser && enrollments.length > 0 ? "Go to My Learning" : "Explore Courses"}
             <FiArrowRight />
-
           </Link>
 
         </div>
 
       </section>
-
 
       {/* ================= BACK HOME ================= */}
 

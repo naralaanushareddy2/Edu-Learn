@@ -1,5 +1,6 @@
-import React, { useEffect, useMemo, useState } from "react";
-import axios from "axios";
+import { useEffect, useMemo, useState } from "react";
+import api, { API_URL } from "../services/api";
+import AdminNav from "../components/AdminNav";
 
 import {
   FiBookOpen,
@@ -19,8 +20,6 @@ import {
 
 import "../styles/admin-learning.css";
 import "../styles/modern-overrides.css";
-
-const API_URL = "http://localhost:5000";
 
 const AdminLearning = () => {
 
@@ -49,48 +48,57 @@ const AdminLearning = () => {
 
 
   // =====================================================
-  // LOAD DATA
+  // LOAD DATA (MANUAL REFRESH)
   // =====================================================
 
   const load = async () => {
-
     setLoading(true);
-
     try {
-
-      const [enrollmentResponse, userResponse] =
-        await Promise.all([
-          axios.get(`${API_URL}/enrollments`),
-          axios.get(`${API_URL}/users`)
-        ]);
+      const [enrollmentResponse, userResponse] = await Promise.all([
+        api.get(`${API_URL}/enrollments`),
+        api.get(`${API_URL}/users`)
+      ]);
 
       setEnrollments(enrollmentResponse.data);
       setUsers(userResponse.data);
-
     } catch (error) {
-
-      console.error(
-        "Admin dashboard error:",
-        error
-      );
-
-      alert(
-        "Unable to load admin data. Make sure JSON Server is running."
-      );
-
+      console.error("Admin dashboard error:", error);
     } finally {
-
       setLoading(false);
-
     }
-
   };
 
+  // =====================================================
+  // LOAD ON MOUNT (CLEAN EFFECT)
+  // =====================================================
 
   useEffect(() => {
+    let isMounted = true;
+    const fetchInitialData = async () => {
+      try {
+        const [enrollmentResponse, userResponse] = await Promise.all([
+          api.get(`${API_URL}/enrollments`),
+          api.get(`${API_URL}/users`)
+        ]);
 
-    load();
+        if (isMounted) {
+          setEnrollments(enrollmentResponse.data);
+          setUsers(userResponse.data);
+        }
+      } catch (error) {
+        console.error("Admin dashboard error:", error);
+      } finally {
+        if (isMounted) {
+          setLoading(false);
+        }
+      }
+    };
 
+    fetchInitialData();
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
 
@@ -227,7 +235,7 @@ const AdminLearning = () => {
       };
 
 
-      await axios.patch(
+      await api.patch(
         `${API_URL}/users/${editingUser.id}`,
         updatedUser
       );
@@ -282,7 +290,7 @@ const AdminLearning = () => {
 
 
     const newLockedStatus =
-      !Boolean(user.locked);
+      !user.locked;
 
 
     const message = newLockedStatus
@@ -308,7 +316,7 @@ const AdminLearning = () => {
       };
 
 
-      await axios.patch(
+      await api.patch(
         `${API_URL}/users/${user.id}`,
         {
           locked: newLockedStatus
@@ -353,30 +361,21 @@ const AdminLearning = () => {
 
   const deleteUser = async (user) => {
 
-    if (user.role === "admin") {
-
-      alert(
-        "Administrator account cannot be deleted."
+    const confirmed =
+      window.confirm(
+        `Are you sure you want to delete ${user.name}? This will also delete all their enrollments.`
       );
 
+    if (!confirmed) {
       return;
-
     }
-
-
-    const confirmed = window.confirm(
-      `Are you sure you want to delete ${user.name}?`
-    );
-
-
-    if (!confirmed) return;
 
 
     try {
 
       // Delete user
 
-      await axios.delete(
+      await api.delete(
         `${API_URL}/users/${user.id}`
       );
 
@@ -394,7 +393,7 @@ const AdminLearning = () => {
       await Promise.all(
         userEnrollments.map(
           (item) =>
-            axios.delete(
+            api.delete(
               `${API_URL}/enrollments/${item.id}`
             )
         )
@@ -474,6 +473,8 @@ const AdminLearning = () => {
   return (
 
     <div className="admin-learning-page">
+
+      <AdminNav />
 
 
       {/* =================================================

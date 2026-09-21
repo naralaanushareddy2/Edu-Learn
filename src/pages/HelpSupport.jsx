@@ -1,4 +1,3 @@
-import React from "react";
 import { FiBookOpen, FiUser, FiHeart, FiHelpCircle, FiMail, FiMessageCircle } from "react-icons/fi";
 import "../styles/help-support.css";
 

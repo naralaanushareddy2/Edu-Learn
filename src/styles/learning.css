@@ -1,6 +1,8 @@
 .learning-page {
   min-height: 100vh;
-  background: #f7f9fd;
+  background: var(--bg-page);
+  color: var(--text-primary);
+  transition: var(--theme-transition);
 }
 
 
@@ -9,11 +11,13 @@
 .learning-header {
   padding: 70px 8%;
   text-align: center;
-  background: #ffffff;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-color);
+  transition: var(--theme-transition);
 }
 
 .learning-header p {
-  color: #2448b8;
+  color: var(--accent-primary);
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -21,12 +25,13 @@
 
 .learning-header h1 {
   margin: 10px 0 15px;
-  color: #172033;
+  color: var(--text-primary);
   font-size: 40px;
+  letter-spacing: -0.5px;
 }
 
 .learning-header span {
-  color: #6b7280;
+  color: var(--text-muted);
 }
 
 
@@ -43,37 +48,45 @@
 
 
 .learning-stat-card {
-  background: #ffffff;
+  background: var(--bg-card);
 
   padding: 25px;
 
   border-radius: 12px;
 
-  border: 1px solid #e5e8ef;
+  border: 1px solid var(--border-color);
 
   display: flex;
   align-items: center;
 
   gap: 20px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease;
+}
+
+.learning-stat-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-primary);
+  box-shadow: var(--shadow-md);
 }
 
 
 .learning-stat-card > svg {
   font-size: 30px;
-  color: #2448b8;
+  color: var(--accent-primary);
 }
 
 
 .learning-stat-card h3 {
   margin: 0 0 5px;
-  color: #172033;
+  color: var(--text-primary);
   font-size: 25px;
 }
 
 
 .learning-stat-card p {
   margin: 0;
-  color: #6b7280;
+  color: var(--text-muted);
   font-size: 14px;
 }
 
@@ -86,7 +99,7 @@
 
 .continue-learning h2 {
   text-align: center;
-  color: #172033;
+  color: var(--text-primary);
   margin-bottom: 30px;
 }
 
@@ -100,30 +113,31 @@
 
   padding: 50px 30px;
 
-  background: #ffffff;
+  background: var(--bg-card);
 
-  border: 1px solid #e5e8ef;
+  border: 1px solid var(--border-color);
 
   border-radius: 12px;
 
   text-align: center;
+  box-shadow: var(--shadow-sm);
 }
 
 
 .learning-empty > svg {
   font-size: 45px;
-  color: #2448b8;
+  color: var(--accent-primary);
   margin-bottom: 15px;
 }
 
 
 .learning-empty h3 {
-  color: #172033;
+  color: var(--text-primary);
 }
 
 
 .learning-empty p {
-  color: #6b7280;
+  color: var(--text-secondary);
   line-height: 1.6;
   font-size: 14px;
 }
@@ -140,7 +154,7 @@
 
   padding: 12px 20px;
 
-  background: #2448b8;
+  background: var(--accent-primary);
 
   color: white;
 
@@ -151,6 +165,12 @@
   font-size: 14px;
 
   font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.learning-empty a:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
 }
 
 
@@ -162,9 +182,14 @@
 }
 
 .learning-bottom a {
-  color: #2448b8;
+  color: var(--accent-primary);
   text-decoration: none;
   font-weight: 600;
+}
+
+.learning-bottom a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
 }
 
 

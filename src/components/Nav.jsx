@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { useTheme } from "../context/ThemeContext";
+import { useTheme } from "../context/useTheme";
 
 import "../styles/nav.css";
 import logo from "../assets/logo.png";
@@ -20,7 +20,9 @@ import {
 } from "react-icons/fi";
 
 const Nav = () => {
-  const { theme, toggleTheme, isDark } = useTheme();
+  const { toggleTheme, isDark } = useTheme();
+  const navigate = useNavigate();
+  const [searchTerm, setSearchTerm] = useState("");
 
   // =====================================================
   // GET USER FROM REDUX
@@ -131,20 +133,30 @@ const Nav = () => {
 
         <section className="search-bar">
 
-          <div className="search-box">
+          <form
+            className="search-box"
+            onSubmit={(e) => {
+              e.preventDefault();
+              if (searchTerm.trim()) {
+                navigate(`/Courses?search=${encodeURIComponent(searchTerm.trim())}`);
+              }
+            }}
+          >
 
             <input
               type="text"
               placeholder="Search Courses, Subjects, Skills..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
             />
 
-            <button type="button">
+            <button type="submit" aria-label="Search">
 
               <FiSearch />
 
             </button>
 
-          </div>
+          </form>
 
         </section>
 

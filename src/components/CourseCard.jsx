@@ -1,11 +1,11 @@
-import React from 'react'
 import '../styles/coursecard.css'
+
 const CourseCard = () => {
   return (
-    <div>
-      
+    <div className="course-card-component">
+      {/* Reusable Course Card */}
     </div>
   )
 }
-import '../styles/coursecard.css'
+
 export default CourseCard

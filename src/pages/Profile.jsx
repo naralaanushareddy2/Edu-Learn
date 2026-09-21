@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import axios from "axios";
+import { useState } from "react";
+import api, { API_URL } from "../services/api";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -123,8 +123,8 @@ const Profile = () => {
 
         try {
 
-            await axios.patch(
-                `http://localhost:5000/users/${user.id}`,
+            await api.patch(
+                `${API_URL}/users/${user.id}`,
                 {
                     name: updatedUser.name,
                     email: updatedUser.email,

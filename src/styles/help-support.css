@@ -1,7 +1,9 @@
 .help-page {
   min-height: calc(100vh - 124px);
   padding: 50px 6% 100px;
-  background: #f7f9fc;
+  background: var(--bg-page);
+  color: var(--text-primary);
+  transition: var(--theme-transition);
 }
 
 .help-header {
@@ -12,7 +14,7 @@
 
 .help-label {
   margin: 0 0 10px;
-  color: #315d8f;
+  color: var(--accent-primary);
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -20,13 +22,14 @@
 
 .help-header h1 {
   margin: 0 0 12px;
-  color: #172b45;
+  color: var(--text-primary);
   font-size: 38px;
+  letter-spacing: -0.5px;
 }
 
 .help-header > p:last-child {
   margin: 0;
-  color: #68778a;
+  color: var(--text-muted);
   font-size: 16px;
   line-height: 1.7;
 }
@@ -42,27 +45,29 @@
   gap: 18px;
   padding: 24px;
   margin-bottom: 28px;
-  background: #ffffff;
-  border: 1px solid #e3e8ef;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: 14px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--theme-transition);
 }
 
 .help-intro > svg {
   width: 30px;
   height: 30px;
   flex-shrink: 0;
-  color: #3454d1;
+  color: var(--accent-primary);
 }
 
 .help-intro h2 {
   margin: 0 0 5px;
-  color: #172b45;
+  color: var(--text-primary);
   font-size: 20px;
 }
 
 .help-intro p {
   margin: 0;
-  color: #718096;
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 
@@ -76,16 +81,17 @@
   display: flex;
   gap: 16px;
   padding: 22px;
-  background: #ffffff;
-  border: 1px solid #e3e8ef;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: 14px;
-  transition: 0.25s ease;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease;
 }
 
 .faq-card:hover {
   transform: translateY(-2px);
-  border-color: #cbd8eb;
-  box-shadow: 0 8px 25px rgba(30, 50, 90, 0.08);
+  border-color: var(--accent-primary);
+  box-shadow: var(--shadow-md);
 }
 
 .faq-icon {
@@ -96,8 +102,8 @@
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  background: #eef4ff;
-  color: #3454d1;
+  background: var(--accent-subtle);
+  color: var(--accent-primary);
 }
 
 .faq-icon svg {
@@ -107,13 +113,13 @@
 
 .faq-card h3 {
   margin: 0 0 7px;
-  color: #24364b;
+  color: var(--text-primary);
   font-size: 16px;
 }
 
 .faq-card p {
   margin: 0;
-  color: #718096;
+  color: var(--text-secondary);
   font-size: 14px;
   line-height: 1.6;
 }
@@ -124,9 +130,12 @@
   gap: 18px;
   margin-top: 28px;
   padding: 25px;
-  background: #eef4ff;
-  border: 1px solid #d9e5fa;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--accent-primary);
   border-radius: 14px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--theme-transition);
 }
 
 .support-icon {
@@ -136,9 +145,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ffffff;
+  background: var(--accent-subtle);
   border-radius: 10px;
-  color: #3454d1;
+  color: var(--accent-primary);
 }
 
 .support-icon svg {
@@ -148,23 +157,24 @@
 
 .support-card h2 {
   margin: 0 0 6px;
-  color: #24364b;
+  color: var(--text-primary);
   font-size: 19px;
 }
 
 .support-card p {
   margin: 0 0 6px;
-  color: #68778a;
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 
 .support-card a {
-  color: #3454d1;
+  color: var(--accent-primary);
   font-weight: 600;
   text-decoration: none;
 }
 
 .support-card a:hover {
+  color: var(--accent-hover);
   text-decoration: underline;
 }
 

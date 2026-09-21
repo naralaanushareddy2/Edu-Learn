@@ -267,7 +267,7 @@
 
     border-radius: 8px;
 
-    color: #334155;
+    color: var(--text-muted);
 
     text-decoration: none;
 
@@ -279,8 +279,8 @@
 
 
 .action-icon:hover {
-    color: #b4233c;
-    background: #faf1f3;
+    color: var(--accent-primary);
+    background: var(--accent-subtle);
 
     transform: translateY(-1px);
 }
@@ -323,10 +323,10 @@
     justify-content: center;
     gap: 8px;
 
-    background: #0f2747;
+    background: var(--accent-primary);
     color: #ffffff;
 
-    border: 1px solid #0f2747;
+    border: 1px solid var(--accent-primary);
     border-radius: 7px;
 
     text-decoration: none;
@@ -343,8 +343,8 @@
 
 
 .login-button:hover {
-    background: #183c67;
-    border-color: #183c67;
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
 
     box-shadow: 0 5px 14px rgba(15, 39, 71, 0.18);
 
@@ -381,12 +381,12 @@
 
     overflow: hidden;
 
-    background: #f4f7fa;
+    background: var(--bg-well);
 
-    border: 1px solid #d8e0e8;
+    border: 1px solid var(--border-color);
     border-radius: 50%;
 
-    color: #315d8f;
+    color: var(--accent-primary);
 
     cursor: pointer;
 
@@ -398,10 +398,9 @@
 
 
 .profile-button:hover {
-    border-color: #315d8f;
+    border-color: var(--accent-primary);
 
-    box-shadow:
-        0 4px 12px rgba(15, 39, 71, 0.12);
+    box-shadow: var(--shadow-sm);
 
     transform: translateY(-1px);
 }
@@ -439,15 +438,13 @@
 
     padding: 10px;
 
-    background: #ffffff;
+    background: var(--bg-card);
 
-    border: 1px solid #e1e6ec;
+    border: 1px solid var(--border-color);
 
     border-radius: 12px;
 
-    box-shadow:
-        0 14px 35px rgba(15, 39, 71, 0.14),
-        0 3px 8px rgba(15, 39, 71, 0.06);
+    box-shadow: var(--shadow-xl);
 
     animation: profileMenuOpen 0.2s ease-out;
 
@@ -482,11 +479,11 @@
 
     margin-bottom: 7px;
 
-    background: #f7f9fc;
+    background: var(--bg-well);
 
     border-radius: 9px;
 
-    border: 1px solid #edf0f4;
+    border: 1px solid var(--border-color);
 }
 
 
@@ -504,12 +501,12 @@
 
     overflow: hidden;
 
-    background: #e8eef5;
+    background: var(--accent-subtle);
 
-    border: 1px solid #d5dfe9;
+    border: 1px solid var(--border-color);
     border-radius: 50%;
 
-    color: #315d8f;
+    color: var(--accent-primary);
 }
 
 
@@ -532,7 +529,7 @@
 .profile-header h4 {
     margin: 0 0 3px;
 
-    color: #172b45;
+    color: var(--text-primary);
 
     font-size: 15px;
     font-weight: 600;
@@ -542,7 +539,7 @@
 .profile-header p {
     margin: 0;
 
-    color: #7a8796;
+    color: var(--text-muted);
 
     font-size: 12px;
 }
@@ -569,7 +566,7 @@
     border: none;
     border-radius: 7px;
 
-    color: #344454;
+    color: var(--text-secondary);
 
     text-decoration: none;
 
@@ -586,8 +583,8 @@
 
 
 .profile-option:hover {
-    background: #f1f5f9;
-    color: #0f2747;
+    background: var(--bg-card-hover);
+    color: var(--accent-primary);
 }
 
 
@@ -597,12 +594,12 @@
 
     flex-shrink: 0;
 
-    color: #55789c;
+    color: var(--text-muted);
 }
 
 
 .profile-option:hover svg {
-    color: #315d8f;
+    color: var(--accent-primary);
 }
 
 

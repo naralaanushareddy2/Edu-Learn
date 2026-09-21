@@ -1441,17 +1441,194 @@ body,
 }
 
 /* =========================================================
-   GLOBAL OVERRIDES FOR POLISH
+   GLOBAL OVERRIDES FOR POLISH & NEW COMPONENTS
    ========================================================= */
 
 [data-theme="dark"] .card {
-  background: #1e293b;
-  border-color: #293548;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  background: #121c2e;
+  border-color: #1e2d42;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
 }
 
 [data-theme="dark"] input,
 [data-theme="dark"] textarea,
 [data-theme="dark"] select {
+  background-color: #101928;
+  border-color: #1e2d42;
   color: #f8fafc;
+}
+
+[data-theme="dark"] input:focus,
+[data-theme="dark"] textarea:focus,
+[data-theme="dark"] select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.28);
+}
+
+/* Admin Tabs */
+[data-theme="dark"] .admin-nav-tabs {
+  background: #090e17;
+  border-bottom-color: #1e2d42;
+}
+
+[data-theme="dark"] .admin-nav-tab {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .admin-nav-tab:hover {
+  color: #60a5fa;
+}
+
+[data-theme="dark"] .admin-nav-tab.active {
+  color: #38bdf8;
+  border-bottom-color: #38bdf8;
+  background: rgba(56, 189, 248, 0.12);
+}
+
+/* Courses Search & Filter Bar */
+[data-theme="dark"] .courses-search-wrapper {
+  background: transparent;
+}
+
+[data-theme="dark"] .courses-inline-search {
+  background: #121c2e;
+  border: 1px solid #1e2d42;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="dark"] .courses-inline-search:focus-within {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+[data-theme="dark"] .courses-inline-search input {
+  color: #f8fafc;
+  background: transparent;
+}
+
+[data-theme="dark"] .courses-inline-search input::placeholder {
+  color: #64748b;
+}
+
+[data-theme="dark"] .inline-search-icon {
+  color: #38bdf8;
+}
+
+[data-theme="dark"] .clear-search-btn {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .clear-search-btn:hover {
+  color: #f87171;
+}
+
+[data-theme="dark"] .search-results-bar h2 {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .results-count {
+  color: #38bdf8;
+}
+
+[data-theme="dark"] .text-reset-btn {
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+}
+
+[data-theme="dark"] .text-reset-btn:hover {
+  background: rgba(56, 189, 248, 0.2);
+}
+
+[data-theme="dark"] .empty-search-state {
+  background: #121c2e;
+  border: 1px dashed #1e2d42;
+}
+
+[data-theme="dark"] .empty-search-state h3 {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .empty-search-state p {
+  color: #94a3b8;
+}
+
+/* Instructor Modal */
+[data-theme="dark"] .instructor-modal-overlay {
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+}
+
+[data-theme="dark"] .instructor-modal-content {
+  background: #121c2e;
+  border: 1px solid #1e2d42;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .instructor-modal-close {
+  color: #94a3b8;
+  background: #18263e;
+}
+
+[data-theme="dark"] .instructor-modal-close:hover {
+  color: #f87171;
+  background: rgba(239, 68, 68, 0.2);
+}
+
+[data-theme="dark"] .modal-avatar {
+  background: #18263e;
+  color: #38bdf8;
+  border-color: #1e2d42;
+}
+
+[data-theme="dark"] .modal-role {
+  color: #38bdf8;
+}
+
+[data-theme="dark"] .modal-exp {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .instructor-modal-body h4 {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .instructor-modal-body p {
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .modal-courses-list li {
+  background: #18263e;
+  color: #f8fafc;
+  border: 1px solid #1e2d42;
+}
+
+[data-theme="dark"] .modal-courses-list li svg {
+  color: #10b981;
+}
+
+[data-theme="dark"] .explore-courses-btn {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .explore-courses-btn:hover {
+  background: #60a5fa;
+}
+
+/* Status Badges */
+[data-theme="dark"] .status-badge-active {
+  background: rgba(16, 185, 129, 0.16);
+  color: #34d399;
+}
+
+[data-theme="dark"] .status-badge-locked {
+  background: rgba(239, 68, 68, 0.16);
+  color: #f87171;
+}
+
+[data-theme="dark"] .course-track-pill {
+  background: rgba(59, 130, 246, 0.16);
+  color: #60a5fa;
 }

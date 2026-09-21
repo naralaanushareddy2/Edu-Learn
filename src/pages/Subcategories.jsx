@@ -1,4 +1,3 @@
-import React from "react";
 import { Link, useParams } from "react-router-dom";
 
 import "../styles/subcategories.css";
@@ -14,9 +13,6 @@ import categories from "@data/categories.json";
 const Subcategories = () => {
 
   const { categoryId } = useParams();
-
-  console.log("Category ID:", categoryId);
-  console.log("Categories:", categories);
 
   const selectedCategory = categories.find(
     (category) => category.id === Number(categoryId)

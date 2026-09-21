@@ -1,4 +1,17 @@
 /* =====================================================
+   ADMIN LEARNING
+   Modern, formal styling using design tokens
+===================================================== */
+
+.admin-learning-page {
+  min-height: 100vh;
+  padding: 40px;
+  background: var(--bg-page);
+  color: var(--text-primary);
+  transition: var(--theme-transition);
+}
+
+/* =====================================================
    ADMIN TABS
 ===================================================== */
 
@@ -6,7 +19,7 @@
   display: flex;
   gap: 12px;
   margin-bottom: 30px;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid var(--border-color);
   padding-bottom: 12px;
   flex-wrap: wrap;
 }
@@ -15,94 +28,97 @@
   display: flex;
   align-items: center;
   gap: 8px;
-
-  padding: 13px 20px;
-
-  border: 1px solid #ddd;
+  padding: 12px 20px;
+  border: 1px solid var(--border-color);
   border-radius: 9px;
-
-  background: white;
-
+  background: var(--bg-card);
+  color: var(--text-primary);
   cursor: pointer;
-
   font-weight: 600;
+  transition: var(--theme-transition);
+}
+
+.admin-tab:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
 }
 
 .admin-tab.active {
-  background: #222;
-  color: white;
-  border-color: #222;
+  background: var(--accent-primary);
+  color: #ffffff;
+  border-color: var(--accent-primary);
 }
-
 
 /* =====================================================
    USER MANAGEMENT
 ===================================================== */
 
 .admin-users-section {
-  background: white;
-
-  border: 1px solid #e5e5e5;
-
-  border-radius: 12px;
-
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
   overflow: hidden;
+  box-shadow: var(--shadow-sm);
 }
 
 .admin-section-header {
   padding: 25px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .admin-section-header h2 {
   margin: 0 0 6px;
+  color: var(--text-primary);
 }
 
 .admin-section-header p {
   margin: 0;
-  color: #777;
+  color: var(--text-muted);
 }
-
 
 /* =====================================================
    SEARCH
 ===================================================== */
 
 .admin-search {
-  margin: 0 25px 20px;
-
+  margin: 20px 25px;
   display: flex;
   align-items: center;
   gap: 10px;
-
-  border: 1px solid #ddd;
-
+  border: 1px solid var(--border-color);
+  background: var(--bg-input);
   border-radius: 8px;
-
   padding: 0 14px;
-
   max-width: 600px;
+  transition: var(--theme-transition);
+}
+
+.admin-search:focus-within {
+  border-color: var(--accent-primary);
+  box-shadow: var(--ring-focus);
 }
 
 .admin-search svg {
-  color: #777;
+  color: var(--text-muted);
 }
 
 .admin-search input {
   width: 100%;
-
   border: none;
-
   outline: none;
-
   padding: 13px 5px;
-
   font-size: 14px;
+  background: transparent;
+  color: var(--text-primary);
 }
 
+.admin-search input::placeholder {
+  color: var(--text-muted);
+}
 
 /* =====================================================
    USER TABLE
@@ -112,33 +128,27 @@
   min-width: 1100px;
 }
 
-
 /* =====================================================
    ROLE BADGES
 ===================================================== */
 
 .role-badge {
   display: inline-block;
-
-  padding: 5px 10px;
-
+  padding: 4px 10px;
   border-radius: 20px;
-
   font-size: 12px;
-
   font-weight: 700;
 }
 
 .role-badge.admin {
-  background: #f1e8ff;
-  color: #6c2bd9;
+  background: var(--accent-gold-bg);
+  color: var(--accent-gold);
 }
 
 .role-badge.student {
-  background: #e7f7f0;
-  color: #16845c;
+  background: var(--accent-subtle);
+  color: var(--accent-primary);
 }
-
 
 /* =====================================================
    USER STATUS
@@ -146,24 +156,19 @@
 
 .user-status {
   display: inline-flex;
-
   align-items: center;
-
   gap: 6px;
-
   font-size: 13px;
-
   font-weight: 600;
 }
 
 .user-status.active {
-  color: #16845c;
+  color: var(--success);
 }
 
 .user-status.locked {
-  color: #c62828;
+  color: var(--danger);
 }
-
 
 /* =====================================================
    USER ACTIONS
@@ -171,43 +176,42 @@
 
 .user-actions {
   display: flex;
-
   align-items: center;
-
   gap: 7px;
 }
 
 .user-action {
   width: 35px;
   height: 35px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   border-radius: 7px;
-
-  border: 1px solid #ddd;
-
-  background: white;
-
+  border: 1px solid var(--border-color);
+  background: var(--bg-well);
+  color: var(--text-secondary);
   cursor: pointer;
-
   font-size: 16px;
+  transition: var(--theme-transition);
 }
 
 .user-action.edit:hover {
-  background: #f1f1f1;
+  background: var(--accent-subtle);
+  color: var(--accent-primary);
+  border-color: var(--accent-primary);
 }
 
 .user-action.lock:hover {
-  background: #fff4e5;
+  background: var(--warning-bg);
+  color: var(--warning);
+  border-color: var(--warning);
 }
 
 .user-action.delete:hover {
-  background: #ffe9e9;
+  background: var(--danger-bg);
+  color: var(--danger);
+  border-color: var(--danger);
 }
-
 
 /* =====================================================
    EDIT MODAL
@@ -215,80 +219,63 @@
 
 .admin-modal-overlay {
   position: fixed;
-
   inset: 0;
-
-  background: rgba(0, 0, 0, 0.55);
-
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   z-index: 9999;
-
   padding: 20px;
 }
 
 .admin-edit-modal {
   width: 100%;
-
   max-width: 650px;
-
-  background: white;
-
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: 14px;
-
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
-
+  box-shadow: var(--shadow-xl);
   max-height: 90vh;
-
   overflow-y: auto;
+  color: var(--text-primary);
 }
 
 .admin-modal-header {
   display: flex;
-
   justify-content: space-between;
-
   align-items: center;
-
   padding: 22px 25px;
-
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .admin-modal-header h2 {
   margin: 0;
-
   display: flex;
-
   align-items: center;
-
   gap: 8px;
+  color: var(--text-primary);
+  font-size: 22px;
 }
 
 .admin-modal-header p {
   margin: 5px 0 0;
-
-  color: #777;
-
+  color: var(--text-muted);
   font-size: 13px;
 }
 
 .admin-modal-header > button {
   border: none;
-
   background: transparent;
-
   font-size: 22px;
-
   cursor: pointer;
-
-  color: #777;
+  color: var(--text-muted);
+  transition: var(--theme-transition);
 }
 
+.admin-modal-header > button:hover {
+  color: var(--danger);
+}
 
 /* =====================================================
    EDIT FORM
@@ -304,44 +291,37 @@
 
 .admin-form-group label {
   display: block;
-
   margin-bottom: 7px;
-
   font-size: 13px;
-
   font-weight: 600;
+  color: var(--text-primary);
 }
 
 .admin-form-group input,
 .admin-form-group select {
   width: 100%;
-
   box-sizing: border-box;
-
   padding: 12px;
-
-  border: 1px solid #ddd;
-
+  border: 1px solid var(--border-color);
+  background: var(--bg-input);
+  color: var(--text-primary);
   border-radius: 7px;
-
   outline: none;
-
   font-size: 14px;
+  transition: var(--theme-transition);
 }
 
 .admin-form-group input:focus,
 .admin-form-group select:focus {
-  border-color: #555;
+  border-color: var(--accent-primary);
+  box-shadow: var(--ring-focus);
 }
 
 .admin-form-row {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
   gap: 15px;
 }
-
 
 /* =====================================================
    MODAL BUTTONS
@@ -349,64 +329,39 @@
 
 .admin-modal-actions {
   display: flex;
-
   justify-content: flex-end;
-
   gap: 10px;
-
   margin-top: 25px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 20px;
 }
 
 .admin-cancel-btn,
 .admin-save-btn {
-  padding: 11px 18px;
-
+  padding: 10px 18px;
   border-radius: 7px;
-
-  border: none;
-
   cursor: pointer;
-
   font-weight: 600;
+  transition: var(--theme-transition);
 }
 
 .admin-cancel-btn {
-  background: #eee;
+  border: 1px solid var(--border-color);
+  background: var(--bg-well);
+  color: var(--text-primary);
+}
+
+.admin-cancel-btn:hover {
+  background: var(--bg-card-hover);
 }
 
 .admin-save-btn {
-  display: flex;
-
-  align-items: center;
-
-  gap: 7px;
-
-  background: #222;
-
-  color: white;
+  border: none;
+  background: var(--accent-primary);
+  color: #ffffff;
 }
 
-.admin-learning-page {
-  min-height: 100vh;
-  padding: 40px;
-  padding-bottom: 120px;
-  background: #f7f8fa;
-}
-@media (max-width: 600px) {
-
-  .admin-learning-page {
-    padding: 20px;
-    padding-bottom: 180px;
-  }
-
-  .admin-learning-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-  }
-
-  .learning-stats {
-    grid-template-columns: 1fr;
-  }
-
+.admin-save-btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
 }

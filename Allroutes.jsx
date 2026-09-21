@@ -1,7 +1,6 @@
-import React from "react";
-
 import {
   BrowserRouter,
+  Navigate,
   Route,
   Routes
 } from "react-router-dom";
@@ -97,6 +96,11 @@ const Allroutes = () => {
         />
 
         <Route
+          path="/Instructors/:instructorName"
+          element={<Instructors />}
+        />
+
+        <Route
           path="/Learning"
           element={<Learning />}
         />
@@ -132,10 +136,10 @@ const Allroutes = () => {
 
 
         {/* =================================================
-            ADMIN ROUTES
+            ADMIN ROUTES (PROTECTED ADMIN ONLY)
         ================================================= */}
 
-        <Route element={<ProtectedRoute />}>
+        <Route element={<ProtectedRoute adminOnly={true} />}>
 
           <Route
             path="/admin"
@@ -147,8 +151,25 @@ const Allroutes = () => {
             element={<AdminLearning />}
           />
 
-        </Route>
+          <Route
+            path="/Admin Dashboard"
+            element={<Navigate to="/admin" replace />}
+          />
 
+          <Route
+            path="/Admin Learning"
+            element={<Navigate to="/AdminLearning" replace />}
+          />
+
+        </Route>
+        
+        {/* =================================================
+            FALLBACK ROUTE (404 HANDLING FOR DEPLOYMENT)
+        ================================================= */}
+        <Route
+          path="*"
+          element={<Navigate to="/" replace />}
+        />
 
       </Routes>
 

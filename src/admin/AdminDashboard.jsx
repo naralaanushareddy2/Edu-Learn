@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import { useEffect, useState } from "react";
+import api, { API_URL } from "../services/api";
 import { useSelector } from "react-redux";
+import AdminNav from "../components/AdminNav";
 
 import {
   FiUsers,
@@ -17,8 +18,6 @@ import {
 } from "react-icons/fi";
 
 import "../styles/admin-dashboard.css";
-
-const API_URL = "http://localhost:5000";
 
 const AdminDashboard = () => {
 
@@ -45,49 +44,48 @@ const AdminDashboard = () => {
 
 
   // =====================================================
-  // LOAD USERS
+  // LOAD USERS (MANUAL TRIGGER)
   // =====================================================
 
   const loadUsers = async () => {
-
     try {
-
       setLoading(true);
-
-      const response = await axios.get(
-        `${API_URL}/users`
-      );
-
+      const response = await api.get(`${API_URL}/users`);
       setUsers(response.data);
-
     } catch (error) {
-
-      console.error(
-        "Unable to load users:",
-        error
-      );
-
-      alert(
-        "Unable to load users. Make sure JSON Server is running."
-      );
-
+      console.error("Unable to load users:", error);
     } finally {
-
       setLoading(false);
-
     }
-
   };
 
 
   // =====================================================
-  // LOAD ON PAGE OPEN
+  // LOAD ON MOUNT (CLEAN EFFECT)
   // =====================================================
 
   useEffect(() => {
+    let isMounted = true;
+    const fetchInitialUsers = async () => {
+      try {
+        const response = await api.get(`${API_URL}/users`);
+        if (isMounted) {
+          setUsers(response.data);
+        }
+      } catch (error) {
+        console.error("Unable to load users:", error);
+      } finally {
+        if (isMounted) {
+          setLoading(false);
+        }
+      }
+    };
 
-    loadUsers();
+    fetchInitialUsers();
 
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
 
@@ -150,7 +148,7 @@ const AdminDashboard = () => {
 
     try {
 
-      const response = await axios.patch(
+      const response = await api.patch(
         `${API_URL}/users/${editingUser.id}`,
         {
           name: editingUser.name,
@@ -230,7 +228,7 @@ const AdminDashboard = () => {
 
     try {
 
-      const response = await axios.patch(
+      const response = await api.patch(
         `${API_URL}/users/${user.id}`,
         {
           locked: !currentlyLocked
@@ -300,7 +298,7 @@ const AdminDashboard = () => {
 
     try {
 
-      await axios.delete(
+      await api.delete(
         `${API_URL}/users/${user.id}`
       );
 
@@ -401,6 +399,8 @@ const AdminDashboard = () => {
   return (
 
     <div className="admin-dashboard-page">
+
+      <AdminNav />
 
 
       {/* =================================================

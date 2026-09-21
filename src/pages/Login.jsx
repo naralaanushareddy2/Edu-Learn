@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../styles/login.css";
-import axios from "axios";
+import api from "../services/api";
 import {
     Link,
     useLocation,
@@ -61,11 +61,10 @@ const Login = () => {
 
 
     // =====================================================
-    // JSON SERVER URL
+    // API URL
     // =====================================================
 
-    const url =
-        "http://localhost:5000/users";
+    const url = "/users";
 
 
     // =====================================================
@@ -75,8 +74,8 @@ const loginUser = async (e) => {
     e.preventDefault();
 
     try {
-        // Get users from JSON Server
-        const response = await axios.get(url);
+        // Get users from API or resilient store
+        const response = await api.get(url);
         const users = response.data;
 
         // Normalize email
@@ -170,7 +169,7 @@ const loginUser = async (e) => {
             // =================================================
 
             const response =
-                await axios.get(url);
+                await api.get(url);
 
             const users =
                 response.data;
@@ -220,20 +219,21 @@ const loginUser = async (e) => {
 
                 role: role,
 
-                profileImage: ""
+                profileImage: "",
+
+                locked: false
 
             };
 
 
             // =================================================
-            // SAVE USER TO JSON SERVER
+            // SAVE USER
             // =================================================
 
-            const registerResponse =
-                await axios.post(
-                    url,
-                    userData
-                );
+            await api.post(
+                url,
+                userData
+            );
 
 
             // =================================================

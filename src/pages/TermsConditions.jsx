@@ -1,4 +1,3 @@
-import React from "react";
 import "../styles/terms-conditions.css";
 
 const TermsConditions = () => {
