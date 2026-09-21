@@ -72,6 +72,19 @@ const Profile = () => {
         user?.country || ""
     );
 
+    // Toggle edit mode and synchronize form with current user
+    const handleToggleEdit = () => {
+        if (!editMode && user) {
+            setProfileImage(user.profileImage || null);
+            setName(user.name || "");
+            setEmail(user.email || "");
+            setDob(user.dob || "");
+            setGender(user.gender || "");
+            setState(user.country || "");
+        }
+        setEditMode((prev) => !prev);
+    };
+
     // =====================================================
     // PROFILE IMAGE UPLOAD
     // =====================================================
@@ -304,9 +317,7 @@ const Profile = () => {
 
                     <button
                         className="edit-profile-button"
-                        onClick={() =>
-                            setEditMode(!editMode)
-                        }
+                        onClick={handleToggleEdit}
                     >
 
                         <FiEdit2 />

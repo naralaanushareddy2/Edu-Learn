@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../styles/login.css";
 import api from "../services/api";
 import {
@@ -7,7 +7,7 @@ import {
     useNavigate
 } from "react-router-dom";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import {
     loginUser as loginUserAction
@@ -22,6 +22,20 @@ const Login = () => {
 
     const location = useLocation();
 
+    // Redux auth state
+    const currentUser = useSelector((state) => state.auth.user);
+    const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+
+    // If already logged in, redirect away from Login / Register
+    useEffect(() => {
+        if (isAuthenticated && currentUser) {
+            if (currentUser.role === "admin") {
+                navigate("/admin", { replace: true });
+            } else {
+                navigate("/", { replace: true });
+            }
+        }
+    }, [isAuthenticated, currentUser, navigate]);
 
     // =====================================================
     // CHECK CURRENT PAGE

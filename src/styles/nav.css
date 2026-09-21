@@ -618,6 +618,22 @@
     margin-top: 2px;
 }
 
+.profile-option.profile-logout-option {
+    margin-top: 6px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 6px;
+    color: #ef4444;
+}
+
+.profile-option.profile-logout-option:hover {
+    background: rgba(239, 68, 68, 0.1);
+    color: #dc2626;
+}
+
+.profile-option.profile-logout-option svg {
+    color: #ef4444;
+}
+
 
 /* =========================================================
    TABLET

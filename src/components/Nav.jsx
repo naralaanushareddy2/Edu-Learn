@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useTheme } from "../context/useTheme";
+import { updateUser, logoutUser } from "../redux/authSlice";
 
 import "../styles/nav.css";
 import logo from "../assets/logo.png";
@@ -15,11 +16,13 @@ import {
   FiUpload,
   FiTrash2,
   FiLogIn,
+  FiLogOut,
   FiSun,
   FiMoon
 } from "react-icons/fi";
 
 const Nav = () => {
+  const dispatch = useDispatch();
   const { toggleTheme, isDark } = useTheme();
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
@@ -32,13 +35,8 @@ const Nav = () => {
     (state) => state.auth.user
   );
 
-  // =====================================================
-  // PROFILE IMAGE
-  // =====================================================
-
-  const [profileImage, setProfileImage] = useState(
-    loggedInUser?.profileImage || null
-  );
+  // Derive profile image directly from Redux auth user
+  const profileImage = loggedInUser?.profileImage || null;
 
   const [showProfile, setShowProfile] = useState(false);
 
@@ -58,7 +56,9 @@ const Nav = () => {
 
       const imageData = reader.result;
 
-      setProfileImage(imageData);
+      if (loggedInUser) {
+        dispatch(updateUser({ ...loggedInUser, profileImage: imageData }));
+      }
 
     };
 
@@ -72,7 +72,9 @@ const Nav = () => {
 
   const removeProfileImage = () => {
 
-    setProfileImage(null);
+    if (loggedInUser) {
+      dispatch(updateUser({ ...loggedInUser, profileImage: null }));
+    }
 
   };
 
@@ -412,6 +414,20 @@ const Nav = () => {
                     <span>
                       {isDark ? "Light Mode" : "Dark Mode"}
                     </span>
+                  </button>
+
+                  {/* LOGOUT */}
+                  <button
+                    type="button"
+                    className="profile-option profile-logout-option"
+                    onClick={() => {
+                      setShowProfile(false);
+                      dispatch(logoutUser());
+                      navigate("/Login");
+                    }}
+                  >
+                    <FiLogOut />
+                    <span>Logout</span>
                   </button>
 
                 </div>
