@@ -313,6 +313,29 @@
       "enrolledAt": "2026-09-21T05:52:16.728Z",
       "completedAt": null,
       "id": "ApRwjn8yQYk"
+    },
+    {
+      "userId": "tTYKbrH4ZkI",
+      "userName": "Anusha Narala",
+      "courseId": 102,
+      "courseName": "CSS",
+      "categoryId": 1,
+      "categoryName": "Web Development",
+      "completedLessons": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "progress": 100,
+      "completed": true,
+      "certificateIssued": true,
+      "enrolledAt": "2026-09-21T07:29:45.857Z",
+      "completedAt": "2026-09-21T07:30:08.542Z",
+      "id": "N3MCOfLfQBM"
     }
   ],
   "certificates": [],
