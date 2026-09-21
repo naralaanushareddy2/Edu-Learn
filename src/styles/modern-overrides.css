@@ -301,6 +301,27 @@ small,
   transition: var(--theme-transition);
 }
 
+.category-card,
+.category-card:hover,
+.category-card:focus,
+.category-card:active,
+.category-card:visited,
+.subcategory-card,
+.subcategory-card:hover,
+.subcategory-page-card,
+.subcategory-page-card:hover,
+.subcategory-page-card:focus,
+.subcategory-page-card:active,
+.subcategory-page-card:visited {
+  text-decoration: none !important;
+}
+
+.category-card *,
+.subcategory-card *,
+.subcategory-page-card * {
+  text-decoration: none !important;
+}
+
 .category-card:hover,
 .subcategory-card:hover,
 .subcategory-page-card:hover,
